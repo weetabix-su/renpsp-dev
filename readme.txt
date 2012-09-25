@@ -1,4 +1,5 @@
-NO GUARANTEES, USE ON YOUR OWN RISK!
+RenPSP is a Lua Player clone of the Ren'Py Visual Novel Engine for the PlayStation Portable platform.
+This repository will serve as a developmental testbed for edited as well as new features of the RenPSP 0.3 release onwards. It will also contain select developmental visual novels, if possible.
 
 RenPSP is free, but there are some rules of it's rebistribution:
 1. inform lolbot_iichan@mail.ru about your actions
@@ -10,7 +11,7 @@ Note that LuaPlayer is licensed under GPL.
 Start on Microsoft Windows:
     just run: win32_start.bat
     tested at Windows XP and Windows 7 
-	MS Windows release is based on LuaPlayer 0.20
+    MS Windows release is based on LuaPlayer 0.20
 	LuaPlayer 0.20 exists on PSP 1.50 too
     
 Start on cracked PSP as homebrew:
@@ -19,25 +20,32 @@ Start on cracked PSP as homebrew:
     rename EBOOT_LPP.PBP to EBOOT.PBP to use Lua Player Plus rev163
     tested at PSP FAT with 5.00 M33-3
 
+FEATURES:
++ Support for .rpy scripts, image formats (JPEG, PNG, BMP), audio formats (WAV, MP3, OGG Vorbis, Atrac3)
++ Single save file function
++ Cyrillic 1251 character map compatibility
 
+CHANGELOG:
 
-НИКАКИХ ГАРАНТИЙ, ИСПОЛЬЗУЙТЕ НА СВОЙ СТРАХ И РИСК!
+0.3
++ Added LuaPlayer Plus r163 EBOOT with the release
++ Images loaded when used, not upon initialization
++ Full paths used for most files
++ Use of RenPSP logfile
++ 8 New Character Positions
 
-RenPSP бесплатен, но есть несколько правил его распространения:
-1. проинформируйте lolbot_iichan@mail.ru о своих действиях
-2. предоставьте ссылку на http://iichan.ru или http://iichan-eroge.blogspot.com вместе с вашим релизом
-3. не пытайтесь заработать денег при помощи RenPSP или его частей
+0.2
++ Skip function stops correctly
++ Settings, Help File, Test script, and Dropdown menu changed from Russian to English
++ Fixed If-Else Test in Test script
++ UI Changes (Black dialog and answer boxes, Katawa Shoujo SD Character Icons for the dropdown menu)
 
-Обратите внимание, что LuaPlayer лицензирован под GPL.
+0.1
++ Initial Release
 
-Для запуска на Microsoft Windows:
-    просто выполните: win32_start.bat
-    проверено на Windows XP и Windows 7 
-	релиз для MS Windows основан на LuaPlayer 0.20
-	LuaPlayer 0.20 существует и для PSP 1.50
-    
-Для запуска на взоманной PSP как homebrew:
-    положите все в ms0:/PSP/GAME5xx/
-    переименуйте EBOOT_LPE.PBP в EBOOT.PBP чтобы использовать Lua Player Euphoria v8
-    переименуйте EBOOT_LPP.PBP в EBOOT.PBP чтобы использовать Lua Player Plus rev163
-    проверено на толстой PSP с 5.00 M33-3
+(All further changes in this repository will not be reflected in this changelog)
+
+DISCALIMER:
+RenPSP is an independent release of lolbot from the iichan Eroge Team. RenPSP is NOT affiliated with iichan Eroge unless further specified.
+This development repository is managed by weetabix. Note that this repository does not have prior consent from the developer.
+Content used in RenPSP games may be protected by any form of licensing and may be publishing a derivative of the protected game. It is your responsibility to use the content at your own risk.
