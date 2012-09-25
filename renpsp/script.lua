@@ -171,9 +171,15 @@ function ENGINE:ExecuteScriptLine(cmd)
 			bgname = bgname..' '..cmd[i].data
 		end
         -- WEETABIX NOTE: Cache clear start
-            self.media.imgcache[*]:clear()
-            self.media.imgcache[*] = nil
-        -- WEETABIX NOTE: Cache clear end
+    	if self.media.background == nil then
+			return
+		elseif self.media.background ~= nil then
+			if CURRENT_SYSTEM == "LPE" then
+            		Image.free(self.media.background)
+			end
+            	self.media.background = 'black'
+		end
+        -- WEETABIX NOTE: Cache clear end, still needs work
 		self:Scene(bgname)
 		self:ClearChars()
 	elseif cmd[1].data == 'show' then
