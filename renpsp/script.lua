@@ -177,7 +177,8 @@ function ENGINE:ExecuteScriptLine(cmd)
 			if CURRENT_SYSTEM == "LPE" then
             		Image.free(self.media.background)
 			end
-            	self.media.background = 'black'
+            GAME_clear()
+            -- self.media.background = 'black'
 		end
         -- WEETABIX NOTE: Cache clear end, still needs work
 		self:Scene(bgname)
