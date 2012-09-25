@@ -6,7 +6,7 @@ RenPSP is free, but there are some rules of it's rebistribution:
 2. provide link to http://iichan.ru or http://iichan-eroge.blogspot.com with your release
 3. do not try to earn money using RenPSP or it's parts
 
-Note that LuaPlayer is licensed under GPL.
+Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License; Lua Player Euphoria is licensed under OSI BSD 3-Clause License (a.k.a. New BSD License)
 
 Start on Microsoft Windows:
     just run: win32_start.bat

@@ -170,6 +170,10 @@ function ENGINE:ExecuteScriptLine(cmd)
 			end
 			bgname = bgname..' '..cmd[i].data
 		end
+        -- WEETABIX NOTE: Cache clear start
+            self.media.imgcache[]:clear()
+            self.media.imgcache[] = nil
+        -- WEETABIX NOTE: Cache clear end
 		self:Scene(bgname)
 		self:ClearChars()
 	elseif cmd[1].data == 'show' then
