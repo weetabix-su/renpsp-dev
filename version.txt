@@ -1,0 +1,86 @@
+=== Version 0.3 === 
+Added support for 3 Lua Players:
+* Lua Player 0.20 for Windows
+* Lua Player Euphoria v8
+* Lua Player Plus rev163
+
+Some improvements were made:
+* Images are loaded when used, not at the start
+* Full pathes used for most of files
+* Logfile is introduced. See renpsp.log
+
+Thanks to weetabix for contribution:
+* New positions to be used with "show CHAR_ID at POSITION".
+
+Released with several mini-VNs:
+* a test game to demonstrate some features
+* "The Question" by LSF Team
+* "9 мая" by IIchan Eroge Team
+* "Ripples" by Ayu Sakata
+* "One Lazy Saturday" by Dei Akarinazo
+* "The Most Offensive Game Ever" by Dei Akarinazo
+* "Watashi wa Onigiri!" by Dei Akarinazo
+* "A Midsummer Day's Resonance" by Kagura Saitoh
+* "OMGWTFOTL" by HANPANMAN SOFT
+
+=== Version 0.2 === 
+Most of the materials are translated into english.
+Added keymap readme for windows version.
+
+Game uses Lucida Console White, but help still uses Lucida Console Black.
+
+Fixed some major bugs:
+* a bug with unstopable fast-forward.
+* a bug with wrong elseif/else behavior.
+
+Thanks to weetabix for contribution:
+* New positions to be used with "show CHAR_ID at POSITION".
+* New skin to be used with Katawa Shoujo.
+
+Released with several mini-VNs:
+* "The Question"
+* "9 мая" by IIchan Eroge Team
+* a test game to demonstrate some features
+* Katawa Shoujo alpha (script only contains up to Act 1 Monday)
+
+=== Version 0.1 === 
+Very first and unstable alpha release of RenPSP Engine.
+
+Font is monospace Lucida Console.
+Encoding is 1251.
+
+Supported commands:
+* define ... = Character( ...
+* image ... = ...
+* label ... :
+* narration / talks
+* scene ...
+* show ... at ...
+* hide ...
+* music play ...
+* sound play ...
+* music stop
+* sound stop
+* jump ...
+* return
+* # comments
+* $ ...lua-code...
+* some $renpy.*() functions
+* if ...lua-code... :
+* elif ...lua-code... :
+* else :
+* menu :
+
+Features:
+* multifile rpy load (not encoded)
+* save/load (not encoded)
+* persistent data (not encoded)
+* rollback
+* screenshots in PNG
+* selection between several games
+* PSP 5.XX, PSP 1.50 and Win32 are supported
+
+Released with several mini-VNs:
+* "The Question"
+* "9 мая" by IIchan Eroge Team
+* a test game to demonstrate some features

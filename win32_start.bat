@@ -1,0 +1,1 @@
+start for_win32\luaplayer.exe win32.lua

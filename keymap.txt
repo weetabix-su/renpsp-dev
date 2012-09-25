@@ -1,0 +1,12 @@
+Windows version of RenPSP is based on LuaPlayer 0.20.
+
+It emulates PSP's keys with keyboard this way:
+* q - L
+* w - R
+* a - Select
+* s - Start
+* r - Triangle
+* d - Square
+* f - Circle
+* c - Cross
+* Arrors - Arrows

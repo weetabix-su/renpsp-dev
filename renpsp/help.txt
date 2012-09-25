@@ -1,0 +1,103 @@
+
+Hi. I'm Lurkmore-kun.
+
+I will tell you about RenPSP engine.
+
+First of all, controls:
+
+During the game:
+  Square      — toggle displaying text
+  Cross       — go to the next dialogue line
+  L/R         - see game history
+
+At any moment:
+  Start       — toggle falling menu
+  Arrows      — change active menu item
+  Cross       — select a menu item
+  Triangle    — make a PNG screenshot
+
+At this help:
+  Arrows, L/R - change help page
+  Select      - return to the game
+
+----
+
+Windows version of RenPSP is based on LuaPlayer 0.20.
+
+It emulates PSP's keys with keyboard this way:
+
+  q - L
+  w - R
+
+  a - Select
+  s - Start
+
+  r - Triangle
+  d - Square
+  f - Circle
+  c - Cross
+
+  Arrors - Arrows
+
+----
+
+Engine was written in Lua language for LuaPlayer platform. So, it's not a full RenPy port, but it's imitation.
+
+Lua-code checks /games/ folder for loadable scripts. If two or more contains label 'start', menu is shown to select shich game to load. Engine's state can be saved to 'saves/default.sav', this file is not encrypted. Screenshot is saved to 'screenshot.png'.
+
+Engine supports simple narration, code branching with menus and conditions, character emotions change, label jumping. There is no transition effects.
+
+Code lines and conditions are supported, but they must be written in Lua, not Python as is original RenPy. Main difference for simple games is using "A~=B" instead of "A!=B".
+  
+
+----
+
+Supported RenPy semantics of:
+  define CHARACTER_ID = Character('FULL_NAME')
+  image SPRITE_ID [SPRITE_SUBID] = FILENAME
+  scene SPRITE_ID
+  show SPRITE_ID [SPRITE_SUBID] [at POSITION]
+  hide SPRITE_ID
+  label LABEL_ID:
+  jump LABEL_ID
+  play [sound|music] FILENAME
+  stop [sound|music]
+  $ LuaCode()
+  if LuaCode(): elif Lua()Code: else:
+  menu:
+  return
+
+Those lines are ignored:
+  # ... , with ... , pass
+
+Anything else is parsed to lexems, first of them is converted to sayer's name.
+
+----
+
+Set of supported images format is unknown. However, engine does not support image higher then 800õ600 for sure. Included demos use JPEG and 8-bit PNG.
+
+Monotype font Lucida Console is used for text rendering. Text is rendered character by character. Encoding used is CP-1251.
+
+All characters from english and russian keyboard layouts are supported:
+qwertyuiop[]\ asdfghjkl;' zxcvbnm,./ `
+QWERTYUIOP{}| ASDFGHJKL:" ZXCVBNM<>? ~
+éöóêåíãøùçõú\ ôûâàïðîëäæý ÿ÷ñìèòüáþ. ¸
+ÉÖÓÊÅÍÃØÙÇÕÚ/ ÔÛÂÀÏÐÎËÄÆÝ ß×ÑÌÈÒÜÁÞ, ¨
+1234567890-= !@#$%^&*()_+ !"¹;%:?*()_+
+
+There are also some additional characters for better typoghaphics: « » — ©
+
+----
+
+Engine is created by lolbot, a member of IIchan.ru Eroge Team, june 2010.
+
+You can report bugs on: lolbot_iichan@mail.ru
+
+If you want to release something using this engine, you are also welcome to write me.
+
+RenPSP is free, but there are some rules of it's rebistribution:
+1. inform lolbot_iichan@mail.ru about your actions
+2. provide link to http://iichan.ru or http://iichan-eroge.blogspot.com with your release
+3. do not try to earn money using RenPSP or it's parts
+
+Special thanks to weetabix for engine reanimation.
