@@ -170,18 +170,7 @@ function ENGINE:ExecuteScriptLine(cmd)
 			end
 			bgname = bgname..' '..cmd[i].data
 		end
-        -- WEETABIX NOTE: Cache clear start
-    		if self.media.background == nil then
-			return
-		elseif self.media.background ~= nil then
-            		GAME_print('self.media.background to clear (LPE ONLY) = '..self.media.background..)
-			if CURRENT_SYSTEM == "LPE" then
-            			freeImage(Image.self.media.background)
-			end
-            -- GAME_clear()
-            -- self.media.background = 'black'
-		end
-        -- WEETABIX NOTE: Cache clear end, still needs work
+		self:ClearScene()	-- WEETABIX NOTE: Background clearing code transferred to media.lua
 		self:Scene(bgname)
 		self:ClearChars()
 	elseif cmd[1].data == 'show' then

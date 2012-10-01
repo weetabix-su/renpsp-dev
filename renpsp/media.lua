@@ -21,6 +21,19 @@ function ENGINE:Scene(bg)
 	end
 end
 
+function ENGINE:ClearScene()
+	if self.media.images[self.state.bgname] == nil then
+		return
+	elseif self.media.images[self.state.bgname] ~= nil then
+       	GAME_print('self.media.background to clear (LPE ONLY) = '..self.media.images[self.state.bgname])
+		if CURRENT_SYSTEM == "LPE" then
+           	freeImage(self.state.bgname)
+		elseif CURRENT_SYSTEM ~= "LPE" then
+			return
+		end
+	end
+end
+
 -------------------
 --- CHARACTERS ----
 -------------------
