@@ -225,17 +225,17 @@ function ENGINE:StopMusic(ch)
 
 	if GAME_hasMP3() then
 		if type == 'mp3' then
-			Mp3.unload(ch)
 			Mp3.stop(ch)
+			Mp3.unload(ch)
 		elseif type == 'at3' then
-			At3.unload(ch)
 			At3.stop(ch)
+			At3.unload(ch)
 		elseif type == 'ogg' then
-			Ogg.unload(ch)
 			Ogg.stop(ch)
+			Ogg.unload(ch)
 		elseif type == 'wav' then
-			Wav.unload(ch)
 			Wav.stop(ch)
+			Wav.unload(ch)
 		else
 			self:ErrorState('Engine:StopMusic(ch='..tostring(ch)..'): unknown filetype')
 		end
