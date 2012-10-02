@@ -27,6 +27,7 @@ function ENGINE:ClearScene()
 	elseif self.media.images[self.state.bgname] ~= nil then
        	GAME_print('self.media.background to clear (LPE ONLY) = '..self.media.images[self.state.bgname])
 		if CURRENT_SYSTEM == "LPE" then
+            clearScreen(self.media.colors['black'])
            	freeImage(self.state.bgname)
 		elseif CURRENT_SYSTEM ~= "LPE" then
 			return
