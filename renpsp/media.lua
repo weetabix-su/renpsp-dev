@@ -224,16 +224,26 @@ function ENGINE:StopMusic(ch)
 	GAME_print('stopping '..type..' at '..ch)
 
 	if GAME_hasMP3() then
-		if type == 'mp3' then
-			Mp3.unload(ch)
-		elseif type == 'at3' then
-			At3.unload(ch)
-		elseif type == 'ogg' then
-			Ogg.unload(ch)
-		elseif type == 'wav' then
-			Wav.unload(ch)
-		else
-			self:ErrorState('Engine:StopMusic(ch='..tostring(ch)..'): unknown filetype')
+		if CURRENT_SYSTEM == "LPE" then
+			if ch == 0 then
+				blankload = RENPSP_FOLDER..'/blank.ogg'
+				Ogg.load(blankload,ch)
+				Ogg.play(true,ch)
+			elseif ch == 1 then
+				return
+			end
+		elseif CURRENT_SYSTEM ~= "LPE" then
+			if type == 'mp3' then
+				Mp3.unload(ch)
+			elseif type == 'at3' then
+				At3.unload(ch)
+			elseif type == 'ogg' then
+				Ogg.unload(ch)
+			elseif type == 'wav' then
+				Wav.unload(ch)
+			else
+				self:ErrorState('Engine:StopMusic(ch='..tostring(ch)..'): unknown filetype')
+			end
 		end
 	end
 
