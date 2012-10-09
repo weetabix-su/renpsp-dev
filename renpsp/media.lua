@@ -44,6 +44,13 @@ function ENGINE:ClearChars()
 	self.state.chars = {}
 	for who,what in pairs (self.media.imgcache) do 
 		self.media.imgcache[who].surf:clear()
+		if CURRENT_SYSTEM == "LPE" then
+			while self.media.imgcache[who].state ~= nil do 
+				charstate = self.media.imgcache[who].state
+				img = self.media.images
+				Image.free(img[who..' '..charstate])
+			end
+		end
 		self.media.imgcache[who] = nil
 	end
 
@@ -224,27 +231,31 @@ function ENGINE:StopMusic(ch)
 	GAME_print('stopping '..type..' at '..ch)
 
 	if GAME_hasMP3() then
-		if CURRENT_SYSTEM == "LPE" then
-			if ch == 0 then
-				blankload = RENPSP_FOLDER..'/blank.ogg'
-				Ogg.load(blankload,ch)
-				Ogg.play(true,ch)
-			elseif ch == 1 then
-				return
-			end
-		elseif CURRENT_SYSTEM ~= "LPE" then
+		-- if CURRENT_SYSTEM == "LPE" then
+			-- if ch == 0 then
+				-- blankload = RENPSP_FOLDER..'/blank.ogg'
+				-- Ogg.load(blankload,ch)
+				-- Ogg.play(true,ch)
+			-- elseif ch == 1 then
+				-- return
+			-- end
+		-- elseif CURRENT_SYSTEM ~= "LPE" then
 			if type == 'mp3' then
 				Mp3.unload(ch)
+				Mp3.stop(ch)
 			elseif type == 'at3' then
 				At3.unload(ch)
+				At3.stop(ch)
 			elseif type == 'ogg' then
 				Ogg.unload(ch)
+				Ogg.stop(ch)
 			elseif type == 'wav' then
 				Wav.unload(ch)
+				Wav.stop(ch)
 			else
 				self:ErrorState('Engine:StopMusic(ch='..tostring(ch)..'): unknown filetype')
 			end
-		end
+		-- end
 	end
 
 end
