@@ -44,13 +44,13 @@ function ENGINE:ClearChars()
 	self.state.chars = {}
 	for who,what in pairs (self.media.imgcache) do 
 		self.media.imgcache[who].surf:clear()
-		if CURRENT_SYSTEM == "LPE" then
-			while self.media.imgcache[who].state ~= nil do 
-				charstate = self.media.imgcache[who].state
-				img = self.media.images
-				Image.free(img[who..' '..charstate])
-			end
-		end
+		-- if CURRENT_SYSTEM == "LPE" then
+			-- while self.media.imgcache[who].state ~= nil do 
+				-- charstate = self.media.imgcache[who].state
+				-- img = self.media.images
+				-- Image.free(img[who..' '..charstate])
+			-- end
+		-- end
 		self.media.imgcache[who] = nil
 	end
 
@@ -226,6 +226,12 @@ function ENGINE:StopMusic(ch)
 		return
 	end
 
+        if self.state.music[ch].loop == false then
+                loopkill == self.state.music[ch].loop
+        elseif self.state.music[ch].loop == true then
+                loopkill == false
+        end
+
 	local type = self.state.music[ch].type
 	self.state.music[ch] = nil
 	GAME_print('stopping '..type..' at '..ch)
@@ -241,15 +247,19 @@ function ENGINE:StopMusic(ch)
 			-- end
 		-- elseif CURRENT_SYSTEM ~= "LPE" then
 			if type == 'mp3' then
+                                Mp3.play(loopkill,ch)
 				Mp3.unload(ch)
 				Mp3.stop(ch)
 			elseif type == 'at3' then
+                                At3.play(loopkill,ch)
 				At3.unload(ch)
 				At3.stop(ch)
 			elseif type == 'ogg' then
+                                Ogg.play(loopkill,ch)
 				Ogg.unload(ch)
 				Ogg.stop(ch)
 			elseif type == 'wav' then
+                                Wav.play(loopkill,ch)
 				Wav.unload(ch)
 				Wav.stop(ch)
 			else
