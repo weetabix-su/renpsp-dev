@@ -97,8 +97,11 @@ function ENGINE:ShowChar(name)
 		screen:blit(288-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == '4four' then
 		screen:blit(384-GAME_imagewidth(surf)/2, 0, surf)
-    elseif ch.position ~= nil then
+    elseif ch.position <= 1 then
         posval = ch.position * 480
+        screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
+    elseif ch.position > 1 then
+        posval = ch.position
         screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
     else
         self:ErrorState('ENGINE:ShowChar('..name..') invalid position')

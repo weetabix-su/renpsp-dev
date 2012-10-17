@@ -145,6 +145,8 @@ end
 function GAME_quit()
 	if CURRENT_SYSTEM == "LPE" then
 		System.quit()
+    elseif CURRENT_SYSTEM == "LPP" then
+        lpp.quit(0)
 	end
 end
 
