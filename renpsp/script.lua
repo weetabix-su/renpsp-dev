@@ -178,12 +178,20 @@ function ENGINE:ExecuteScriptLine(cmd)
 		local how = 'default'
 		local pos = 'center'
 		if  table.maxn(cmd)>2 and cmd[3].data == 'at' then
-			pos = cmd[4].data
+			if cmd[4].data == 'Transform(xpos=' then
+                pos = cmd[5].data
+            else
+                pos = cmd[4].data
+            end
 		elseif table.maxn(cmd)>2 then
 			how = cmd[3].data
 			for i=4,table.maxn(cmd) do
 				if cmd[i].data == 'at' then
-					pos = cmd[i+1].data
+					if cmd[i+1].data == 'Transform(xpos=' then
+                        pos = cmd[i+2].data
+                    else
+                        pos = cmd[i+1].data
+                    end
 					break
 				end
 				how = how..' '..cmd[i].data
