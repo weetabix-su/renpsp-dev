@@ -235,9 +235,9 @@ function ENGINE:StopMusic(ch)
 	end
 
         if self.state.music[ch].loop == false then
-                loopkill == self.state.music[ch].loop
+                loopkill = self.state.music[ch].loop
         elseif self.state.music[ch].loop == true then
-                loopkill == false
+                loopkill = false
         end
 
 	local type = self.state.music[ch].type
