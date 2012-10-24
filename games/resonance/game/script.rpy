@@ -1706,85 +1706,42 @@ label off:
 	"This summer, I..."
 	"...took one more step away from being a child."
 scene weet end
-#        Afterword
-#
-#
-#
-#All the themes seemed to come together all
-#at once, and thus did production on this
-#work begin.
-#
-#Summer.
-#
-#Youth.
-#
-#Adolescent girls.
-#
-#Lesbian yearnings.
-#
-#An unattainable first love.
-#
-#A wondrous correspondence.
-#
-#All these themes -- each one a special
-#favorite ingredient of this chef -- were
-#mixed together in a shiny new bowl
-#called "online distribution", and then
-#before I knew it the fires of creativity
-#were burning bright.
-#
-#Since I had all my favorite ingredients
-#lined up before me like that, I couldn't
-#exactly stop myself, or so it seems.
-#
-#I was between jobs at the time, and so
-#after three weeks of intense preparation,
-#I am proud to present this story as a
-#finished dish -- plated and ready to be
-#judged -- to all of you.
-#
-#But as a matter of fact, I think the
-#person who tasted this dish most
-#profoundly was none other but me. I
-#keep feeling that I want to create
-#something more.
-#
-#Well, certainly, the act of taking the
-#world that exists within you and
-#printing it out for all to see can be
-#very embarrassing, and right now I don't
-#write nearly as well as I'd like to,
-#so I ended up with something that fell
-#well, well short of what I'd originally
-#imagined, but the joy of creating
-#something and nurturing it from
-#conception to birth cannot be stayed.
-#Furthermore, I am struck by the fact
-#that there are so many different paths,
-#so many different ways to create things.
-#
-#For instance, when you've given it your
-#all, and expressed yourself to your
-#limits without once involving money or
-#payment or anything like that ... you
-#stand satisfied, ready for any judgment,
-#because you know you've done what you must.
-#
-#So let's meet each other again on
-#different pages someday.
-#
-#I don't know if I'll be able to write a
-#story that is all that different from
-#the one I've presented here, but I do
-#know that whatever it is, I'll write it
-#the way I please. And that will not
-#change, no matter what.
-#
-#Thank you all for nurturing my
-#ever-so-clumsy, ever-so-childish efforts.
-#
-#
-#
-#1 July 2002
-#Kagura Saitoh
+$GAME_print('        Afterword')
+$GAME_print('')
+$GAME_print('')
+$GAME_print('All the themes seemed to come together all at once, and thus did production on this work begin.')
+$GAME_print('')
+$GAME_print('Summer.')
+$GAME_print('')
+$GAME_print('Youth.')
+$GAME_print('')
+$GAME_print('Adolescent girls.')
+$GAME_print('')
+$GAME_print('Lesbian yearnings.')
+$GAME_print('')
+$GAME_print('An unattainable first love.')
+$GAME_print('')
+$GAME_print('A wondrous correspondence.')
+$GAME_print('')
+$GAME_print('All these themes -- each one a special favorite ingredient of this chef -- were mixed together in a shiny new bowl called "online distribution", and then before I knew it the fires of creativity were burning bright.')
+$GAME_print('')
+$GAME_print('Since I had all my favorite ingredients lined up before me like that, I couldn't exactly stop myself, or so it seems.
+$GAME_print('')
+$GAME_print('I was between jobs at the time, and so after three weeks of intense preparation, I am proud to present this story as a finished dish -- plated and ready to be judged -- to all of you.')
+$GAME_print('')
+$GAME_print('But as a matter of fact, I think the person who tasted this dish most profoundly was none other but me. I keep feeling that I want to create something more.')
+$GAME_print('')
+$GAME_print('Well, certainly, the act of taking the world that exists within you and printing it out for all to see can be very embarrassing, and right now I don't write nearly as well as I'd like to, so I ended up with something that fell well, well short of what I'd originally imagined, but the joy of creating something and nurturing it from conception to birth cannot be stayed. Furthermore, I am struck by the fact that there are so many different paths, so many different ways to create things.')
+$GAME_print('')
+$GAME_print('For instance, when you've given it your all, and expressed yourself to your limits without once involving money or payment or anything like that ... you stand satisfied, ready for any judgment, because you know you've done what you must.')
+$GAME_print('')
+$GAME_print('So let's meet each other again on different pages someday.')
+$GAME_print('')
+$GAME_print('I don't know if I'll be able to write a story that is all that different from the one I've presented here, but I do know that whatever it is, I'll write it the way I please. And that will not change, no matter what.')
+$GAME_print('')
+$GAME_print('Thank you all for nurturing my ever-so-clumsy, ever-so-childish efforts.')
+$GAME_print('')
+$GAME_print('')
+$GAME_print('1 July 2002')
+$GAME_print('Kagura Saitoh')
 $renpy.quit()
