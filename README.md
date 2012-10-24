@@ -4,9 +4,9 @@ RenPSP is a Lua Player clone of the Ren'Py Visual Novel Engine for the PlayStati
 This repository will serve as a developmental testbed for edited as well as new features of the RenPSP 0.3 release onwards. It will also contain select developmental visual novels, if possible.
 
 RenPSP is free, but there are some rules of it's rebistribution:
-1. inform lolbot_iichan@mail.ru about your actions
-2. provide link to http://iichan.ru or http://iichan-eroge.blogspot.com with your release
-3. do not try to earn money using RenPSP or it's parts
+* inform lolbot_iichan@mail.ru or kraftwerk.renpsp@gmail.com about your actions
+* provide link to http://iichan.ru or http://iichan-eroge.blogspot.com with your release
+* do not try to earn money using RenPSP or it's parts
 
 Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License; Lua Player Euphoria is licensed under OSI BSD 3-Clause License (a.k.a. New BSD License)
 
