@@ -5,7 +5,7 @@ This repository will serve as a developmental testbed for edited as well as new 
 
 RenPSP is free, but there are some rules of it's rebistribution:
 * inform lolbot_iichan@mail.ru or kraftwerk.renpsp@gmail.com about your actions
-* provide link to http://iichan.ru or http://iichan-eroge.blogspot.com with your release
+* provide link to http://iichan.hk or http://iichan-eroge.blogspot.com with your release
 * do not try to earn money using RenPSP or it's parts
 
 Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License; Lua Player Euphoria is licensed under OSI BSD 3-Clause License (a.k.a. New BSD License)
@@ -17,10 +17,10 @@ Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License
 	LuaPlayer 0.20 exists on PSP 1.50 too
     
 # Start on cracked PSP as homebrew:
-    put everything in ms0:/PSP/GAME5xx/
+    put everything in ms0:/PSP/GAME/
     rename EBOOT_LPE.PBP to EBOOT.PBP to use Lua Player Euphoria v8
     rename EBOOT_LPP.PBP to EBOOT.PBP to use Lua Player Plus rev163
-    tested at PSP FAT with 5.00 M33-3
+    tested at PSP FAT with 5.00 M33-3 and 6.60 ME
 
 ## FEATURES:
 + Support for .rpy scripts, image formats (JPEG, PNG, BMP), audio formats (WAV, MP3, OGG Vorbis, Atrac3)
@@ -45,7 +45,7 @@ Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License
 # 0.1
 + Initial Release
 
-(All further changes in this repository will not be reflected in this changelog)
+(All further changes in this repository may not be reflected in this changelog)
 
 ## DISCLAIMER:
 RenPSP is an independent release of lolbot from the iichan Eroge Team. RenPSP is NOT affiliated with iichan Eroge unless further specified.
