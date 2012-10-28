@@ -97,12 +97,12 @@ function ENGINE:ShowChar(name)
 		screen:blit(288-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == '4four' then
 		screen:blit(384-GAME_imagewidth(surf)/2, 0, surf)
-    elseif ch.position <= 1 then
-        posval = ch.position * 480
-        screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
-    elseif ch.position > 1 then
-        posval = ch.position
-        screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
+    --elseif ch.position <= 1 then
+        --posval = ch.position * 480
+        --screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
+    --elseif ch.position > 1 then
+        --posval = ch.position
+        --screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
     else
         self:ErrorState('ENGINE:ShowChar('..name..') invalid position')
 	end
@@ -234,11 +234,11 @@ function ENGINE:StopMusic(ch)
 		return
 	end
 
-        if self.state.music[ch].loop == false then
-                loopkill = self.state.music[ch].loop
-        elseif self.state.music[ch].loop == true then
-                loopkill = false
-        end
+    if self.state.music[ch].loop == false then
+            loopkill = self.state.music[ch].loop
+    elseif self.state.music[ch].loop == true then
+            loopkill = false
+    end
 
 	local type = self.state.music[ch].type
 	self.state.music[ch] = nil
@@ -255,19 +255,19 @@ function ENGINE:StopMusic(ch)
 			-- end
 		-- elseif CURRENT_SYSTEM ~= "LPE" then
 			if type == 'mp3' then
-                Mp3.play(loopkill,ch)
+                --Mp3.play(loopkill,ch)
 				Mp3.unload(ch)
 				Mp3.stop(ch)
 			elseif type == 'at3' then
-                At3.play(loopkill,ch)
+                --At3.play(loopkill,ch)
 				At3.unload(ch)
 				At3.stop(ch)
 			elseif type == 'ogg' then
-                Ogg.play(loopkill,ch)
+                --Ogg.play(loopkill,ch)
 				Ogg.unload(ch)
 				Ogg.stop(ch)
 			elseif type == 'wav' then
-                Wav.play(loopkill,ch)
+                --Wav.play(loopkill,ch)
 				Wav.unload(ch)
 				Wav.stop(ch)
 			else
