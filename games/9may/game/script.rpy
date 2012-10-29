@@ -23,7 +23,7 @@ label start:
     scene cg 9may
     $renpy.pause(2)
     
-    play music "music/RedOctober.mp3"
+    play music "music/RedOctober.ogg"
 
     scene bg square with fade
 
