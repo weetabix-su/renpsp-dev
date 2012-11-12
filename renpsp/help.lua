@@ -34,8 +34,15 @@ function ENGINE:ReadFile(fname)
 	return lines
 end
 
-function ENGINE:Help()
-	help = self:ReadFile(self.homepath .. "/help.txt")
+HELPFILE = nil
+
+function ENGINE:Help(helptxt)
+	if helptxt ~= nil then
+		help = self:ReadFile(helptxt)
+	elseif helptxt == nil then
+		help = self:ReadFile(self.homepath .. "/help.txt")
+	end
+	
 	pages = {}
 	pagemax = 1
 	tmp = {}

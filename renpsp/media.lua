@@ -108,10 +108,6 @@ function ENGINE:ShowChar(name)
 	end
 end
 
-
---help
-ENGINE.media.images['lurk default'] = WGPATH.."lurkmoar.png"
-
 -------------------
 ----- COLORS ------
 -------------------
@@ -154,12 +150,69 @@ falling_menu[4] = LdWg("conf","button_settings.png")
 falling_menu[5] = LdWg("skip","button_skip.png")
 falling_menu[6] = LdWg("exit","button_exit.png")
 
+--help
+ENGINE.media.images['lurk default'] = WGPATH.."lurkmoar.png"
+
 -------------------
 -- GAME WIDGETS ---
 -------------------
 
 ENGINE.media.text_frame = Image.load(WGPATH.."frame.png")
 ENGINE.media.answer_frame = Image.load(WGPATH.."answer.png")
+
+-------------------
+-- SKIN RELOAD ----
+-------------------
+
+function LdWgNew(path,c,f)
+	switch = path
+	return {
+		comment = c,
+		image = Image.load(switch.."/"..f),
+	}
+end
+
+function ENGINE:SkinReload(skinpath)
+	GAME_print('UNLOADING FALLING MENU DATA AND GAME WIDGETS (LPE ONLY)')
+	GAME_print('Reloading from path: '..skinpath)
+	if CURRENT_SYSTEM == LPE then
+		unload.text = ENGINE.media.text_frame
+		unload.answer = ENGINE.media.answer_frame
+		unload.bframe = falling_menu_bframe
+		unload.help = falling_menu[1].image
+		unload.load = falling_menu[2].image
+		unload.save = falling_menu[3].image
+		unload.conf = falling_menu[4].image
+		unload.skip = falling_menu[5].image
+		unload.exit = falling_menu[6].image
+		Image.free(unload.text)
+		Image.free(unload.answer)
+		Image.free(unload.bframe)
+		Image.free(unload.help)
+		Image.free(unload.load)
+		Image.free(unload.save)
+		Image.free(unload.conf)
+		Image.free(unload.skip)
+		Image.free(unload.exit)
+	end
+	TEXT.fonts['custom'] =  {
+		img = skinpath.."/customfont.png",
+		fontDx = 7,
+		fontDy = 11
+	}
+	ENGINE.media.text_frame = Image.load(skinpath.."/frame.png")
+	ENGINE.media.answer_frame = Image.load(skinpath.."/answer.png")
+	ENGINE.media.images['lurk default'] = skinpath.."/lurkmoar.png"
+	falling_menu_bframe = Image.load(skinpath.."/button_frame.png")
+	falling_menu[1] = LdWgNew(skinpath,"help","button_help.png")
+	falling_menu[2] = LdWgNew(skinpath,"load","button_load.png")
+	falling_menu[3] = LdWgNew(skinpath,"save","button_save.png")
+	falling_menu[4] = LdWgNew(skinpath,"conf","button_settings.png")
+	falling_menu[5] = LdWgNew(skinpath,"skip","button_skip.png")
+	falling_menu[6] = LdWgNew(skinpath,"exit","button_exit.png")
+	TEXT:UseFont('custom')
+	HELPFILE = skinpath.."/help.txt"
+end
 
 -------------------
 --SOUND AND MUSIC--

@@ -500,6 +500,12 @@ function ENGINE:SelectGame(path)
 	GAME_curdir(self.state.menu.jmp[self.state.menu.active])
 	ENGINE.curgamepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/game'
 	ENGINE.cursavepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/saves'
+	ENGINE.curskinpath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/skin'
 	GAME_print('ENGINE.curgamepath = '..ENGINE.curgamepath)
-	ENGINE.state.menu = {a={},jmp={},active=1}	
+	ENGINE.state.menu = {a={},jmp={},active=1}
+	if System.listDirectory(ENGINE.curskinpath).directory == true then
+		self:SkinReload(ENGINE.curskinpath)
+	elseif ENGINE.curskinpath == nil then
+		return
+	end
 end

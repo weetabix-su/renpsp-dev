@@ -68,5 +68,27 @@ function RenpyClass(renpy)
 	function renpy.print(l)
 		GAME_print(tostring(l))
 	end
+	
+	function renpy.input(desc,def)
+		if CURRENT_SYSTEM == LPE then
+			ans, res = System.osk(desc,def)
+			if (res==System.OSK_RESULT_UNCHANGED) then
+				return def
+			elseif (res==System.OSK_RESULT_CANCELLED) then
+				return def
+			elseif (res==System.OSK_RESULT_CHANGED) then
+				return ans
+			end
+		elseif CURRENT_SYSTEM == LPP then
+			System.oskInit(desc,def)
+			res, ans = System.oskUpdate()
+			if res == true then
+				return ans
+			elseif res == false then
+				return def
+			end
+		else
+			return def
+		end
+	end
 end
-
