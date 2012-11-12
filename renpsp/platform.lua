@@ -77,11 +77,19 @@ function GAME_curdir(dir)
 	end
 end
 
-function GAME_listdir()
+function GAME_listdir(d)
 	if CURRENT_SYSTEM == "LPP" then
-		return System.listDir()
+		if d ~= nil then
+			return System.listDir(d)
+		else
+			return System.listDir()
+		end
 	else
-		return System.listDirectory()
+		if d ~= nil then
+			return System.listDirectory(d)
+		else
+			return System.listDirectory()
+		end
 	end
 end
 
@@ -155,4 +163,15 @@ function GAME_print(text)
 	tmpFile:write(text..'\n') 
 	tmpFile:close()
 	print(text)
+end
+
+function GAME_chkDir(x)
+	local num = 0
+	if GAME_listdir(x) == nil then
+		return num > 0
+	end
+	for idx,item in pairs(GAME_listdir(x)) do
+		num = num+1
+	end
+	return num > 0
 end
