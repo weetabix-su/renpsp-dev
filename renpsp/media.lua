@@ -103,8 +103,8 @@ function ENGINE:ShowChar(name)
     --elseif ch.position > 1 then
         --posval = ch.position
         --screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
-    else
-        self:ErrorState('ENGINE:ShowChar('..name..') invalid position')
+    --else
+        --self:ErrorState('ENGINE:ShowChar('..name..') invalid position')
 	end
 end
 
