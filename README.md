@@ -18,7 +18,7 @@ Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License
     
 # Start on cracked PSP as homebrew:
     put everything in ms0:/PSP/GAME/
-    rename EBOOT_LPE.PBP to EBOOT.PBP to use Lua Player Euphoria v8
+    Lua Player Euphoria v8 is the default Lua Player EBOOT.PBP
     rename EBOOT_LPP.PBP to EBOOT.PBP to use Lua Player Plus rev163
     tested at PSP FAT with 5.00 M33-3 and 6.60 ME
 
