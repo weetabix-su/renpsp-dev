@@ -83,7 +83,11 @@ function ENGINE:CtrlGame(pad, oldpad)
 		screen:save("screenshot.png")
 	elseif pad:cross() and not oldpad:cross() and not self.state.is_error then
 		self.state.hide_text = false
-		self.script.continue = true
+		if CURRENT_SYSTEM == "LPE" then
+			ENGINE:Timer(100)
+		else
+			self.script.continue = true
+		end
 	elseif pad:l() and not oldpad:l() then
 		self:PrevState()
 	elseif pad:r() and not oldpad:r() and not self.state.is_error then
