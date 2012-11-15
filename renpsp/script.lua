@@ -497,5 +497,8 @@ function ENGINE:SelectGame(path)
 	ENGINE.curgamepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/game'
 	ENGINE.cursavepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/saves'
 	GAME_print('ENGINE.curgamepath = '..ENGINE.curgamepath)
-	ENGINE.state.menu = {a={},jmp={},active=1}	
+	ENGINE.state.menu = {a={},jmp={},active=1}
+	if GAME_chkDir(ENGINE.curskinpath) == true then
+		self:SkinReload(ENGINE.curskinpath)
+	end
 end
