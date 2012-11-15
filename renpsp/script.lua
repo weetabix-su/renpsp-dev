@@ -195,7 +195,7 @@ function ENGINE:ExecuteScriptLine(cmd)
 		self.state.chars[who] = nil
         if  self.media.imgcache[who] then
 			self.media.imgcache[who].surf:clear()
-			if CURRENT_SYSTEM == LPE then
+			if CURRENT_SYSTEM == "LPE" then
 				prevsurf = self.media.imgcache[who].surf
 				Image.free(prevsurf)
 			end
@@ -496,6 +496,7 @@ function ENGINE:SelectGame(path)
 	GAME_curdir(self.state.menu.jmp[self.state.menu.active])
 	ENGINE.curgamepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/game'
 	ENGINE.cursavepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/saves'
+	ENGINE.curskinpath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/skin'
 	GAME_print('ENGINE.curgamepath = '..ENGINE.curgamepath)
 	ENGINE.state.menu = {a={},jmp={},active=1}
 	if GAME_chkDir(ENGINE.curskinpath) == true then

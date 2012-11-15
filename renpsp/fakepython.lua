@@ -70,7 +70,7 @@ function RenpyClass(renpy)
 	end
 	
 	function renpy.input(desc,def)
-		if CURRENT_SYSTEM == LPE then
+		if CURRENT_SYSTEM == "LPE" then
 			ans, res = System.osk(desc,def)
 			if (res==System.OSK_RESULT_UNCHANGED) then
 				return def
@@ -79,7 +79,7 @@ function RenpyClass(renpy)
 			elseif (res==System.OSK_RESULT_CHANGED) then
 				return ans
 			end
-		elseif CURRENT_SYSTEM == LPP then
+		elseif CURRENT_SYSTEM == "LPP" then
 			System.oskInit(desc,def)
 			res, ans = System.oskUpdate()
 			if res == true then

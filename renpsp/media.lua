@@ -44,7 +44,7 @@ function ENGINE:ClearChars()
 	self.state.chars = {}
 	for who,what in pairs (self.media.imgcache) do 
 		self.media.imgcache[who].surf:clear()
-		if CURRENT_SYSTEM == LPE then
+		if CURRENT_SYSTEM == "LPE" then
 			prevsurf = self.media.imgcache[who].surf
 			Image.free(prevsurf)
 		end
@@ -65,7 +65,7 @@ function ENGINE:ShowChar(name)
 
 	if  self.media.imgcache[name] == nil or self.media.imgcache[name].state ~= ch.state then
 		-- GAME_print('Clearing '..self.media.imgcache[name].state..' (LPE ONLY)')
-		if CURRENT_SYSTEM == LPE and self.media.imgcache[name].state ~= ch.state and self.media.imgcache[name].surf ~= nil then
+		if CURRENT_SYSTEM == "LPE" and self.media.imgcache[name].state ~= ch.state and self.media.imgcache[name].surf ~= nil then
 			prevsurf = self.media.imgcache[name].surf
 			Image.free(prevsurf)
 		end
@@ -177,7 +177,7 @@ end
 function ENGINE:SkinReload(skinpath)
 	GAME_print('UNLOADING FALLING MENU DATA AND GAME WIDGETS (LPE ONLY)')
 	GAME_print('Reloading from path: '..skinpath)
-	if CURRENT_SYSTEM == LPE then
+	if CURRENT_SYSTEM == "LPE" then
 		unload.text = ENGINE.media.text_frame
 		unload.answer = ENGINE.media.answer_frame
 		unload.bframe = falling_menu_bframe
