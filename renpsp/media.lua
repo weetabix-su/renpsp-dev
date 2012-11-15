@@ -64,10 +64,12 @@ function ENGINE:ShowChar(name)
 	end
 
 	if  self.media.imgcache[name] == nil or self.media.imgcache[name].state ~= ch.state then
-		-- GAME_print('Clearing '..self.media.imgcache[name].state..' (LPE ONLY)')
-		if CURRENT_SYSTEM == "LPE" and self.media.imgcache[name].state ~= ch.state and self.media.imgcache[name].surf ~= nil then
-			prevsurf = self.media.imgcache[name].surf
-			Image.free(prevsurf)
+		if ((self.media.imgcache[name] ~= nil) and (self.media.imgcache[name].state ~= nil)) then
+		GAME_print('Clearing '..self.media.imgcache[name].state..' (LPE ONLY)')
+			if ((CURRENT_SYSTEM == "LPE") and (self.media.imgcache[name].surf ~= nil)) then
+				prevsurf = self.media.imgcache[name].surf
+				Image.free(prevsurf)
+			end
 		end
 		GAME_print('loading character '..name..' from '..img[name..' '..ch.state])
 		loadedsurf = Image.load(img[name..' '..ch.state])
