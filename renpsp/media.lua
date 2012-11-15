@@ -44,13 +44,10 @@ function ENGINE:ClearChars()
 	self.state.chars = {}
 	for who,what in pairs (self.media.imgcache) do 
 		self.media.imgcache[who].surf:clear()
-		-- if CURRENT_SYSTEM == "LPE" then
-			-- while self.media.imgcache[who].state ~= nil do 
-				-- charstate = self.media.imgcache[who].state
-				-- img = self.media.images
-				-- Image.free(img[who..' '..charstate])
-			-- end
-		-- end
+		if CURRENT_SYSTEM == LPE then
+			prevsurf = self.media.imgcache[who].surf
+			Image.free(prevsurf)
+		end
 		self.media.imgcache[who] = nil
 	end
 
@@ -67,8 +64,8 @@ function ENGINE:ShowChar(name)
 	end
 
 	if  self.media.imgcache[name] == nil or self.media.imgcache[name].state ~= ch.state then
-		GAME_print('Clearing '..self.media.imgcache[name].state..' (LPE ONLY)')
-		if CURRENT_SYSTEM == LPE and self.media.imgcache[name].state ~= ch.state then
+		-- GAME_print('Clearing '..self.media.imgcache[name].state..' (LPE ONLY)')
+		if CURRENT_SYSTEM == LPE and self.media.imgcache[name].state ~= ch.state and self.media.imgcache[name].surf ~= nil then
 			prevsurf = self.media.imgcache[name].surf
 			Image.free(prevsurf)
 		end

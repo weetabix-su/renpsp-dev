@@ -178,20 +178,12 @@ function ENGINE:ExecuteScriptLine(cmd)
 		local how = 'default'
 		local pos = 'center'
 		if  table.maxn(cmd)>2 and cmd[3].data == 'at' then
-			if cmd[4].data == 'Transform(xpos=' then
-                pos = cmd[5].data
-            else
-                pos = cmd[4].data
-            end
+			pos = cmd[4].data
 		elseif table.maxn(cmd)>2 then
 			how = cmd[3].data
 			for i=4,table.maxn(cmd) do
 				if cmd[i].data == 'at' then
-					if cmd[i+1].data == 'Transform(xpos=' then
-                        pos = cmd[i+2].data
-                    else
-                        pos = cmd[i+1].data
-                    end
+					pos = cmd[i+1].data
 					break
 				end
 				how = how..' '..cmd[i].data
@@ -203,6 +195,10 @@ function ENGINE:ExecuteScriptLine(cmd)
 		self.state.chars[who] = nil
         if  self.media.imgcache[who] then
 			self.media.imgcache[who].surf:clear()
+			if CURRENT_SYSTEM == LPE then
+				prevsurf = self.media.imgcache[who].surf
+				Image.free(prevsurf)
+			end
 			self.media.imgcache[who] = nil
 		end
 	elseif cmd[1].data == 'with' then
@@ -500,10 +496,6 @@ function ENGINE:SelectGame(path)
 	GAME_curdir(self.state.menu.jmp[self.state.menu.active])
 	ENGINE.curgamepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/game'
 	ENGINE.cursavepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/saves'
-	ENGINE.curskinpath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/skin'
 	GAME_print('ENGINE.curgamepath = '..ENGINE.curgamepath)
-	ENGINE.state.menu = {a={},jmp={},active=1}
-	if GAME_chkDir(ENGINE.curskinpath) == true then
-		self:SkinReload(ENGINE.curskinpath)
-	end
+	ENGINE.state.menu = {a={},jmp={},active=1}	
 end
