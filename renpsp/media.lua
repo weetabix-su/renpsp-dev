@@ -24,7 +24,7 @@ end
 function ENGINE:ClearScene()
 	if self.media.images[self.state.bgname] == nil then
 		return
-	elseif self.media.images[self.state.bgname] ~= nil then
+	elseif ((self.media.images[self.state.bgname] ~= nil) and (self.media.images[self.state.bgname] == self.media.background)) then
        	GAME_print('self.media.background to clear (LPE ONLY) = '..self.media.images[self.state.bgname])
 		if CURRENT_SYSTEM == "LPE" then
             self.media.prevbg = self.media.background
@@ -101,14 +101,6 @@ function ENGINE:ShowChar(name)
 		screen:blit(288-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == '4four' then
 		screen:blit(384-GAME_imagewidth(surf)/2, 0, surf)
-    --elseif ch.position <= 1 then
-        --posval = ch.position * 480
-        --screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
-    --elseif ch.position > 1 then
-        --posval = ch.position
-        --screen:blit(posval-GAME_imagewidth(surf)/2, 0, surf)
-    --else
-        --self:ErrorState('ENGINE:ShowChar('..name..') invalid position')
 	end
 end
 
@@ -177,27 +169,27 @@ function LdWgNew(path,c,f)
 end
 
 function ENGINE:SkinReload(skinpath)
-	GAME_print('UNLOADING FALLING MENU DATA AND GAME WIDGETS (LPE ONLY)')
+	GAME_print('freeupNG FALLING MENU DATA AND GAME WIDGETS (LPE ONLY)')
 	GAME_print('Reloading from path: '..skinpath)
 	if CURRENT_SYSTEM == "LPE" then
-		unload.text = ENGINE.media.text_frame
-		unload.answer = ENGINE.media.answer_frame
-		unload.bframe = falling_menu_bframe
-		unload.help = falling_menu[1].image
-		unload.load = falling_menu[2].image
-		unload.save = falling_menu[3].image
-		unload.conf = falling_menu[4].image
-		unload.skip = falling_menu[5].image
-		unload.exit = falling_menu[6].image
-		Image.free(unload.text)
-		Image.free(unload.answer)
-		Image.free(unload.bframe)
-		Image.free(unload.help)
-		Image.free(unload.load)
-		Image.free(unload.save)
-		Image.free(unload.conf)
-		Image.free(unload.skip)
-		Image.free(unload.exit)
+		freeuptext = ENGINE.media.text_frame
+		freeupanswer = ENGINE.media.answer_frame
+		freeupbframe = falling_menu_bframe
+		freeuphelp = falling_menu[1].image
+		freeupload = falling_menu[2].image
+		freeupsave = falling_menu[3].image
+		freeupconf = falling_menu[4].image
+		freeupskip = falling_menu[5].image
+		freeupexit = falling_menu[6].image
+		Image.free(freeuptext)
+		Image.free(freeupanswer)
+		Image.free(freeupbframe)
+		Image.free(freeuphelp)
+		Image.free(freeupload)
+		Image.free(freeupsave)
+		Image.free(freeupconf)
+		Image.free(freeupskip)
+		Image.free(freeupexit)
 	end
 	TEXT.fonts['custom'] =  {
 		img = skinpath.."/customfont.png",
@@ -302,35 +294,21 @@ function ENGINE:StopMusic(ch)
 	GAME_print('stopping '..type..' at '..ch)
 
 	if GAME_hasMP3() then
-		-- if CURRENT_SYSTEM == "LPE" then
-			-- if ch == 0 then
-				-- blankload = RENPSP_FOLDER..'/blank.ogg'
-				-- Ogg.load(blankload,ch)
-				-- Ogg.play(true,ch)
-			-- elseif ch == 1 then
-				-- return
-			-- end
-		-- elseif CURRENT_SYSTEM ~= "LPE" then
 			if type == 'mp3' then
-                --Mp3.play(loopkill,ch)
 				Mp3.unload(ch)
 				Mp3.stop(ch)
 			elseif type == 'at3' then
-                --At3.play(loopkill,ch)
 				At3.unload(ch)
 				At3.stop(ch)
 			elseif type == 'ogg' then
-                --Ogg.play(loopkill,ch)
 				Ogg.unload(ch)
 				Ogg.stop(ch)
 			elseif type == 'wav' then
-                --Wav.play(loopkill,ch)
 				Wav.unload(ch)
 				Wav.stop(ch)
 			else
 				self:ErrorState('Engine:StopMusic(ch='..tostring(ch)..'): unknown filetype')
 			end
-		-- end
 	end
 
 end
