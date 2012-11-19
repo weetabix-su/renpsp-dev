@@ -12,7 +12,7 @@ init:
 
 
 label never:
-    "Непоказанный текст"
+    "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ"
 
 label start:
     scene black
@@ -26,13 +26,13 @@ label start:
             $ renpy.print(persistent.x)
             "after"
             jump start
-        "Описание возможностей":
+        "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ":
             menu:
-                "Структура сценария":
+                "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ":
                     jump scen
-                "Фоны и персонажи":
+                "пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ":
                     jump bgch
-                "Встроенные функции":
+                "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ":
                     jump func
         "Menu, if, else test":
             jump ifelsetest
@@ -40,13 +40,13 @@ label start:
             jump errortesting
 
 label scen:
-    "В данный момент подгружаются все *.rpy файлы из каталога /game/ игры. Каждый файл содержит код, совместимый с обычным RenPy (http://renpy.org)."
+    "пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ *.rpy пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ /game/ пїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ RenPy (http://renpy.org)."
     jump start
 
 label bgch:
-    "scene - команда смены фона и удаления всех персонажей с экрана"
+    "scene - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"
     scene red
-    "Есть возможность использовать цвета как фон:\n\n    scene red"
+    "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ:\n\n    scene red"
     scene green
     $renpy.pause(0.5)
     scene blue
@@ -56,44 +56,44 @@ label bgch:
     scene gray
     $renpy.pause(0.5)
     scene white
-    "Пока что только предопределенные цвета в файле media.lua"
+    "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ media.lua"
     scene black
-    "Другой вариант - изображение в качестве фона"
-    "Сначала нужно выполнить команду image, связывающую имя изображения (\"cg rowrow\") с именем файла (\"ext_musclub_day.jpg\"):\n\n    image bg ext musclub day = \"ext_musclub_day.jpg\""
+    "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ"
+    "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ image, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (\"cg rowrow\") пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (\"ext_musclub_day.jpg\"):\n\n    image bg ext musclub day = \"ext_musclub_day.jpg\""
     scene bg ext musclub day
-    "Затем мы можем указать имя изображения как параметр для scene:\n\n    scene cg rowrow"
-    "Персонажи объявляются той же коммандой image:\n\n    image cccp happy = \"cccp_smile1.png\""
+    "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ scene:\n\n    scene cg rowrow"
+    "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ image:\n\n    image cccp happy = \"cccp_smile1.png\""
     show cccp happy
-    "Команда show выводит персонажа:\n\n    show cccp happy"
+    "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ show пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    show cccp happy"
     show cccp happy at right
-    "Можно указать позицию:\n\n    show cccp happy at right"
+    "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    show cccp happy at right"
     show slavya happy at left
-    "Можно указать позицию:\n\n    show slavya happy at left"
+    "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    show slavya happy at left"
     hide slavya
-    "Можно скрывать персонажей:\n\n    hide slavya"
+    "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    hide slavya"
     show cccp sad at center
-    "Можно двигать персонажей и менять эмоции:\n\n    show cccp sad at center"
-    "Пока что это все"
+    "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    show cccp sad at center"
+    "пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ"
     jump start
 
 label func:
-    "Функция задержки:\n\n    $renpy.pause(sec), где sec - время задержки"
+    "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    $renpy.pause(sec), пїЅпїЅпїЅ sec - пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
     scene black
     $ renpy.pause(3)
     scene blue
     $ renpy.pause(3)
     scene black
-    "Вот как этот работает"
-    "Блокировка перемотки обратно:\n\n    $block_rollback()"
+    "пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+    "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    $block_rollback()"
     $ renpy.block_rollback()
-    "Попробуйте перемотать обратно - не получится"
-    "Для остановки игры можно использовать:\n\n    $renpy.quit()"
+    "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
+    "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    $renpy.quit()"
     menu:
-        "Не выходить":
+        "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ":
             pass
-        "Выйти":
+        "пїЅпїЅпїЅпїЅпїЅ":
             $ renpy.quit()
-    "Для перехода по меткам:\n\n    $renpy.jump(lbl) - перейти к метке lbl\n    $renpy.has_label(lbl) - проверить существование метки lbl"
+    "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:\n\n    $renpy.jump(lbl) - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ lbl\n    $renpy.has_label(lbl) - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ lbl"
     $ sample = 'exist'
     if renpy.has_label(sample) and not renpy.has_label('afkjsdfkljawddf'):
         $ renpy.jump(sample)
@@ -101,5 +101,38 @@ label func:
         "FAIL"
 
 label exist:
-    "Эта метка существует"
+    "пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
     jump start
+
+#WEETABIX NOTE: FORBIDDEN SEGMENT STARTS HERE, UNTIL WE GET THE OSK FIXED
+label osk:
+    "weetabix segment:" "On-Screen Keyboard"
+    if CURRENT_SYSTEM == "LPE":
+        "Detected Lua Player:" "Lua Player Euphoria"
+        jump oskcont
+    elif CURRENT_SYSTEM == "LPP":
+        "Detected Lua Player:" "Lua Player Plus"
+        jump oskcont
+    elif CURRENT_SYSTEM == "WIN":
+        "Detected Lua Player:" "Lua Player 0.20 (Windows/PSP)"
+        jump oskcont
+
+label oskcont:
+    "If you want to use the on-screen keyboard, use the following function:" "renpy.input(desc,def)" "" "(Where 'desc' is the input description and 'def' is the default answer)"
+    "Usage:\n\n$ varosk = renpy.input('Test keyboard','DEFAULT OUTPUT')" "(Where the variable 'varosk' is assigned to the output of the OSK)"
+    "Please note that this function is only compatible with Lua Player Euphoria and Lua Player Plus. Using Lua Player 0.20 on Windows or PSP will only return the default value." "" "Press X to continue."
+    jump osknow
+
+label osknow:
+    $varosk = renpy.input('Test keyboard','DEFAULT OUTPUT')
+    $self.state.text = {'KEYBOARD OUTPUT:\n\n'..varosk}
+    jump oskdone
+
+label oskdone:
+    menu:
+        "Repeat OSK":
+            jump osknow
+        "Main Menu":
+            jump start
+        "Quit":
+            $renpy.quit()

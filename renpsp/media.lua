@@ -169,7 +169,7 @@ function LdWgNew(path,c,f)
 end
 
 function ENGINE:SkinReload(skinpath)
-	GAME_print('freeupNG FALLING MENU DATA AND GAME WIDGETS (LPE ONLY)')
+	GAME_print('UNLOADING FALLING MENU DATA AND GAME WIDGETS (LPE ONLY)')
 	GAME_print('Reloading from path: '..skinpath)
 	if CURRENT_SYSTEM == "LPE" then
 		freeuptext = ENGINE.media.text_frame
