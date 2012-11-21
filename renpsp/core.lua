@@ -80,7 +80,11 @@ function ENGINE:CtrlGame(pad, oldpad)
 	elseif pad:circle() and not oldpad:circle() then
 		self.control.debug = not self.control.debug
 	elseif pad:triangle() and not oldpad:triangle() then
-		screen:save("screenshot.png")
+        if GAME_chkDir("ms0:/PICTURE/RenPSP") == false then
+            System.createDir("ms0:/PICTURE/RenPSP")
+        end
+        flutter = os.date("%Y%m%d%H%M%S")
+		screen:save("ms0:/PICTURE/RenPSP/screenshot_"..tostring(flutter)..".png")
 	elseif pad:cross() and not oldpad:cross() and not self.state.is_error then
 		self.state.hide_text = false
 		if CURRENT_SYSTEM == "LPE" then
