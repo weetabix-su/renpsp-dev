@@ -80,11 +80,19 @@ function ENGINE:CtrlGame(pad, oldpad)
 	elseif pad:circle() and not oldpad:circle() then
 		self.control.debug = not self.control.debug
 	elseif pad:triangle() and not oldpad:triangle() then
-        if GAME_chkDir("ms0:/PICTURE/RenPSP") == false then
-            System.createDir("ms0:/PICTURE/RenPSP")
-        end
-        flutter = os.date("%Y%m%d%H%M%S")
-		screen:save("ms0:/PICTURE/RenPSP/screenshot_"..tostring(flutter)..".png")
+		flutter = os.date("%Y%m%d%H%M%S")
+		if CURRENT_SYSTEM == "WIN" then
+			screen:save("screenshot.png")
+		else
+			if GAME_chkDir("ms0:/PICTURE/RenPSP") == false then
+				if CURRENT_SYSTEM == "LPP" then
+					System.createDir("ms0:/PICTURE/RenPSP")
+				elseif CURRENT_SYSTEM == "LPE" then
+					System.createDirectory("ms0:/PICTURE/RenPSP")
+				end
+			end
+			screen:save("ms0:/PICTURE/RenPSP/screenshot_"..tostring(flutter)..".png")
+		end
 	elseif pad:cross() and not oldpad:cross() and not self.state.is_error then
 		self.state.hide_text = false
 		if CURRENT_SYSTEM == "LPE" then
@@ -153,7 +161,11 @@ function ENGINE:DrawMenu(menu)
 end
 
 function ENGINE:DrawDebug()
-	local text = 'System.getFreeMemory: ' .. tostring(System.getFreeMemory())
+	if CURRENT_SYSTEM == "WIN" then
+		textdbg = 'Lua Player Windows: Debug Mode'
+	else
+		textdbg = 'System.getFreeMemory: ' .. tostring(System.getFreeMemory())
+	end
 	GAME_superblit(
 			0,
 			0,
@@ -163,7 +175,7 @@ function ENGINE:DrawDebug()
 			480,
 			GAME_imageheight(self.media.text_frame)
 		)
-	TEXT:WriteLineCenter(2,text)
+	TEXT:WriteLineCenter(2,textdbg)
 end
 
 function ENGINE:ErrorState(error_text)
