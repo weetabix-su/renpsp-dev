@@ -235,6 +235,15 @@ function ENGINE:ExecuteScriptLine(cmd)
 		self:EvalLua(cmd[2].data)
 	elseif cmd[1].data == 'pass' then
 		-- do nothing
+--	elseif cmd[1].data == 'centered' then
+--		if self.media.names[cmd[2].data]~=nil then
+--			cmd[2].data = self.media.names[cmd[2].data]
+--		end
+--		self.state.text = {}
+--		for i=2,table.maxn(cmd) do
+--			self.state.text[i] = cmd[i].data
+--		end
+--		self.script.continue = false
 	else
 		if self.media.names[cmd[1].data]~=nil then
 			cmd[1].data = self.media.names[cmd[1].data]
