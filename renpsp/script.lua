@@ -177,19 +177,31 @@ function ENGINE:ExecuteScriptLine(cmd)
 		local who = cmd[2].data
 		local how = 'default'
 		local pos = 'center'
+		local mov = nil
 		if  table.maxn(cmd)>2 and cmd[3].data == 'at' then
 			pos = cmd[4].data
+			if cmd[5].data == 'with' then
+				mov = cmd[6].data
+			end
+		elseif  table.maxn(cmd)>2 and cmd[3].data == 'with' then
+			mov = cmd[4].data
 		elseif table.maxn(cmd)>2 then
 			how = cmd[3].data
 			for i=4,table.maxn(cmd) do
 				if cmd[i].data == 'at' then
 					pos = cmd[i+1].data
+					if cmd[i+2].data == 'with' then
+						mov = cmd[i+3].data
+					end
+					break
+				elseif cmd[i].data == 'with' then
+					mov = cmd[i+1].data
 					break
 				end
 				how = how..' '..cmd[i].data
 			end
 		end
-		self.state.chars[who] = {state = how, position = pos}
+		self.state.chars[who] = {state = how, position = pos, transition = mov}
 	elseif cmd[1].data == 'hide' then
 		local who = cmd[2].data
 		self.state.chars[who] = nil
