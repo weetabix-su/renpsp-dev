@@ -80,7 +80,7 @@ function ENGINE:ShowChar(name)
 	surf = self.media.imgcache[name].surf
 	sprcent = GAME_imagewidth(surf)/2
 	state = name .. ' ' .. ch.state
-	centro = 0
+	centro = nil
 	if ch.position == 'left' then
 		centro = 100
 	elseif ch.position == 'right' then
@@ -106,36 +106,42 @@ function ENGINE:ShowChar(name)
 	end
 	xblitnumber = centro - sprcent
 	centroadd = centro / 20
-	if trans == nil then
+	if centro ~= nil then
+--	WEETABIX NOTE: Sprite transitioning unresolved and commented out as of 6 December 2012
+--	if trans == nil then
 		screen:blit(xblitnumber, 0, surf)
-	elseif trans == "moveinleft" then
-		xfin = 0
-		repeat
-			screen:blit(xfin, 0, surf)
-			xfin = xfin + centroadd
-		until xfin == xblitnumber
-		screen:blit(xblitnumber, 0, surf)
-	elseif trans == "moveinright" then
-		xfin = 480
-		repeat
-			screen:blit(xfin, 0, surf)
-			xfin = xfin - centroadd
-		until xfin == xblitnumber
-		screen:blit(xblitnumber, 0, surf)
-	elseif trans == "moveoutleft" then
-		repeat
-			screen:blit(xblitnumber, 0, surf)
-			xblitnumber = xblitnumber - centroadd
-		until xblitnumber == 0
-		screen:blit(0, 0, surf)
-	elseif trans == "moveoutright" then
-		repeat
-			screen:blit(xblitnumber, 0, surf)
-			xblitnumber = xblitnumber + centroadd
-		until xblitnumber == 480
-		screen:blit(480, 0, surf)
+--	elseif trans == "moveinleft" then
+--		xfin = 0
+--		repeat
+--			screen:blit(xfin, 0, surf)
+--			xfin = xfin + centroadd
+--		until xfin == xblitnumber
+--		screen:blit(xblitnumber, 0, surf)
+--	elseif trans == "moveinright" then
+--		xfin = 480
+--		repeat
+--			screen:blit(xfin, 0, surf)
+--			xfin = xfin - centroadd
+--		until xfin == xblitnumber
+--		screen:blit(xblitnumber, 0, surf)
+--
+--	elseif trans == "moveoutleft" then
+--		repeat
+--			screen:blit(xblitnumber, 0, surf)
+--			xblitnumber = xblitnumber - centroadd
+--		until xblitnumber == 0
+--		screen:blit(0, 0, surf)
+--	elseif trans == "moveoutright" then
+--		repeat
+--			screen:blit(xblitnumber, 0, surf)
+--			xblitnumber = xblitnumber + centroadd
+--		until xblitnumber == 480
+--		screen:blit(480, 0, surf)
+--	else
+--		-- do nothing
+--	end
 	else
-		break
+		-- do nothing
 	end
 end
 

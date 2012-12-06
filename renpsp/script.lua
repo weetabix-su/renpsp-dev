@@ -202,6 +202,7 @@ function ENGINE:ExecuteScriptLine(cmd)
 			end
 		end
 		self.state.chars[who] = {state = how, position = pos, transition = mov}
+		-- WEETABIX NOTE: self.state.chars[who].transition prepped for new function.
 	elseif cmd[1].data == 'hide' then
 		local who = cmd[2].data
 		self.state.chars[who] = nil
