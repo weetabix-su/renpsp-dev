@@ -27,7 +27,7 @@ label start:
 
     scene bg square with fade
 
-    show cccp  happy at right with dissolve
+    show cccp  happy at right with moveinright	#dissolve
     
     s "Привет, Славя!"
     "СССР-тян радостно помахала рукой."
@@ -35,7 +35,7 @@ label start:
     s "«Сталин повелеват танцевать!»"
     "СССР-тян звонко рассмеялась."
 
-    show slavya happy at left with dissolve
+    show slavya happy at left with moveinleft	#dissolve
 
     s "Ух ты! А чего ты так вырядилась?"
     u "А ты не знаешь? Сегодня же 9 Мая! Великий праздник."
