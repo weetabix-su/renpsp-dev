@@ -56,7 +56,6 @@ end
 function ENGINE:ShowChar(name)
 	ch = self.state.chars[name]
 	img = self.media.images
-	trans = ch.transition
 
 	if ch==nil or img[name..' '..ch.state]==nil then
 		self:ErrorState('ENGINE:ShowChar('..name..') failed to find character')
@@ -78,70 +77,30 @@ function ENGINE:ShowChar(name)
 	end
 
 	surf = self.media.imgcache[name].surf
-	sprcent = GAME_imagewidth(surf)/2
+
 	state = name .. ' ' .. ch.state
-	centro = nil
 	if ch.position == 'left' then
-		centro = 100
+		screen:blit(100-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == 'right' then
-		centro = 380
+		screen:blit(380-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == 'twoleft' then
-		centro = 160
+		screen:blit(160-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == 'tworight' then
-		centro = 320
+		screen:blit(320-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == 'center' then
-		centro = 240
+		screen:blit(240-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == 'offscreenleft' then
-		centro = 25
+		screen:blit(25-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == 'offscreenright' then
-		centro = 455
+		screen:blit(455-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == '1four' then
-		centro = 96
+		screen:blit(96-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == '2four' then
-		centro = 192
+		screen:blit(192-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == '3four' then
-		centro = 288
+		screen:blit(288-GAME_imagewidth(surf)/2, 0, surf)
 	elseif ch.position == '4four' then
-		centro = 384
-	end
-	xblitnumber = centro - sprcent
-	centroadd = centro / 20
-	if centro ~= nil then
---	WEETABIX NOTE: Sprite transitioning unresolved and commented out as of 6 December 2012
---	if trans == nil then
-		screen:blit(xblitnumber, 0, surf)
---	elseif trans == "moveinleft" then
---		xfin = 0
---		repeat
---			screen:blit(xfin, 0, surf)
---			xfin = xfin + centroadd
---		until xfin == xblitnumber
---		screen:blit(xblitnumber, 0, surf)
---	elseif trans == "moveinright" then
---		xfin = 480
---		repeat
---			screen:blit(xfin, 0, surf)
---			xfin = xfin - centroadd
---		until xfin == xblitnumber
---		screen:blit(xblitnumber, 0, surf)
---
---	elseif trans == "moveoutleft" then
---		repeat
---			screen:blit(xblitnumber, 0, surf)
---			xblitnumber = xblitnumber - centroadd
---		until xblitnumber == 0
---		screen:blit(0, 0, surf)
---	elseif trans == "moveoutright" then
---		repeat
---			screen:blit(xblitnumber, 0, surf)
---			xblitnumber = xblitnumber + centroadd
---		until xblitnumber == 480
---		screen:blit(480, 0, surf)
---	else
---		-- do nothing
---	end
-	else
-		-- do nothing
+		screen:blit(384-GAME_imagewidth(surf)/2, 0, surf)
 	end
 end
 
