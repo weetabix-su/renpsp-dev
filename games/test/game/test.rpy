@@ -38,6 +38,8 @@ label start:
             jump ifelsetest
         "Errors gallery":
             jump errortesting
+        "On-Screen Keyboard":
+            jump osk
 
 label scen:
     "� ������ ������ ������������ ��� *.rpy ����� �� �������� /game/ ����. ������ ���� �������� ���, ����������� � ������� RenPy (http://renpy.org)."
@@ -104,20 +106,8 @@ label exist:
     "��� ����� ����������"
     jump start
 
-#WEETABIX NOTE: FORBIDDEN SEGMENT STARTS HERE, UNTIL WE GET THE OSK FIXED
 label osk:
     "weetabix segment:" "On-Screen Keyboard"
-    if CURRENT_SYSTEM == "LPE":
-        "Detected Lua Player:" "Lua Player Euphoria"
-        jump oskcont
-    elif CURRENT_SYSTEM == "LPP":
-        "Detected Lua Player:" "Lua Player Plus"
-        jump oskcont
-    elif CURRENT_SYSTEM == "WIN":
-        "Detected Lua Player:" "Lua Player 0.20 (Windows/PSP)"
-        jump oskcont
-
-label oskcont:
     "If you want to use the on-screen keyboard, use the following function:" "renpy.input(desc,def)" "" "(Where 'desc' is the input description and 'def' is the default answer)"
     "Usage:\n\n$ varosk = renpy.input('Test keyboard','DEFAULT OUTPUT')" "(Where the variable 'varosk' is assigned to the output of the OSK)"
     "Please note that this function is only compatible with Lua Player Euphoria and Lua Player Plus. Using Lua Player 0.20 on Windows or PSP will only return the default value." "" "Press X to continue."

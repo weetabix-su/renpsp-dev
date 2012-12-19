@@ -24,7 +24,7 @@ end
 function ENGINE:ClearScene()
 	if self.media.images[self.state.bgname] == nil then
 		return
-	elseif ((self.media.images[self.state.bgname] ~= nil) and (self.media.colors[self.media.background] == nil)) then
+	elseif ((self.media.images[self.state.bgname] ~= nil) and (self.media.images[self.state.bgname] == self.media.background)) then
        	GAME_print('self.media.background to clear (LPE ONLY) = '..self.media.images[self.state.bgname])
 		if CURRENT_SYSTEM == "LPE" then
             self.media.prevbg = self.media.background
