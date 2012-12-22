@@ -76,7 +76,7 @@ function explodeLexer(str)
 		newLexem = newLexem or (TEXT:isWhite(chr))
 		newLexem = newLexem or (TEXT:isLetter(chr) and not TEXT:isLetterNumber(prev))
 		newLexem = newLexem or (chr=='=' and prev~='=')
-		if chr == '"' or chr == '\'' then
+		if (chr == '"' or chr == '\'') and not ignorewhite then
 			if not inQ then
 				whatQ = chr
 				if not TEXT:isWhite(prev) then
