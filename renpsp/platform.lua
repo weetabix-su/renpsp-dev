@@ -181,4 +181,5 @@ function GAME_makeDir(x)
 		System.createDir(x)
 	else
 		System.createDirectory(x)
+	end
 end

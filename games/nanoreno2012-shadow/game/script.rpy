@@ -1,49 +1,42 @@
-﻿# You can place the script of your game in this file.
-
-# Declare images below this line, using the image statement.
-image ctc_animation = Animation("ctc1.png", 0.03, "ctc2.png", 0.03, "ctc3.png", 0.03, "ctc4.png", 0.03, "ctc5.png", 0.03, "ctc6.png", 0.03, "ctc7.png", 0.03, "ctc8.png", 0.03, "ctc9.png", 0.03, "ctc10.png", 0.03, "ctc11.png", 0.03, "ctc12.png", 0.03, "ctc13.png", 0.03, "ctc14.png", 0.03, "ctc15.png", 0.03, "ctc16.png", 0.03, "ctc17.png", 0.03, "ctc18.png", 0.03, "ctc19.png", 0.03, "ctc20.png", 0.03, "ctc21.png", 0.03, "ctc22.png", 0.03, "ctc23.png", 0.03, "ctc24.png", 0.03, "ctc25.png", 0.03, "ctc26.png", 0.03, "ctc27.png", 0.03, "ctc28.png", 0.03, "ctc29.png", 0.03, "ctc30.png", 0.1, "ctc31.png", 0.1, xpos=0.99, ypos=0.99, xanchor=1.4, yanchor=2.0)
-$ a = Character('Eve', ctc="ctc_animation")
-
-#BGS
+﻿#BGS
 image bridge1 = "Bg/bridge1.png"
-image bridge1e = "Bg/bridge1e.png"
-image bridge1n = "Bg/bridge1n.png"
-image bridge2 = "Bg/bridge2.png"
-image bridge2e = "Bg/bridge2e.png"
-image bridge2n = "Bg/bridge2n.png"
-image bridge3 = "Bg/bridge3.png"
-image bridge3e = "Bg/bridge3e.png"
-image bridge3n = "Bg/bridge3n.png"
-image bridge4 = "Bg/bridge4.png"
-image bridge5 = "Bg/bridge5.png"
-image bridge5n = "Bg/bridge5n.png"
-image bridge6 = "Bg/bridge6.png"
-image water1 = "Bg/water1.png"
-image water1n = "Bg/water1n.png"
-image lot1 = "Bg/lot1.png"
-image lot2 = "Bg/lot2.png"
-image lot3 = "Bg/lot3.png"
-image lot4 = "Bg/lot4.png"
-image food1 = "Bg/food1.png"
-image store1 = "Bg/store1.png"
-image house1 = "Bg/house1.png"
-image house1e = "Bg/house1e.png"
-image house1n = "Bg/house1n.png"
-image house2 = "Bg/house2.png"
-image house2n = "Bg/house2n.png"
-image house_in1 = "Bg/house_in1.png"
-image house_in2 = "Bg/house_in2.png"
-image park1 = "Bg/park1.png"
-image park2 = "Bg/park2.png"
-image park3 = "Bg/park3.png"
-image park4 = "Bg/park4.png"
-image street1 = "Bg/street1.png"
-image street1n = "Bg/street1n.png"
-image end1 = "Bg/end1.png"
-image end2 = "Bg/end2.png"
-image end3 = "Bg/end3.png"
-image end4 = "Bg/end3.png"
-image black = "Bg/black.png"
+image bridge1e = "BG/bridge1e.png"
+image bridge1n = "BG/bridge1n.png"
+image bridge2 = "BG/bridge2.png"
+image bridge2e = "BG/bridge2e.png"
+image bridge2n = "BG/bridge2n.png"
+image bridge3 = "BG/bridge3.png"
+image bridge3e = "BG/bridge3e.png"
+image bridge3n = "BG/bridge3n.png"
+image bridge4 = "BG/bridge4.png"
+image bridge5 = "BG/bridge5.png"
+image bridge5n = "BG/bridge5n.png"
+image bridge6 = "BG/bridge6.png"
+image water1 = "BG/water1.png"
+image water1n = "BG/water1n.png"
+image lot1 = "BG/lot1.png"
+image lot2 = "BG/lot2.png"
+image lot3 = "BG/lot3.png"
+image lot4 = "BG/lot4.png"
+image food1 = "BG/food1.png"
+image store1 = "BG/store1.png"
+image house1 = "BG/house1.png"
+image house1e = "BG/house1e.png"
+image house1n = "BG/house1n.png"
+image house2 = "BG/house2.png"
+image house2n = "BG/house2n.png"
+image house_in1 = "BG/house_in1.png"
+image house_in2 = "BG/house_in2.png"
+image park1 = "BG/park1.png"
+image park2 = "BG/park2.png"
+image park3 = "BG/park3.png"
+image park4 = "BG/park4.png"
+image street1 = "BG/street1.png"
+image street1n = "BG/street1n.png"
+image end1 = "BG/end1.png"
+image end2 = "BG/end2.png"
+image end3 = "BG/end3.png"
+image end4 = "BG/end3.png"
 
 #Sprites
 image eve 1 = "Eve/1/eve_1.png"
@@ -110,144 +103,86 @@ image eve d9b = "Eve/2/eve2_d9.png"
 image eve d10b = "Eve/2/eve2_d10.png"
 
 # Declare characters used by this game.
-define e = Character(' Eve', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define mom = Character('Ryo`s Mom', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define dad = Character('Ryo`s Dad', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define r = Character(' Ryo', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define dad2 = Character('Eve`s Dad', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define girlA = Character('Girl A', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define girlB = Character('Girl B', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define k1 = Character('Kid 1', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define k2 = Character('Kid 2', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define k3 = Character('Kid 3', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define k4 = Character('Kid 4', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define k5 = Character('Kids', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define Chika = Character('Chika', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define Jiro = Character('Jiro', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define Shigeru = Character('Shigeru', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define teacher = Character('Teacher', show_two_window=True, ctc="ctc_animation", ctc_position="fixed", color="#2E0854")
-define narrator = Character(None, ctc="ctc_animation", ctc_position="fixed")
+define e = Character('Eve')
+define mom = Character('Ryo\'s Mom')
+define dad = Character('Ryo\'s Dad')
+define r = Character('Ryo')
+define dad2 = Character('Eve\'s Dad')
+define girlA = Character('Girl A')
+define girlB = Character('Girl B')
+define k1 = Character('Kid 1')
+define k2 = Character('Kid 2')
+define k3 = Character('Kid 3')
+define k4 = Character('Kid 4')
+define k5 = Character('Kids')
+define Chika = Character('Chika')
+define Jiro = Character('Jiro')
+define Shigeru = Character('Shigeru')
+define teacher = Character('Teacher')
+define narrator = Character('')
 
-# The game starts here.
 label start:
-    $ love_points = 0     
+    $love_points = 0     
     scene black
-    pause .5
+    $renpy.pause(0.5)
     play sound "clock.mp3"
-    pause 1.0
+    $renpy.pause(1)
     play music "Music/White Snow.ogg"
-    pause 3.0
+    $renpy.pause(3)
     mom "Ryo, you need to get up you are going to be late for school."
-
     r "Ugh... Just five, five more minutes."
-     
     mom "Honestly what is the point of even setting an alarm if you ignore it all the time."
-     
     mom "It is time to get up, young man. I will not allow you to be late for school."
-     
     r "..........."
-     
     mom "Ryo, you better be up and awake by the time I get back, or there will be consequences."
-
     r "Alright... alright, I'm getting up."
-     
     mom "Good, now hurry down for breakfast."
-     
     "With a groan Ryo crawled out of bed. Letting out a yawn he dressed himself in his uniform in a foggy haze. His body was still half asleep causing him to sway back and forth as he headed out of his room and to the kitchen."
-
     scene house_in1
-    with fade
-
     mom "Good morning, today I made a-"
-     
     mom "You are not going to school looking like that are you?"
-     
     "Ryo glanced up and down at what he was wearing a shrugged."
-     
     r "Why not?"
-     
     "He was wearing clothes, so he wasn't in his underwear, and he had his uniform on. He wondered what was wrong with what he was wearing."
-     
     "Ryo's mom let out a sigh and shook her head. She reached into her pocket and magically pull out a comb."
-    
     mom "You're hair is a mess. You can't go to school looking like that."
-     
     "In a swift motion without waiting for her son's reply began to comb his hair. Combing it until it reached her approval, despite Ryo's protests."
-     
     r "Mom, stop. I can do it myself. I'm not a little kid. It is embarrassing."
-     
     "She smiled at her son and stopped fussing over him, allowing him control over his hair once again."
-     
     mom "Oh, just look at you. You're still half asleep. You look like you are about to fall asleep again."
-     
     play sound "sprayer.wav"
-     
     r "Mom! What are you doing stop!?"
-     
     mom "Sorry, I thought it would wake you up."
-     
     "Ryo glared at his mother as he took the hand towel she held out to him."
-     
     mom "Honestly sometimes you act just like a little child."
-     
     r "I'm the child? It is pretty childlike in my eyes to spray someone with the sprayer."
-     
     mom "Don't take everything so seriously. Have a little fun with life."
-     
     play sound "toaster.wav"
-     
     r "Toast for breakfast today?"
-     
     mom "Ding. Ding. Ding. You've guessed correctly. Today I decided to make a western breakfast. But we had no eggs, so just toast."
-     
     "Ryo shook his head at his mother's antics. He wondered just how in the world his mom and dad got together, they were complete opposites. His dad was always serious and hardly ever joked around, while his mother was almost never serious."
-     
     mom "Here you go Ryo. I even cut the crust off so it would be easier for you to eat."
-     
     "Ryo glared at the good being offered to him. It wasn't that he didn't like toast. No, in fact he actually liked toast. Nor was it the fact that his mother had made it."
-     
     "He hated the extra attention that his mother had put into it. He was not a little kid and he did not want to be treated like one, ever."
-     
     r "Thanks..."
-     
     "He took the piece of toast and took one bite from the center of it before throwing the remainder away."
-     
     "Ryo's mother quickly masked her slight disappointment and wished him a safe trip."
-     
     "Ryo had only eating a tiny bit of the toast and had thrown away the majority of it. It was just a simple action, but it held deeper meaning to her. It reminded of of how whenever she tried to get closed to her son, he would throw her feelings away."
-     
     r "Well, I'm off."
-     
     mom "Have a safe trip."
-     
     "Ryo bundled himself up in a winter coat and hat before heading out the door."
-
     scene house1
-    with Dissolve(1.0)
-     
     "Currently there was no snow falling, but the cold march weather still caused a chill in the air."
-     
     "A crisp breeze caused the trees to sway back and forth, and made the day feel much harsher than it was. It made the 0 C day feel more like -5 C" 
-     
     "Ryo slung his bag over his shoulder and set out for school. The school was pretty far away over a thirty minute walk away."
-     
     "On normal days Ryo didn't mind that his school was such a distance away, but on cold days like this one he hated it."
-     
     scene black
-    with Dissolve(1.0)
-     
     "School was hectic the students were all in excitement and it was noisy due to White Day being only a few days away."
-     
     "Ryo settled into his chair and tried to ignore the noisy atmosphere. White Day meant nothing to him, so he had no reason to join in the chatter about it."
-     
     "He had received nothing for any girl on Valentines Day, so he had no obligation to give any girl anything on White Day."
-
     "Ryo disregarded the nasty words spoken about him and his attitude. He was at the very top of the school in terms of grades."
-    
     "When he first started at the school everyone was impressed with his grades and he was looked up to. But after a while when other students found out how little effort he put into getting those grades, he became despised by almost all the school."
-     
     "Ryo was at the university level already, but his parents had thought it would be better to have him go through high school, like a normal teen. They thought it would be a good experience."
-     
     "However so far the only real thing he had come to experience was how shallow and jealous teens can be, and how envy can change a person."
      
     teacher "Alright settle down. We are going to have a test today. Everyone try do their best."
