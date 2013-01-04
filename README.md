@@ -10,13 +10,13 @@ RenPSP is free, but there are some rules of it's rebistribution:
 
 Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License; Lua Player Euphoria is licensed under OSI BSD 3-Clause License (a.k.a. New BSD License)
 
-# Start on Microsoft Windows:
+### Start on Microsoft Windows:
     just run: win32_start.bat
-    tested at Windows XP and Windows 7 
+    tested at Windows XP, Windows 7, and Windows 8 
     MS Windows release is based on LuaPlayer 0.20
-	LuaPlayer 0.20 exists on PSP 1.50 too
+    LuaPlayer 0.20 exists on PSP 1.50 too
     
-# Start on cracked PSP as homebrew:
+### Start on cracked PSP as homebrew:
     put everything in ms0:/PSP/GAME/
     Lua Player Euphoria v8 is the default Lua Player EBOOT.PBP
     rename EBOOT_LPP.PBP to EBOOT.PBP to use Lua Player Plus rev163
@@ -29,20 +29,27 @@ Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License
 
 ## CHANGELOG:
 
-# 0.3
+### 0.4
++ New default skin
++ Set Lua Player Euphoria v8 as default Lua Player
++ Fixed image memory leaks from sprites and backgrounds (improved as of 0.4a)
++ Game skin and helpfile customization
++ Custom game skin variables corrected (as of 0.4a)
+
+### 0.3
 + Added LuaPlayer Plus r163 EBOOT with the release
 + Images loaded when used, not upon initialization
 + Full paths used for most files
 + Use of RenPSP logfile
 + 8 New Character Positions
 
-# 0.2
+### 0.2
 + Skip function stops correctly
 + Settings, Help File, Test script, and Dropdown menu changed from Russian to English
 + Fixed If-Else Test in Test script
 + UI Changes (Black dialog and answer boxes, Katawa Shoujo SD Character Icons for the dropdown menu)
 
-# 0.1
+### 0.1
 + Initial Release
 
 (All further changes in this repository may not be reflected in this changelog)
