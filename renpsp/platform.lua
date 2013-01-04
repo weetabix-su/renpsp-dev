@@ -175,3 +175,10 @@ function GAME_chkDir(x)
 	end
 	return num > 0
 end
+
+function GAME_makeDir(x)
+	if CURRENT_SYSTEM == "LPP" then
+		System.createDir(x)
+	else
+		System.createDirectory(x)
+end

@@ -85,11 +85,7 @@ function ENGINE:CtrlGame(pad, oldpad)
 			screen:save("screenshot.png")
 		else
 			if GAME_chkDir("ms0:/PICTURE/RenPSP") == false then
-				if CURRENT_SYSTEM == "LPP" then
-					System.createDir("ms0:/PICTURE/RenPSP")
-				elseif CURRENT_SYSTEM == "LPE" then
-					System.createDirectory("ms0:/PICTURE/RenPSP")
-				end
+				GAME_makeDir("ms0:/PICTURE/RenPSP")
 			end
 			screen:save("ms0:/PICTURE/RenPSP/screenshot_"..tostring(flutter)..".png")
 		end
