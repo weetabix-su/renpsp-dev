@@ -1,3 +1,20 @@
+soundon = nil
+if CURRENT_SYSTEM == "LPE" then
+	soundchk = System.msgDialog("Turn on sound?",true)
+	if soundchk == System.MSGDIALOG_RESULT_YES then
+		soundon = true
+	elseif soundchk == System.MSGDIALOG_RESULT_NO then
+		soundon = false
+	elseif soundchk == System.MSGDIALOG_RESULT_BACK then
+		soundon = false
+	elseif soundchk == System.MSGDIALOG_RESULT_UNKNOWN1 then
+		soundon = false
+	end
+elseif CURRENT_SYSTEM == "LPP" then
+	soundon = true
+else
+	soundon = false
+end
 
 dofile("platform.lua")
 GAME_CPU(333)
