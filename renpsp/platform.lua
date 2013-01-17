@@ -1,5 +1,5 @@
 function GAME_hasMP3()
-	return CURRENT_SYSTEM ~= "WIN"
+	return (CURRENT_SYSTEM ~= "WIN" and soundon == true)
 end
 
 function GAME_CPU(x)
