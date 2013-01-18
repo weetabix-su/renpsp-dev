@@ -115,6 +115,8 @@ ENGINE.media.colors['blue']  = Color.new(0, 0, 255)
 ENGINE.media.colors['black'] = Color.new(0, 0, 0)
 ENGINE.media.colors['white'] = Color.new(255, 255, 255)
 ENGINE.media.colors['gray']  = Color.new(128, 128, 128)
+ENGINE.media.colors['grey']  = Color.new(128, 128, 128)
+ENGINE.media.colors['juniperblack']  = Color.new(20, 13, 20)
 
 ENGINE.media.colors['bg red']   = Color.new(255, 0, 0)
 ENGINE.media.colors['bg green'] = Color.new(0, 255, 0)
@@ -122,6 +124,8 @@ ENGINE.media.colors['bg blue']  = Color.new(0, 0, 255)
 ENGINE.media.colors['bg black'] = Color.new(0, 0, 0)
 ENGINE.media.colors['bg white'] = Color.new(255, 255, 255)
 ENGINE.media.colors['bg gray']  = Color.new(128, 128, 128)
+ENGINE.media.colors['bg grey']  = Color.new(128, 128, 128)
+ENGINE.media.colors['bg juniperblack']  = Color.new(20, 13, 20)
 
 -------------------
 -- FALLING MENU ---
