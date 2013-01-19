@@ -69,7 +69,7 @@ function RenpyClass(renpy)
 		GAME_print(tostring(l))
 	end
 	
-    --WEETABIX NOTE: UNTESTED ON ACTUAL PSP
+    --WEETABIX NOTE: TESTED ON ACTUAL PSP, CRASHES OCCUR, FIX WILL BE DEPLOYED IN THE FUTURE
 	function renpy.input(desc,def)
 		if CURRENT_SYSTEM == "LPE" then
 			ans, res = System.osk(desc,def)
@@ -92,4 +92,11 @@ function RenpyClass(renpy)
 			return def
 		end
 	end
+        
+        function renpy.load(anon)
+            ENGINE:Load(anon)
+        end
+        
+        function renpy.save(anon)
+            ENGINE:Save(anon)
 end

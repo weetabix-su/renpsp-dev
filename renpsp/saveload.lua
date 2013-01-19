@@ -217,8 +217,13 @@ function ENGINE:FileSeekToState(st)
 	self:FileSeek(st.current_file, st.current_position)
 end
 
-function ENGINE:Load()
-	local loaded = self:LoadStateFromFile(ENGINE.cursavepath.."/default.sav")
+function ENGINE:Load(xtra)
+        if xtra ~= nil then
+            savname = xtra
+        elseif xtra == nil then
+            savname = "default"
+        end
+	local loaded = self:LoadStateFromFile(ENGINE.cursavepath.."/"..savname..".sav")
 	self:FileSeek(loaded.f, loaded.pos)
 	self.state = stateClone(loaded.st)
 	self.state.menu.active = 1
@@ -230,8 +235,13 @@ function ENGINE:Load()
 	self.history.states[1] = stateClone(self.state)
 end
 
-function ENGINE:Save()
-	f = io.open(ENGINE.cursavepath.."/default.sav","w")
+function ENGINE:Save(xtra)
+        if xtra ~= nil then
+            savname = xtra
+        elseif xtra == nil then
+            savname = "default"
+        end
+	f = io.open(ENGINE.cursavepath.."/"..savname..".sav","w")
 	fileWriteLine(f,self.state.current_file)
 	fileWriteLine(f,self.script.gamefile:seek())
 	fileWriteLine(f,self.state.bgname)
