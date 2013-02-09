@@ -170,7 +170,7 @@ function ENGINE:LoadStateFromFile(fname)
 	local current_file = f:read("*l")
 	local current_position = tonumber(f:read("*l"))
 
-	state.bgname = f:read("*l")
+	local current_bg = f:read("*l")
 
 	state.text = fileReadParagraph(f)
 	state.menu.a = fileReadParagraph(f)
@@ -197,7 +197,7 @@ function ENGINE:LoadStateFromFile(fname)
 
 	f:close()
 
-	return {st=state,f=current_file,pos=current_position}
+	return {st=state,f=current_file,pos=current_position,bck=current_bg}
 end
 
 function ENGINE:FileSeek(fname,pos)
@@ -227,7 +227,7 @@ function ENGINE:Load(xtra)
 	self:FileSeek(loaded.f, loaded.pos)
 	self.state = stateClone(loaded.st)
 	self.state.menu.active = 1
-	self:Scene(self.state.bgname)
+	self:Scene(loaded.bck)
 	continue = false
 
 	self.history.i = 1
