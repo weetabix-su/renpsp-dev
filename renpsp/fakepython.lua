@@ -71,26 +71,28 @@ function RenpyClass(renpy)
 	
     --WEETABIX NOTE: TESTED ON ACTUAL PSP, CRASHES OCCUR, FIX WILL BE DEPLOYED IN THE FUTURE
 	function renpy.input(desc,def)
+            local textout = ""
 		if CURRENT_SYSTEM == "LPE" then
-			ans, res = System.osk(desc,def)
+			ans, res = System.osk(desc, def, System.OSK_INPUTTYPE_ALL, drawFunc)
 			if (res==System.OSK_RESULT_UNCHANGED) then
-				return def
+				textout = def
 			elseif (res==System.OSK_RESULT_CANCELLED) then
-				return def
+				textout = def
 			elseif (res==System.OSK_RESULT_CHANGED) then
-				return ans
+				textout = ans
 			end
 		elseif CURRENT_SYSTEM == "LPP" then
 			System.oskInit(desc,def)
 			res, ans = System.oskUpdate()
 			if res == true then
-				return ans
+				textout = ans
 			elseif res == false then
-				return def
+				textout = def
 			end
 		else
-			return def
+			textout = def
 		end
+            return textout
 	end
         
         function renpy.load(anon)
@@ -99,4 +101,10 @@ function RenpyClass(renpy)
         
         function renpy.save(anon)
             ENGINE:Save(anon)
+        end
+        
+        function renpy.text(blah)
+            ENGINE:TextBoxOut(blah)
+        end
+        
 end

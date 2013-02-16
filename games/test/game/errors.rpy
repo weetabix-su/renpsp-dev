@@ -12,4 +12,6 @@ label errortesting:
             somebody_unknown "No error?"
         "Lua error":
             $ something wrong
+        "Back to Main Menu":
+            jump start
     jump errortesting

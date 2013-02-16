@@ -108,15 +108,19 @@ label exist:
 
 label osk:
     "weetabix segment:" "On-Screen Keyboard"
-    "If you want to use the on-screen keyboard, use the following function:" "renpy.input(desc,def)" "" "(Where 'desc' is the input description and 'def' is the default answer)"
-    "Usage:\n\n$ varosk = renpy.input('Test keyboard','DEFAULT OUTPUT')" "(Where the variable 'varosk' is assigned to the output of the OSK)"
+    "If you want to use the on-screen keyboard, use the following function:" "renpy.input(desc,def)" "" "(Where 'desc' = input description; 'def' = default answer)"
+    "Usage:\n\n$ varosk = renpy.input('Test keyboard','DEFAULT OUTPUT')" "(Where variable 'varosk' is assigned to the output of the OSK)"
     "Please note that this function is only compatible with Lua Player Euphoria and Lua Player Plus. Using Lua Player 0.20 on Windows or PSP will only return the default value." "" "Press X to continue."
     jump osknow
 
 label osknow:
     $varosk = renpy.input('Test keyboard','DEFAULT OUTPUT')
-    $self.state.text = {'KEYBOARD OUTPUT:\n\n'..varosk}
-    jump oskdone
+    if varosk == "DEFAULT OUTPUT":
+        "Output unchanged!"
+        jump oskdone
+    else:
+        $varflunk = ("Output is \""..varosk.."\"")
+        $renpy.text(varflunk)
 
 label oskdone:
     menu:
