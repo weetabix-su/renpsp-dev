@@ -166,6 +166,9 @@ function ENGINE:LoadStateFromFile(fname)
 	local state = {menu = {}}
 
 	f = io.open(fname,"r")
+        if f == nil then
+            return f
+        end
 
 	local current_file = f:read("*l")
 	local current_position = tonumber(f:read("*l"))
@@ -224,6 +227,9 @@ function ENGINE:Load(xtra)
             savname = "default"
         end
 	local loaded = self:LoadStateFromFile(ENGINE.cursavepath.."/"..savname..".sav")
+        if loaded == nil then
+            return 1 < 0
+        end
 	self:FileSeek(loaded.f, loaded.pos)
 	self.state = stateClone(loaded.st)
 	self.state.menu.active = 1
@@ -233,6 +239,7 @@ function ENGINE:Load(xtra)
 	self.history.i = 1
 	self.history.states = {}
 	self.history.states[1] = stateClone(self.state)
+        
 end
 
 function ENGINE:Save(xtra)

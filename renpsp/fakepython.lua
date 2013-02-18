@@ -96,7 +96,10 @@ function RenpyClass(renpy)
 	end
         
         function renpy.load(anon)
-            ENGINE:Load(anon)
+            loadconf = ENGINE:Load(anon)
+            if loadconf == false then
+                return 1 < 0
+            end
         end
         
         function renpy.save(anon)
