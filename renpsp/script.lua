@@ -193,7 +193,7 @@ function ENGINE:ExecuteScriptLine(cmd)
 	elseif cmd[1].data == 'hide' then
 		local who = cmd[2].data
 		self.state.chars[who] = nil
-        if  self.media.imgcache[who] then
+                if  self.media.imgcache[who] then
 			self.media.imgcache[who].surf:clear()
 			if CURRENT_SYSTEM == "LPE" then
 				prevsurf = self.media.imgcache[who].surf

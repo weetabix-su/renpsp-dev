@@ -46,7 +46,10 @@ function ENGINE:CtrlFallingMenu(pad,oldpad)
 				self:Help(HELPFILE)
 			end
 		elseif munuaction == "load" then
-			self:Load()
+			loadconf = self:Load()
+                        if loadconf == false then
+                            self:ErrorState('Default save file not found.')
+                        end
 		elseif munuaction == "save" then
 			self:Save()
 		elseif munuaction == "conf" then

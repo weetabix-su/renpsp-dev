@@ -181,6 +181,11 @@ function ENGINE:ErrorState(error_text)
 	self.state.is_error = true
 end
 
+function ENGINE:TextBoxOut(textin)
+        self.script.continue = false
+        self.state.text = {textin}
+end
+
 function ENGINE:ControlInit()
 	self.control.pad = Controls.read()
 end

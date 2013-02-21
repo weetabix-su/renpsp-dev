@@ -166,11 +166,14 @@ function ENGINE:LoadStateFromFile(fname)
 	local state = {menu = {}}
 
 	f = io.open(fname,"r")
+        if f == nil then
+            return f
+        end
 
 	local current_file = f:read("*l")
 	local current_position = tonumber(f:read("*l"))
 
-	state.bgname = f:read("*l")
+	local current_bg = f:read("*l")
 
 	state.text = fileReadParagraph(f)
 	state.menu.a = fileReadParagraph(f)
@@ -197,7 +200,7 @@ function ENGINE:LoadStateFromFile(fname)
 
 	f:close()
 
-	return {st=state,f=current_file,pos=current_position}
+	return {st=state,f=current_file,pos=current_position,bck=current_bg}
 end
 
 function ENGINE:FileSeek(fname,pos)
@@ -217,21 +220,35 @@ function ENGINE:FileSeekToState(st)
 	self:FileSeek(st.current_file, st.current_position)
 end
 
-function ENGINE:Load()
-	local loaded = self:LoadStateFromFile(ENGINE.cursavepath.."/default.sav")
+function ENGINE:Load(xtra)
+        if xtra ~= nil then
+            savname = xtra
+        elseif xtra == nil then
+            savname = "default"
+        end
+	local loaded = self:LoadStateFromFile(ENGINE.cursavepath.."/"..savname..".sav")
+        if loaded == nil then
+            return 1 < 0
+        end
 	self:FileSeek(loaded.f, loaded.pos)
 	self.state = stateClone(loaded.st)
 	self.state.menu.active = 1
-	self:Scene(self.state.bgname)
+	self:Scene(loaded.bck)
 	continue = false
 
 	self.history.i = 1
 	self.history.states = {}
 	self.history.states[1] = stateClone(self.state)
+        
 end
 
-function ENGINE:Save()
-	f = io.open(ENGINE.cursavepath.."/default.sav","w")
+function ENGINE:Save(xtra)
+        if xtra ~= nil then
+            savname = xtra
+        elseif xtra == nil then
+            savname = "default"
+        end
+	f = io.open(ENGINE.cursavepath.."/"..savname..".sav","w")
 	fileWriteLine(f,self.state.current_file)
 	fileWriteLine(f,self.script.gamefile:seek())
 	fileWriteLine(f,self.state.bgname)
