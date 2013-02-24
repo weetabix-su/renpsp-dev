@@ -65,14 +65,14 @@ init:
 	define f = Character('Girl')
 	define ma = Character('Fujitaka Akane')
 	define w = Character('Narazaki Fuyumi')
-	define du = Character('Narazaki Kyouhei'")
+	define du = Character('Narazaki Kyouhei')
 	define mm = Character('Mailman')
 
 label start:
-	scene weet cred
-	$renpy.pause(2)
-	scene weet title
-	$renpy.pause(3)
+    scene weet cred
+    $renpy.pause(2)
+    scene weet title
+    $renpy.pause(3)
     play music "Music/Wallpaper.ogg"
     scene bg street
     show tegami tch
@@ -88,7 +88,7 @@ label start:
     t "(This is the fourteenth today. Walked a lot, good thing I'm young!)"
     scene bg door
     show tegami talking
-    play sound "SFX/Knock knock.ogg"
+    play sound "SFX/Knock knock.wav"
     t "Excuse me! Doctor's Report for Narazaki Sayaka-san!"
     t "(After this, I'll head over to the next town...)"
     show tegami tch
@@ -136,7 +136,7 @@ label start:
     t "Please accept i-"
     scene black
     play music "Music/blank.ogg"
-    play sound "SFX/Thump.ogg"
+    play sound "SFX/Thump.wav"
     "BAM!"
     scene bg street
     t "Ow..."
@@ -157,8 +157,8 @@ label start:
     show tegami supergrin at left
     t "Gah! I've alive!"
     scene black
-    play sound "SFX/Punch.ogg"
-	$renpy.pause(0.4)
+    play sound "SFX/Punch.wav"
+    $renpy.pause(0.4)
     play music "Music/Merry Go.ogg"
     scene bg street
     show tegami supergrin at left
@@ -422,7 +422,7 @@ label start:
     t "Hey! That's pretty expensive." 
     "He pointed at the gelatin mixture Sayaka held." #a CG would be better here, showing the object
     s "Yeah, it is."
-    "Tegami pulled out a small box labelled “Plain gelatin” from the shelf."
+    "Tegami pulled out a small box labelled 'Plain gelatin' from the shelf."
     show tegami supergrin at left
     t "This brand is cheaper, and it's just as good!"
     s "Really?"
@@ -472,7 +472,7 @@ label start:
     play music "Music/Prelude in C - BWV 846.ogg"
     f "Hey, what's your name? Bear-san beat me up and now wants to get to know you..."
     m "...Tegami."
-    f "Tegami... as in ‘letter'? That's a really odd name!"
+    f "Tegami... as in 'letter'? That's a really odd name!"
     f "Ow! You hit me again, Bear-san!"
     f "Anyway, I'm Narazaki Sayaka-chan. You can call me Sayaka, or Nara-chan!"
     m "..."
@@ -509,7 +509,7 @@ label start:
     t "What?!"
     "Shock rendered him near speechlessness."
     s "Welcome back, Captain Obvious..."
-	play music "Music/blank.ogg"
+    play music "Music/blank.ogg"
     $renpy.pause(2)
     play music "Music/tamsp18.ogg"
     show sayaka happy at right
@@ -693,7 +693,7 @@ label start:
     play music "Music/blank.ogg"
     show tegami uh
     t "(H-hey...)"
-    play sound "SFX/Dog Growling.ogg"
+    play sound "SFX/Dog Growling.wav"
     play music "Music/Merry Go.ogg"
     "...A large Doberman to his right glowered at him."
     t "I'm not a thief, I swear. Don't attack me!"
@@ -713,10 +713,10 @@ label start:
     t "(I gotta lose him! But how?!)"
     "He continued running, navigating around a bunch of trees in a confusing pattern swiftly."
     play music "Music/blank.ogg"
-	$renpy.pause(2)
-    play sound "SFX/Dog crash.ogg"
+    $renpy.pause(2)
+    play sound "SFX/Dog crash.wav"
     "!"
-    "He heard a ‘thud' from behind."
+    "He heard a 'thud' from behind."
     t "...What was that?"
     "He mustered the courage to look back..."
     "And saw that the dog collided with one of the trees." #use a CG here
@@ -768,7 +768,7 @@ label start:
     t "What's happening..."
     play music "Music/Merry Go.ogg"
     t "IT'S YOU!!!"
-    "He yelled at seeing the face of his ‘attacker'."
+    "He yelled at seeing the face of his 'attacker'."
     t "Why are you dragging me on the floor, Nara-chan?"
     show tegami uh at left
     show sayaka uh at right
@@ -794,7 +794,7 @@ label start:
     show tegami sweatdrop at left
     t "Can you please stop dragging me on the road?"
     t "It hurts! Friction sucks."
-    play sound "SFX/Thump.ogg"
+    play sound "SFX/Thump.wav"
     "Sayaka immediately let go of his hand, causing Tegami's upper body to land on the ground with a soft thump."
     show tegami uh at left
     t "OW!"
@@ -816,7 +816,7 @@ label start:
     "She laughed and started to walk again."
     t "This road does look familiar..."
     show sayaka joking at right
-    s "Maybe it's the –"
+    s "Maybe it's the --"
     show tegami uh at left
     t "No, definitely not the chasing incident."
     t "Geez, you'll never let go of that."
@@ -920,7 +920,7 @@ label start:
     t "My boss was going out for lunch and saw me."
     show sayaka joking at right
     s "Pft... What was his reaction?"
-    t "He kinda laughed at me, but excused me for not mailing everything that day because of that ‘accident'."
+    t "He kinda laughed at me, but excused me for not mailing everything that day because of that 'accident'."
     s "Hey! At least you got something out of it."
     "She laughed at imagining her friend's experience."
     t "Why're you laughing?!"
@@ -1035,8 +1035,8 @@ label start:
     hide tegami
     "He continued his plans while skipping through town with a  bright sunny look."
     scene black
-	play music "Music/blank.ogg"
-	$renpy.pause(2)
+    play music "Music/blank.ogg"
+    $renpy.pause(2)
     play music "Music/Wallpaper.ogg"
     scene bg door
     s "Yes? Who is it?"
@@ -1222,7 +1222,7 @@ label start:
     play music "Music/blank.ogg"
     show tegami tch at center
     t "(Hey, what?!)"
-    play sound "SFX/Thump.ogg"
+    play sound "SFX/Thump.wav"
     "The next thing he knew, Narazaki Sayaka's knees gave way, and she dropped to the ground."
     hide tegami
     t "NARA-CHAN!!!"
@@ -1466,7 +1466,7 @@ label start:
     t "So, what can I carry?"
     s "I don't need your help, I can manage three glasses on my own."
     play music "Music/blank.ogg"
-	$renpy.pause(2)
+    $renpy.pause(2)
     play music "Music/Haze of Sense.ogg"
     "Saying those words, she felt her grip on the glass loosen."
     "She tried to grip it back again,"
@@ -1679,7 +1679,7 @@ label start:
     t "(I guess this is okay.)"
     scene black
     play music "Music/blank.ogg"
-	$renpy.pause(2)
+    $renpy.pause(2)
     play music "Music/tamsp18.ogg"
     "The next day, after delivering the letters for the day, Tegami immediately rushed towards Sayaka's house."
     scene bg door
@@ -1880,7 +1880,7 @@ label start:
     t "..."
     show tegami tch at left
     t "(What did I want to say?)"
-	play sound "SFX/Train.ogg"
+    play sound "SFX/Train.wav"
     hide sayaka
     hide tegami
     show fuyumi smile at center
@@ -1938,5 +1938,5 @@ label start:
     $renpy.pause(5)
     play music "Music/blank.ogg"
     scene black    
-    centered "To be continued?" 
+    "To be continued?" 
     $renpy.quit()
