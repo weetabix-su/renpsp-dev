@@ -95,19 +95,54 @@ function RenpyClass(renpy)
             return textout
 	end
         
-        function renpy.load(anon)
-            loadconf = ENGINE:Load(anon)
-            if loadconf == false then
-                return 1 < 0
-            end
-        end
+	function renpy.load(anon)
+		loadconf = ENGINE:Load(anon)
+		if loadconf == false then
+			return 1 < 0
+		end
+	end
         
-        function renpy.save(anon)
-            ENGINE:Save(anon)
-        end
+	function renpy.save(anon)
+		ENGINE:Save(anon)
+	end
         
-        function renpy.text(blah)
-            ENGINE:TextBoxOut(blah)
-        end
+	function renpy.text(blah)
+		ENGINE:TextBoxOut(blah)
+	end
+	
+	function renpy.movie_cutscene(movie, delay, loop)
+		if (delay == nil and delay ~= -1) then
+			delay = 0
+		end
+		delaykill = delay + 1
+		if (loop == nil or loop <= -1) then
+			loop = 0
+		end
+		mpegvsh = RENPSP_FOLDER.."/mpeg_vsh.prx"
+		mpegcooleyes = RENPSP_FOLDER.."/cooleyesBridge.prx"
+		if CURRENT_SYSTEM == "LPP" then
+			mp4up = Mp4.init(mpegvsh, mpegcooleyes)
+			if mp4up == true then
+				ENGINE:Timer(tonumber(delay*1000))
+				ENGINE.state.hide_text = true
+				ENGINE.script.continue = false
+				Mp4.load(movie)
+				i = 0
+				repeat
+					Mp4:play()
+					i = i+1
+				until i >= delay
+				Mp4.shutdown()
+				return 1 > 0
+			elseif mp4up == false then
+				ENGINE:TextBoxOut("ERROR: MP4 not initialized. Press X to continue.")
+				return 1 < 0
+			end
+		else
+			ENGINE:TextBoxOut("WARNING: Video playback incompatible with Lua Player. Press X to continue.")
+			return 1 < 0
+		end
+		
+	end
         
 end
