@@ -9,6 +9,8 @@ init:
 
     image slavya sad   = "slavya_sad.png"
     image slavya happy = "slavya_smile1.png"
+	
+	$ egghunt = 0
 
 
 label never:
@@ -106,6 +108,19 @@ label exist:
     jump start
 
 label osk:
+	"ACHTUNG!" "The following feature has been recently tested on a PSP-2000 on 5.50 Gen-D Prometheus-4. The results are not stellar."
+	"Continue?"
+	menu:
+		"Yes":
+			jump oskcont
+		"No":
+			egghunt = egghunt + 1
+			if egghunt < 7:
+				jump easter
+			else:
+				jump menu
+
+label oskcont:
     "weetabix segment:" "On-Screen Keyboard"
     "If you want to use the on-screen keyboard, use the following function:" "renpy.input(desc,def)" "" "(Where 'desc' = input description; 'def' = default answer)"
     "Usage:\n\n$ varosk = renpy.input('Test keyboard','DEFAULT OUTPUT')" "(Where variable 'varosk' is assigned to the output of the OSK)"
@@ -129,3 +144,9 @@ label oskdone:
             jump start
         "Quit":
             $renpy.quit()
+			
+label easter:
+	"EASTER EGG MODE ACTIVATED!"
+	"lol just kidding, return to menu."
+	egghunt = 0
+	jump menu
