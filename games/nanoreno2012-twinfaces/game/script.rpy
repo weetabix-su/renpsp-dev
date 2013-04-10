@@ -1,88 +1,89 @@
-# BACKGROUNDS
-image bg bgbonus = "bgbonus.png"
-image bg room = "room.jpg"
-image bg pond = "pond.jpg"
-image bg field = "field.jpg"
-image bg hallway = "hallway.png"
-# MILICENT
-image mi mi = "mi.png"
-image mi pi = "mipi.png"
-image mi pi2 = "mipi2.png"
-image mi ma = "mima.png"
-image mi ma2 = "mima2.png"
-image mi wo = "miwo.png"
-image mi pro = "mipro.png"
-image mi sh = "mish.png"
-image mi sh2 = "mish2.png"
-image mi sho = "misho.png"
-image mi sho2 = "misho2.png"
-image mi wha = "miwha.png"
-image mi sly = "misly.png"
-image mi sad = "misad.png"
-#MAE
-image ma ma = "ma.png"
-image ma oh = "maoh.png"
-image ma sly = "masly.png"
-image ma po = "mapo.png"
-image ma po2 = "mapo2.png"
-image ma shy = "mashy.png"
-image ma sad = "masad.png"
-image ma gl = "magl.png"
-image ma se = "mase.png"
-#CGs
-image cg miwo1 = "miwo1.jpg"
-image cg miwo2 = "miwo2.jpg"
-image cg pond11 = "pond11.jpg"
-image cg pond12 = "pond12.jpg"
-image cg pond13 = "pond13.jpg"
-image cg pond2-1 = "pond2-1.jpg"
-image cg pond2-2 = "pond2-2.jpg"
-image cg pond2-3 = "pond2-3.jpg"
-image cg maeappearance = "maeappearance.jpg"
-image cg miliceattacksmae = "miliceattacksmae.jpg" 
-#using show miliceattacksmae:
-#xpos 0 ypos -800 xanchor 0 yanchor 0
-#linear 5.0 xpos -1140 ypos 0
-image cg joisan = "joisan.jpg"
-#
-image cg maeflashback1 = "maeflashback1.jpg"
-image cg maeflashback2 = "maeflashback2.jpg"
-image cg maeflashback31 = "maeflashback31.jpg"
-image cg maeflashback32 = "maeflashback32.jpg"
-image cg maeflashback4 = "maeflashback4.jpg"
-#
-image cg memorychamber = "memorychamber.jpg"
-#using show memorychamber:
-#xpos 0 ypos -800 xanchor 0 yanchor 0
-#linear 5.0 xpos -1025 ypos 0
-image cg maememory = "maememory.jpg"
-image cg mimamemory1 = "mimamemory1.jpg"
-image cg mimamemory2 = "mimamemory2.jpg"
-image cg mimamemory3 = "mimamemory3.jpg"
-image cg mimamemory4 = "mimamemory4.jpg"
-#
-image epilogue11 = "epilogue11.jpg"
-image epilogue12 = "epilogue12.jpg"
-image epilogue21 = "epilogue21.jpg"
-image epilogue22 = "epilogue22.jpg"
-#SPLASHIIES
-image sp splash1 = "splash1.png"
-image sp splash2 = "splash2.png"
-image sp splash3 = "splash3.png"
-# Declare characters used by this game.
-define mi = Character('Milice')
-define vo = Character('??')
-define m = Character('\"Mae\"')
-define gi = Character('Girl')
-define gh = Character('Daena')
-define si = Character('Sirius')
-#
-define nvlx = Character(None, kind=nvl)
-define nvlvo  = Character('Voice', kind=nvl)
-define nvlmi  = Character('Milice', kind=nvl)
-define nvlma = Character('Mae', kind=nvl)
-define nvlm = Character('\"Mae\"', kind=nvl)
-define nvlgi = Character('Girl', kind=nvl)
+init:
+    # BACKGROUNDS
+    image bg bgbonus = "bgbonus.png"
+    image bg room = "room.jpg"
+    image bg pond = "pond.jpg"
+    image bg field = "field.jpg"
+    image bg hallway = "hallway.png"
+    # MILICENT
+    image mi mi = "mi.png"
+    image mi pi = "mipi.png"
+    image mi pi2 = "mipi2.png"
+    image mi ma = "mima.png"
+    image mi ma2 = "mima2.png"
+    image mi wo = "miwo.png"
+    image mi pro = "mipro.png"
+    image mi sh = "mish.png"
+    image mi sh2 = "mish2.png"
+    image mi sho = "misho.png"
+    image mi sho2 = "misho2.png"
+    image mi wha = "miwha.png"
+    image mi sly = "misly.png"
+    image mi sad = "misad.png"
+    #MAE
+    image ma ma = "ma.png"
+    image ma oh = "maoh.png"
+    image ma sly = "masly.png"
+    image ma po = "mapo.png"
+    image ma po2 = "mapo2.png"
+    image ma shy = "mashy.png"
+    image ma sad = "masad.png"
+    image ma gl = "magl.png"
+    image ma se = "mase.png"
+    #CGs
+    image cg miwo1 = "miwo1.jpg"
+    image cg miwo2 = "miwo2.jpg"
+    image cg pond11 = "pond11.jpg"
+    image cg pond12 = "pond12.jpg"
+    image cg pond13 = "pond13.jpg"
+    image cg pond2-1 = "pond2-1.jpg"
+    image cg pond2-2 = "pond2-2.jpg"
+    image cg pond2-3 = "pond2-3.jpg"
+    image cg maeappearance = "maeappearance.jpg"
+    image cg miliceattacksmae = "miliceattacksmae-p.jpg" 
+    #using show miliceattacksmae:
+    #xpos 0 ypos -800 xanchor 0 yanchor 0
+    #linear 5.0 xpos -1140 ypos 0
+    image cg joisan = "joisan.jpg"
+    #
+    image cg maeflashback1 = "maeflashback1.jpg"
+    image cg maeflashback2 = "maeflashback2.jpg"
+    image cg maeflashback31 = "maeflashback31.jpg"
+    image cg maeflashback32 = "maeflashback32.jpg"
+    image cg maeflashback4 = "maeflashback4.jpg"
+    #
+    image cg memorychamber = "memorychamber.jpg"
+    #using show memorychamber:
+    #xpos 0 ypos -800 xanchor 0 yanchor 0
+    #linear 5.0 xpos -1025 ypos 0
+    image cg maememory = "maememory.jpg"
+    image cg mimamemory1 = "mimamemory1.jpg"
+    image cg mimamemory2 = "mimamemory2.jpg"
+    image cg mimamemory3 = "mimamemory3.jpg"
+    image cg mimamemory4 = "mimamemory4.jpg"
+    #
+    image epilogue11 = "epilogue11.jpg"
+    image epilogue12 = "epilogue12.jpg"
+    image epilogue21 = "epilogue21.jpg"
+    image epilogue22 = "epilogue22.jpg"
+    #SPLASHIIES
+    image sp splash1 = "splash1.png"
+    image sp splash2 = "splash2.png"
+    image sp splash3 = "splash3.png"
+    # Declare characters used by this game.
+    define mi = Character('Milice')
+    define vo = Character('??')
+    define m = Character('\"Mae\"')
+    define gi = Character('Girl')
+    define gh = Character('Daena')
+    define si = Character('Sirius')
+    #
+    define nvlx = Character('')
+    define nvlvo  = Character('Voice')
+    define nvlmi  = Character('Milice')
+    define nvlma = Character('Mae')
+    define nvlm = Character('\"Mae\"')
+    define nvlgi = Character('Girl')
 #transform mam:
 #    xpos 0 ypos -800 xanchor 0 yanchor 0
 #    linear 5.0 xpos -1140 ypos 0
@@ -182,7 +183,7 @@ label intro:
     vo "Come, why don't you walk outside and air yourself up a bit?"
     "Agh, this voice again... Ugh..."    
     "They're just delusions..."
-    scene black with dissolve
+    scene black
     "Ever since who-knows-when, I have been hearing voices in my head."
     "No, definitetly, I'm not crazy. I am not delusional and I will never be."
     "No, definitetly, I'm not crazy. I am not delusional and I will never be. And it's not an imaginary friend, I'm not a kid anymore."
@@ -194,7 +195,6 @@ label intro:
     "But still, I don't know where to stay... That wretched general told me not to brandish myself around the camp if I don't want to be talked about."
     "But where to stay... where to stay..."
     $renpy.pause(1)
-    stop music
     play music "calypso.mp3"
     scene cg pond11
     "As I throw another rock at the pond, I see many people from afar glance my way, but I just shoot a dirty look back, even though they can't probably see it."
@@ -230,30 +230,29 @@ label intro:
     "There was a cold touch in my skin..."
     mi "Who's there? Anyone?"
     "I can't see anything from my blurring, spinning vision. But there.. I can make out somebody."
-    scene pond2-2 with dissolve
+    scene pond2-2
     vo "So, there you are."
     vo "I have been waiting, you know?"
     mi "Waiting? Waiting for me?"
     mi "Who are you? What do you want?"
     "I grab onto my waist to find my gun but I realized it was confiscated away from me..."
     "Suddenly, she giggled silently."
-    scene pond2-3 with dissolve
+    scene pond2-3
     play sound "giggle.wav"
     "Her laughter was innocent, but at the situation at hand it sounds quite cruel to me."
     vo "You know what I want."
     vo "...and... for who am I?"
     vo "You know me."
     vo "You surely do."
-    scene black with dissolve
-    stop music fadeout 2    
+    scene black
+    play music "blank.ogg"   
     $renpy.pause(2)
-    $ show_button_game_menu = False
-    nvl show dissolve
-    play music "darkambient.mp3" fadein 1 
+    #$ show_button_game_menu = False
+    play music "darkambient.mp3"
     nvlvo "Hey."
     nvlvo "Hey, you! Wait for me!"
     nvlvo "Hey!"
-    show mipi with dissolve
+    show mi pi
     nvlx "I still continued my walking."
     nvlx "I still can't see where am I. This is some delusion, right?"
     nvlx "Another delusion..."
@@ -264,13 +263,11 @@ label intro:
     nvlx "I turn around to the source of the voice, but I can't see her face clearly."
     nvlmi "Have I done something to you?"
     nvlvo "Nope! Nothing!"
-    nvl clear
     nvlvo "And what makes you think I have something I want from you?"
     nvlvo "You know, my only purpose in life is to give what you want..."
     nvlvo "...sister."
     nvlx "...."
-    show mipi2 with dissolve
-    hide mipi
+    show mi pi2
     nvlmi "... sister?"
     nvlvo "Yes. We are sisters."
     nvlvo "We are more like twins though."
@@ -278,91 +275,81 @@ label intro:
     nvlvo "You can't say anything, so I went up and said it for you."
     nvlvo "I hear you saying in your head that you wanted to tell her the truth for the hell of it."
     nvlvo "But I didn't. I did something better than telling her the truth."
-    nvl clear
     nvlvo "Why? What's that frown in your face? Can't you see what I am doing is for your sake?"
     nvlx "She sure is talkative."
     nvlx "And sure is observative."
     nvlmi "And why do you care?"
     nvlx "Suddenly, there was something that suddenly starts to materialize in front of me."
-    show maeappearance with dissolve
+    scene cg maeappearance
     nvlx "The form became a person, a teen girl I don't know... {w}But seems familiar."
     nvlx "The grin on her face was almost ear-to-ear, and her moves seem as if to mock me."
     nvlgi "I have to, well, it's hard being a sister, but I have to."
     nvlx "..."
     nvlx "Twins..."
     nvlx "Such a silly girl. There's no such thing as blood relations. I will never be related to anybody. Ever!"
-    play music "tension.ogg" fadein 1 
+    play music "tension.ogg"
     nvlmi "Don't make me laugh."
-    nvl clear
     nvlx "She pauses for a while, as if trying to process those words I just said."    
-    scene black with dissolve
-    show mipi at right with dissolve
+    scene black
+    show mi pi at right
     nvlmi "I'll never acknowledge someone as my sister. I'll never acknowledge you as anyone related to me!"
     nvlmi "Why do you think I walked out of the military? It's because I hated those thoughts they keep on slapping at each other's faces!"
     nvlmi "Don't make me laugh! You're like all those people! You're like the compilation of those three people, minus the sadistic laughing!"
     nvlx "She just kept quiet, with a simple smile in her face."
     nvlx "Suddenly, she walked around me, looking at me in the eye, as if she's examining a block of wood she's about to carve."
-    show masly at left with dissolve
+    show ma sly at left
     nvlx "The grin on her face... it's telling me something..."
     nvlgi "Well, I do understand."
     nvlgi "But I think you don't."
-    nvl clear
     nvlmi "What in the hell do you mean? I do understand everything you mean! What, can you just get away, get away!"    
-    show mapo at left with dissolve
-    hide masly
+    show ma po at left
     nvlgi "I can't."
     nvlgi "Because you're the one that makes me stay here."
     nvlgi "When you die... that's the only time I can leave as well."
-    show mima at right with dissolve
-    hide mipi
+    show mi ma at right
     nvlx "I can't understand it, but my anger rose each second that pass."
     nvlx "It's just... it's just absurd!"
-    show miwha at right with dissolve
-    hide mima
+    show mi wha at right
     nvlx "Suddenly, I almost stepped onto an object near my feet."
-    nvlx "I look down and it's a ... {w}knife?"
+    nvlx "I look down and it's a ... "
+    nvlx "I look down and it's a ... knife?"
     nvlx "How in the--"
-    show mashy at left with dissolve
-    hide mapo
+    show ma shy at left
     nvlgi "Go. Kill me like you usually do to other people."
-    show misly at right with dissolve
-    hide miwha
+    show mi sly at right
     nvlmi "Heh, how brave of you to say something like that."
     nvlmi "Still, I might consider it."
     nvlmi "Killing you, I mean. It might not be worth my time."
-    show mapo2 at left with dissolve
-    hide mashy
+    show ma po2 at left
     nvlgi "What stuff is worth your time?"
-    nvl clear
     nvlgi "Trying to insult Sirius and Cetus but suddenly backfires?"    
     nvlgi "Trying to go cute with the head general only to get kicked out by his daughter?"
     nvlgi "Failing your dreams? Making yourself the laughingstock of the nation?"
     nvlgi "What is worth your time and effort, Miliceeeeent?"
     nvlgi "Failing all the time, everytime?"
     nvlgi "Always failing, is that where you are trying your best to succeed into?"
-    show masly at left with dissolve
-    hide mapo2
+    show ma sly at left
     nvlx "She laughed with a hysterical tone, and that's where she totally broke it."
     nvlx "I picked up the knife and charged towards her."
-    show miliceattacksmae with dissolve:
-        xpos 0 ypos -600 xanchor 0 yanchor 0
-        linear 5.0 xpos 0 ypos 0
+    hide ma
+    hide mi
+    $renpy.pause(1)
+    scene cg miliceattacksmae
+    $pause.pause(4)
     nvlx "It wasn't in my own will. Something did it."
     nvlx "It's like some hidden force had clouded my judgement and started taking control of me."
     nvlx "I was mad, yes, but before, I know what I was doing. Now, i felt like someone's manipulating me..."
-    nvl clear
     nvlx "But then, when I was near her, she didn't flinch. {w}She just smiled that crazy-looking grin she kept on brandishing."
-    scene black with dissolve
+    scene black
     show masly with dissolve
     nvlgi "Heh."
     nvlgi "I win this time."
     nvlgi "I'm sorry, sister. It just have to happen."
     nvlgi "Condolences, Miliceeeent."
     scene black with dissolve
-    stop music 
+    play music "blank.ogg"
     
-    nvl hide dissolve
-    $ show_button_game_menu = True
+    #$ show_button_game_menu = True
     "What?"
     "... condolences?"
     "Suddenly, I felt something."
@@ -373,8 +360,8 @@ label intro:
     "I try opening my eyes, but it's no use. It feels sticky as well."
     "Reaching to my eyes, I rub the foreign substance away from my eyes."
     "And then..."
-    scene joisan with dissolve
-    play music "darkmystery.mp3" fadein 1 
+    scene joisan
+    play music "darkmystery.mp3"
     "What in the--"
     "Who's this person covered in blood? How did I get in here? Why am I holding this knife that's stabbed in his chest?"
     "Agh... What in the world..."
@@ -384,8 +371,8 @@ label intro:
     "Pretty much one of the most isolated places in the camp."
     "But why, why did this happen..."
     "Why was anybody -- or maybe I -- was so ... crazed to kill this guy?"
-    scene field with dissolve
-    show masly at left with dissolve
+    scene bg field
+    show ma sly at left
     vo "I was bored!"
     vo "I killed him because I was so bored!"
     "I can hear the same voice as a while ago on my head.{w=0.5} But now, it's as if I am also seeing{/i} a delusion, because that teenager girl from a while ago is right in front of me this time."
@@ -395,8 +382,7 @@ label intro:
     vo "People might think I'm like an obedient dog, but I'm like a sly cat, staring at them evilly!"
     vo "This is the only way I can show how worthy I am! I will show them how will I treat anybody who crosses my way!"   
     "Someone else's puppy..."
-    show mipi at right with dissolve
-    hide miwo
+    show mi pi at right
     "Agh..."
     "I looked around, and it's nighttime. Judging from my surrounding, it may have been days after I lost consciuosness."
     "Firstly, this guy seems to be in the military circle, judging from the color of shirt he's wearing." 
@@ -408,8 +394,7 @@ label intro:
     "If they just haven't made this system, then it wouldn't have happened!"
     "All of this wouldn't have happened!"
     "And if that system wasn't made... {w}Then this girl isn't in front of me now!" 
-    show mashy at left with dissolve
-    hide masly
+    show ma shy at left
     vo "Don't get mad at me! My boredom wasn't the only reason you know."
     vo "I promised, right?"
     vo "I told you before, when you were little, that I'd be a good girl and protect you!"
@@ -419,34 +404,40 @@ label intro:
     vo "Miri-chan, I promised that."
     vo "Even if I die, I will protect you."
     vo "I will!"
-    show misho at right with dissolve
-    hide mipi
+    show mi sho at right
     "Mi-Miri-chan?"
     "That name sounds familiar...."
     "Almost instantly, I feel a rush of thought in my head."
-    scene field with vpunch
+    scene white
+    $renpy.pause(0.1)
+    scene bg field
     "As if they're just locked away in some hidden space in my head, thoughts and memories started to fill my mind."
-    with vpunch
+    scene white
+    $renpy.pause(0.1)
+    scene bg field
     "It felt like as if a mallet was pounding the insides of my head."
-    with vpunch
+    scene white
+    $renpy.pause(0.1)
+    scene bg field
     "Slowly...."
-    with vpunch
+    scene white
+    $renpy.pause(0.1)
+    scene bg field
     "Painfully..."
-    with vpunch
+    scene white
+    $renpy.pause(0.1)
+    scene bg field
     "After a couple of seconds, it was gone, but I felt dizzy."
-    show mashy with dissolve
+    show ma shy
     "I looked up at her, but then, it's like..."
     "... that she's..."
     mi "Oneesan?"
-    scene black with dissolve
-    stop music 
-    $renpy.pause(2)
-    $ show_button_game_menu = False
-    nvl clear
-    nvl show dissolve
-    $renpy.pause(2)    
-    scene maeflashback1 with dissolve
-    play music "memory.mp3" fadein 1
+    scene black
+    play music "blank.ogg"
+    $renpy.pause(4)
+    #$ show_button_game_menu = False
+    scene maeflashback1
+    play music "memory.mp3"
     nvlvo "Ne, she's really pretty, right, okaa-san?"
     nvlvo "Stop calling me by such an absurd name, Mae."
     nvlma "But, okaa-san--"
@@ -455,13 +446,12 @@ label intro:
     nvlvo "And stop calling your sister such absurd names! You'd just influence Milicent!"
     nvlma "Yes, mom."
     nvlvo "Haah. Why did I have a daughter with this thing... Musica Syndrome..."
-    scene black with dissolve
-    nvl clear
+    scene black
     nvlx "Musica Syndrome. Since music is a symbol of cultures back at the old age, it means having knowledge about certain cultures and nationalities in the past."
     nvlx "It ain't genetic. It's an error in the mirochip that's implanted to her when she was born."
     nvlx "She likes speaking in some old Eastern country's \"form of respect\", but father and mother found it more of obnoxious and disrespectful."
     nvlx "They found her weird."
-    scene maeflashback2 with dissolve
+    scene maeflashback2
     nvlma "Hey, Milicent!"
     nvlmi "Sister Mae?"
     nvlma "Eh, stop calling me that. {w}I sound like an old woman! Call me oneesan!"
@@ -469,26 +459,30 @@ label intro:
     nvlma "Yep! It means sister!"
     nvlmi "Sister?"
     nvlma "Yep! That's why I'll call you sister too! I'll also call you oneesan!"
-    nvl clear
     nvlmi "Mae... Mae-oneesan?"
-    nvlma "Yep! {w}Hahaha, you do learn quickly!"
-    scene black with dissolve
+    nvlma "Yep!"
+    nvlma "Yep! Hahaha, you do learn quickly!"
+    scene black
     nvlx "But I didn't find her weird at all."
     nvlx "She was a nice person."
     nvlx "She taught me a lot of things, taught me how do Eastern people eat, told me that people before \"bless their meals\" before they eat them."
     nvlx "When mom and dad were not at home, we even eat our food with our hands."
-    nvl clear
     nvlx "Until one day, she got sick."
     nvlx "It wasn't a bad one, I think, since it didn't last long."
     nvlx "But after that, she totally changed."
     nvlx "I mean, she still eats with me, teaches me things, tells me stories."
     nvlx "But then, she suddenly had a darker view of the world, unlike before."
-    nvl clear
-    scene maeflashback31 with dissolve
-    play music "darkmystery.mp3" fadein 1 
-    nvlmi "O-o{w=0.5}-oneesan?!{w=0.5} W-{w=0.5}w-{w=0.5}what are y-{w=0.5}you doing?!"
-    nvlmi "W-{w=0.5}what are you doing with the cat?!"
-    scene maeflashback32 with dissolve
+    scene maeflashback31
+    play music "darkmystery.mp3"
+    nvlmi "O-o"
+    nvlmi "O-o-oneesan?!"
+    nvlmi "O-o-oneesan?! W-"
+    nvlmi "O-o-oneesan?! W-w-"
+    nvlmi "O-o-oneesan?! W-w-what are y-"
+    nvlmi "O-o-oneesan?! W-w-what are y-you doing?!"
+    nvlmi "W-"
+    nvlmi "W-what are you doing with the cat?!"
+    scene maeflashback32
     nvlma "It stole my cookie."
     nvlmi "Well, I do understand that, but why do you have to crack the cat open? It looks hideous, mom and dad will get angry!"
     nvlma "The cookies he stole might still be in there! I'm looking for it..."
@@ -496,56 +490,55 @@ label intro:
     nvlmi "Hey, hey! Stop it! The cat's dead already, and you're opening him up for just a cookie?"
     nvlma "Yep. Mirisento-san, it's... logic."
     nvlma "I can just return him back later on. You'll see."
-    scene black with dissolve
+    scene black
     nvlx "I still didn't understand what happened that day. Why she mutilated the cat to find just a piece of cookie."
     nvlx "The next day, my parents found the cat's mutilated corpse, and they were too disgusted and horrified to even ask who of the two of us did it."
-    nvl clear
     nvlx "Because of that, I was too scared to even go into her room, I might just find stuff written in blood there."    
     nvlx "It was... well, the time I still had fear."
     nvlx "We were the total opposites. I was afraid, sometimes she'd slap me for being a crybaby."
     nvlx "I loved one thing, she hated it or find it boring. But we still find each other good company...until now."
     nvlx "I was technically avoiding her, and I just watch from the terrace as she started carving weird symbols in the tree bark or as she kills another cat."
-    scene maeflashback4 with dissolve
-    play music "memory.mp3" fadein 2
+    scene maeflashback4
+    play music "memory.mp3"
     nvlx "But she died. Just like that."
     nvlx "But I didn't cry. I wasn't feeling anything."
     nvlx "We just found her dead, at the back of a large tree, unconcscious."
     nvlx "Not even the autopsy can tell what's the reason why she died. It's as if she just fainted and her life ended there."
-    nvl clear
     nvlx "One side of me believed that she hated me because I won't join her demonic rituals. The other believed that before she died, she wanted to tell something to me but she wasn't able to reach it out because I was avoiding her."
     nvlx "I don't know what to believe."    
     nvlx "So, I tried continuing life, without... feeling anything."
     nvlx "Without feeling anything..."
     nvlx "That must be what I am now."
-    nvl hide dissolve
-    $renpy.pause(1)
-    scene black with dissolve
-    show field with dissolve
-    $ show_button_game_menu = True
-    show misho2 at right with dissolve
-    play music "mystery.mp3" fadein 1 fadeout 2
+    $renpy.pause(2)
+    scene bg field
+    #$ show_button_game_menu = True
+    show mi sho2 at right
+    play music "mystery.mp3"
+    $renpy.pause(3)
+    play music "blank.ogg"
     "No! She isn't that same Mae! She isn't!"
     "If she is sister Mae..."
-    show mipi at right with dissolve
+    show mi pi at right
     "Then ... why does she keep on insulting me?"
     "Why does she keep on mocking me!"
     "She's crazy!"
-    show magl at left with dissolve
+    #WEETABIX DEVNOTE: SET CAMP HERE BECAUSE SHIT'S GETTING CRAY.
+    show ma gl at left
     m "I am."
     "No, this voice... this voice doesn't exist!"
     "I better do something about this..."
-    show mapo2 at left with dissolve
+    show ma po2 at left
     m "You left me behind, Miri-chan."
     m "You can't deal with me."
     m "All you got to do is let me help you."
     m "Try to get rid of me and people will suffer."
     "Tsk. I can't differentiate whether she's a maniac or just a playful, mischievous kid..."
-    show mipro at right with dissolve
+    show mi pro at right with dissolve
     mi "Yeah, I may not be allowed to erase the memories, but I can modify them!"
     mi "I can just modify it in a way I won't be affected with whatever you do!"
     mi "I can do that!"
     "Ha, take that!"
-    hide mapo2 with dissolve
+    hide ma
     m "Pfft."
     m "I told you before. Getting rid of me will only harm other people."
     m "And didn't I tell you? Unless you die, I won't disappear."
