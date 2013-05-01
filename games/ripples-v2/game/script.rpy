@@ -57,12 +57,20 @@ init:
     define c = Character('Kuu')
     define x = Character('???')
 label start:
+    $voc = false
     scene weet cred
     $renpy.pause(2)
     scene weet logo
     $renpy.pause(2)
     scene weet title
     "Written by:     Ayu Sakata" "Illustrated by: M. Beatriz Garcia" "Music by:       Marc Conrad Tabula"
+    menu:
+        "Vocals on":
+            $voc = true
+            jump begin
+        "Vocals off":
+            jump begin
+label begin:
     scene table 01
     play music "bgm/memories-loop.ogg"
     "There's something about people that just rubs me the wrong way."
@@ -95,39 +103,106 @@ label start:
     "It's a girl. What is she doing here?"
     "Is she...crying?"
     "I take an uncertain step back. If some girl is using this place as her secret crying spot, I want no part of it."
-    "But the sound of crying sounds more like...
-	"cats..."
+    "But the sound of crying sounds more like..."
+    "But the sound of crying sounds more like... cats..."
     scene cg 01b
+    if voc == true:
+        play sound "voice/01.wav"
+    else:
+        pass
     x "Oh, hello!"
     "The girl looks up at me calmly, and I realize that she's patting a small kitten on the head."
     "Two more kittens are rolling around with each other on the ground beside her. They must be the source of the crying I heard."
+    if voc == true:
+        play sound "koda/01.wav"
+    else:
+        pass
     k "Uh...hey."
+    if voc == true:
+        play sound "koda/02.wav"
+    else:
+        pass
     k "Sorry to bother you. I'm just gonna...go."
+    if voc == true:
+        play sound "voice/02.wav"
+    else:
+        pass
     x "You're not a bother. Stay."
     "The kitten that she's patting yawns lazily and paws at her hand."
     scene cg 01
+    if voc == true:
+        play sound "voice/03.wav"
+    else:
+        pass
     x "Oh, here you go."
     "She pulls out a cookie and holds it above the kitten's mouth. It reaches up and bats at the cookie with its paw before clamping the cookie firmly between it's tiny teeth."
+    if voc == true:
+        play sound "koda/03.wav"
+    else:
+        pass
     k "What are you feeding them?"
     scene park day
-    
     show kuu 228
+    if voc == true:
+        play sound "voice/04.wav"
+    else:
+        pass
     x "Cookies. I baked them myself this morning."
+    if voc == true:
+        play sound "koda/04.wav"
+    else:
+        pass
     k "Sure seems like a waste to give that to a bunch of cats."
     show kuu 284
+    if voc == true:
+        play sound "voice/05.wav"
+    else:
+        pass
     x "No, it's worth it."
+    if voc == true:
+        play sound "koda/05.wav"
+    else:
+        pass
     k "They're just gonna die anyway, you know. Strays rarely live long on the streets."
     show kuu 225
+    if voc == true:
+        play sound "voice/06.wav"
+    else:
+        pass
     x "So?"
+    if voc == true:
+        play sound "koda/06.wav"
+    else:
+        pass
     k "So why bother feeding them?"
     show kuu 126
+    if voc == true:
+        play sound "voice/07.wav"
+    else:
+        pass
     x "They're hungry. Do I need any more reason than that?"
+    if voc == true:
+        play sound "koda/07.wav"
+    else:
+        pass
     k "I guess not. But why cookies?"
     show kuu 338
+    if voc == true:
+        play sound "voice/08.wav"
+    else:
+        pass
     x "Because they're the only ones who will eat it..."
+    if voc == true:
+        play sound "koda/08.wav"
+    else:
+        pass
     k "What?"
     scene park sunset
     show kuu 384s
+    if voc == true:
+        play sound "voice/09.wav"
+    else:
+        pass
     x "I'm sorry, I have to be home soon."
     show kuu 284
     "She gives the kitten in her arms a fond pat on the head before leaving."
@@ -141,80 +216,252 @@ label start:
     "I keep telling myself it's just for photography, since I didn't get any good shots yesterday, but..."
     "I'm pretty sure I'm just lying to myself."
     show kuu 221
+    if voc == true:
+        play sound "voice/10.wav"
+    else:
+        pass
     x "Ah, you came back."
+    if voc == true:
+        play sound "koda/09.wav"
+    else:
+        pass
     k "I just wanted to take a couple pictures."
     show kuu 278
+    if voc == true:
+        play sound "voice/11.wav"
+    else:
+        pass
     x "I'll get out of the way, then."
     k "..."
     show kuu 288
     "I snap a few half-hearted shots, but I keep glancing at her and all the kittens swarming around her."
+    if voc == true:
+        play sound "koda/10.wav"
+    else:
+        pass
     k "What are you feeding them today?"
     show kuu 147
+    if voc == true:
+        play sound "voice/12.wav"
+    else:
+        pass
     x "Hm... I guess you could call them donuts."
+    if voc == true:
+        play sound "koda/11.wav"
+    else:
+        pass
     k "Did you make those too?"
     show kuu 282
+    if voc == true:
+        play sound "voice/13.wav"
+    else:
+        pass
     x "Sure did. This morning before school. I had to get up early to make them."
+    if voc == true:
+        play sound "koda/12.wav"
+    else:
+        pass
     k "Why?"
     show kuu 225
+    if voc == true:
+        play sound "voice/14.wav"
+    else:
+        pass
     x "Well, the dough needs time to rise properly, you see."
+    if voc == true:
+        play sound "koda/13.wav"
+    else:
+        pass
     k "That's not what I meant."
     show kuu 226
+    if voc == true:
+        play sound "voice/15.wav"
+    else:
+        pass
     x "Oh? Then what?"
+    if voc == true:
+        play sound "koda/14.wav"
+    else:
+        pass
     k "Why work so hard just to make food for a bunch of cats?"
     show kuu 281
+    if voc == true:
+        play sound "voice/16.wav"
+    else:
+        pass
     x "I told you. It's because they eat it."
     k "..."
     show kuu 224bl2
+    if voc == true:
+        play sound "voice/17.wav"
+    else:
+        pass
     x "I've always loved baking, you know. The best thing about it is being able to share with others."
     show kuu 264bl2
+    if voc == true:
+        play sound "voice/18.wav"
+    else:
+        pass
     x "There was a point in time when I wanted to own my own bakery."
+    if voc == true:
+        play sound "koda/15.wav"
+    else:
+        pass
     k "So?"
     show kuu 328
+    if voc == true:
+        play sound "voice/19.wav"
+    else:
+        pass
     x "Last year, for a class project, I baked muffins for the entire class."
     show kuu 368
+    if voc == true:
+        play sound "voice/20.wav"
+    else:
+        pass
     x "I woke up early so they'd be fresh, and I filled them with the best ingredients I could afford. I wanted them to be something special."
     show kuu 337
+    if voc == true:
+        play sound "voice/21.wav"
+    else:
+        pass
     x "Except...no one liked them. A lot of girls wouldn't even try them, claiming they had strict diets. I was so happy when some boys took a couple, but then they just threw them at each other."
     show kuu 335
+    if voc == true:
+        play sound "voice/22.wav"
+    else:
+        pass
     x "I even gave some to the teachers, who seemed to appreciate it. But at the end of the day, I found them in the trash."
+    if voc == true:
+        play sound "koda/16.wav"
+    else:
+        pass
     k "Well, yeah. People never appreciate things they're supposed to. Working so hard for them is a waste of time."
     show kuu 377
+    if voc == true:
+        play sound "voice/23.wav"
+    else:
+        pass
     x "Maybe..."
     show kuu 368
+    if voc == true:
+        play sound "voice/24.wav"
+    else:
+        pass
     x "After school, I came here. I wanted to cry, but these little guys came and cheered me up."
     show kuu 228
+    if voc == true:
+        play sound "voice/25.wav"
+    else:
+        pass
     x "I fed them the rest of the muffins, and they ate them without hesitation."
     show kuu 288
+    if voc == true:
+        play sound "voice/26.wav"
+    else:
+        pass
     x "Ever since then, I've brought them something every day. As a way of saying thanks."
+    if voc == true:
+        play sound "koda/17.wav"
+    else:
+        pass
     k "Thanks for what?"
     show kuu 282bl2
+    if voc == true:
+        play sound "voice/27.wav"
+    else:
+        pass
     x "For being happy when they eat my food."
     k "..?"
     show kuu 222
+    if voc == true:
+        play sound "voice/28.wav"
+    else:
+        pass
     x "What I like more than anything else is seeing people smile when they eat what I bake."
     show kuu 221
+    if voc == true:
+        play sound "voice/29.wav"
+    else:
+        pass
     x "I want to cheer people up and make the world a better place."
+    if voc == true:
+        play sound "koda/18.wav"
+    else:
+        pass
     k "That's stupid."
     show kuu 457
+    if voc == true:
+        play sound "voice/30.wav"
+    else:
+        pass
     x "Stupid?"
+    if voc == true:
+        play sound "koda/19.wav"
+    else:
+        pass
     k "Cheering people up is pointless. They'll just get depressed again anyway. And then they die."
     show kuu 415
+    if voc == true:
+        play sound "voice/31.wav"
+    else:
+        pass
     x "...Do you really think that?"
+    if voc == true:
+        play sound "koda/20.wav"
+    else:
+        pass
     k "Um...yeah."
     show kuu 466
+    if voc == true:
+        play sound "voice/32.wav"
+    else:
+        pass
     x "I see. That's awfully nihilistic of you."
+    if voc == true:
+        play sound "koda/21.wav"
+    else:
+        pass
     k "Don't tell me you're going to go all philosophy on me."
     scene park sunset
     show kuu 227
+    if voc == true:
+        play sound "voice/33.wav"
+    else:
+        pass
     x "No. Well, I have to get going. I'll see you tomorrow."
+    if voc == true:
+        play sound "koda/22.wav"
+    else:
+        pass
     k "What?"
     show kuu 224
+    if voc == true:
+        play sound "voice/34.wav"
+    else:
+        pass
     x "My name is Kuu. And you are?"
+    if voc == true:
+        play sound "koda/23.wav"
+    else:
+        pass
     k "Koda..."
     show kuu 284
+    if voc == true:
+        play sound "voice/35.wav"
+    else:
+        pass
     c "Then I'll see you tomorrow, Koda."
+    if voc == true:
+        play sound "koda/24.wav"
+    else:
+        pass
     k "Don't count on it."
     show kuu 274
+    if voc == true:
+        play sound "voice/36.wav"
+    else:
+        pass
     c "Of course."
     scene park night
     "She smiles fondly at me and leaves. Again, the kittens turn their attention to me, but I don't bother to take any pictures of them."
@@ -223,96 +470,296 @@ label start:
     scene park day
     "And yet...somehow..."
     show kuu 282
+    if voc == true:
+        play sound "voice/37.wav"
+    else:
+        pass
     c "Hello, Koda."
     k "..."
     show kuu 274
+    if voc == true:
+        play sound "voice/38.wav"
+    else:
+        pass
     c "You're only here to take pictures, right?"
+    if voc == true:
+        play sound "koda/25.wav"
+    else:
+        pass
     k "Yeah. The ones I developed yesterday weren't very good."
     show kuu 115
+    if voc == true:
+        play sound "voice/39.wav"
+    else:
+        pass
     c "You develop your photos?"
     "She sounds genuinely surprised. For some reason, I feel a little victorious."
+    if voc == true:
+        play sound "koda/26.wav"
+    else:
+        pass
     k "Digital is too easy. There's no fun in it anymore. Makes you sloppy, too, since you can afford to make mistakes."
     show kuu 116
+    if voc == true:
+        play sound "voice/40.wav"
+    else:
+        pass
     c "I see."
     show kuu 224
+    if voc == true:
+        play sound "voice/41.wav"
+    else:
+        pass
     c "This is for you."
     "She hands me a small plastic bag tied with a ribbon."
+    if voc == true:
+        play sound "koda/27.wav"
+    else:
+        pass
     k "What is it?"
     show kuu 282
+    if voc == true:
+        play sound "voice/42.wav"
+    else:
+        pass
     c "Cookies. You want some, right?"
+    if voc == true:
+        play sound "koda/28.wav"
+    else:
+        pass
     k "What makes you think that?"
     show kuu 273
+    if voc == true:
+        play sound "voice/43.wav"
+    else:
+        pass
     c "You came back, didn't you?"
     show kuu 224
-#  play sound "sfx/paperbag.ogg"
+    play sound "sfx/paperbag.wav"
     "With a sigh, I open the package. I'm greeted with the sweet smell of cinnamon and chocolate."
     "I take a bite of one. It's actually quite good. For a moment, I wonder why anyone would even think to dislike this girl's cooking."
     "But I guess that's just the nature of people."
     show kuu 324
+    if voc == true:
+        play sound "voice/44.wav"
+    else:
+        pass
     c "I'm sorry."
+    if voc == true:
+        play sound "koda/29.wav"
+    else:
+        pass
     k "What?"
     show kuu 337
+    if voc == true:
+        play sound "voice/45.wav"
+    else:
+        pass
     c "You're not smiling. It must not be very good."
+    if voc == true:
+        play sound "koda/30.wav"
+    else:
+        pass
     k "That's not it. I'm just a bit angry that people don't appreciate your baking."
     show kuu 282bl2
+    if voc == true:
+        play sound "voice/46.wav"
+    else:
+        pass
     c "You shouldn't be. If you think it tastes good, then smile!"
+    if voc == true:
+        play sound "koda/31.wav"
+    else:
+        pass
     k "Why are you trying so hard to get me to smile?"
     show kuu 225
+    if voc == true:
+        play sound "voice/47.wav"
+    else:
+        pass
     c "You don't look like a happy person."
     "Her honesty is like an arrow to my heart."
+    if voc == true:
+        play sound "koda/32.wav"
+    else:
+        pass
     k "That's really none of your business."
     show kuu 228
+    if voc == true:
+        play sound "voice/48.wav"
+    else:
+        pass
     c "It is if you keep coming here to see me."
+    if voc == true:
+        play sound "koda/33.wav"
+    else:
+        pass
     k "I didn't say I was coming here to see you."
     show kuu 288
+    if voc == true:
+        play sound "voice/49.wav"
+    else:
+        pass
     c "You didn't have to."
+    if voc == true:
+        play sound "koda/34.wav"
+    else:
+        pass
     k "Besides, it doesn't matter. I'll just be depressed again tomorrow, anyway."
     show kuu 284
+    if voc == true:
+        play sound "voice/50.wav"
+    else:
+        pass
     c "Then I'll bring you more cookies tomorrow."
+    if voc == true:
+        play sound "koda/35.wav"
+    else:
+        pass
     k "Do you really want to see me smile that badly?"
     show kuu 281
+    if voc == true:
+        play sound "voice/51.wav"
+    else:
+        pass
     c "I want to see everyone smile."
+    if voc == true:
+        play sound "koda/36.wav"
+    else:
+        pass
     k "Huh. Another impossible dream. This is why I hate people so much."
     show kuu 315
+    if voc == true:
+        play sound "voice/52.wav"
+    else:
+        pass
     c "You don't like people?"
+    if voc == true:
+        play sound "koda/37.wav"
+    else:
+        pass
     k "Of course not! They always ruin things."
     show kuu 327
+    if voc == true:
+        play sound "voice/53.wav"
+    else:
+        pass
     c "How so?"
+    if voc == true:
+        play sound "koda/38.wav"
+    else:
+        pass
     k "They leap into pictures when I don't want them to, or obsess over how they look as if it really makes a difference."
+    if voc == true:
+        play sound "koda/39.wav"
+    else:
+        pass
     k "I can't stand it! They're all so annoying."
     show kuu 325bl1
+    if voc == true:
+        play sound "voice/54.wav"
+    else:
+        pass
     c "Am I annoying?"
+    if voc == true:
+        play sound "koda/40.wav"
+    else:
+        pass
     k "Uh..."
     "Optimists like Kuu have always aggravated me, but there's something about her straightforward honesty that's actually really refreshing."
+    if voc == true:
+        play sound "koda/41.wav"
+    else:
+        pass
     k "I don't know."
     show kuu 388s
     "She giggles and turns back to the kittens, patting one of them fondly on the head."
     show kuu 228
+    if voc == true:
+        play sound "voice/55.wav"
+    else:
+        pass
     c "Fair enough."
+    if voc == true:
+        play sound "koda/42.wav"
+    else:
+        pass
     k "It's not that you're annoying or anything. It's just..."
     "I strain my mind, trying to figure out how to explain my feelings."
+    if voc == true:
+        play sound "koda/43.wav"
+    else:
+        pass
     k "I just don't like people who think they can change the world."
     show kuu 117
+    if voc == true:
+        play sound "voice/56.wav"
+    else:
+        pass
     c "Why not?"
     play music "bgm/blank.ogg"
+    if voc == true:
+        play sound "koda/44.wav"
+    else:
+        pass
     k "Because it's dumb! One person's life is just a drop in the bucket, after all."
     play music "bgm/cherished-loop.ogg"
     show kuu 267
+    if voc == true:
+        play sound "voice/57.wav"
+    else:
+        pass
     c "You don't really believe that."
+    if voc == true:
+        play sound "koda/45.wav"
+    else:
+        pass
     k "Yes I do!"
+    if voc == true:
+        play sound "koda/46.wav"
+    else:
+        pass
     k "It's better than believing that I actually change anything!"
     show kuu 455
+    if voc == true:
+        play sound "voice/58.wav"
+    else:
+        pass
     c "Then why are you here?"
+    if voc == true:
+        play sound "koda/47.wav"
+    else:
+        pass
     k "Wh-what?"
     show kuu 426
+    if voc == true:
+        play sound "voice/59.wav"
+    else:
+        pass
     c "You want to believe it, but you're just afraid to. You're afraid that you can't make a difference, so you don't try."
+    if voc == true:
+        play sound "koda/48.wav"
+    else:
+        pass
     k "That's not-"
     show kuu 117
     "I can't actually bring myself to deny her statement."
     show kuu 222
+    if voc == true:
+        play sound "voice/60.wav"
+    else:
+        pass
     c "Koda..."
+    if voc == true:
+        play sound "koda/49.wav"
+    else:
+        pass
     k "Yeah?"
     show kuu 284bl2
+    if voc == true:
+        play sound "voice/61.wav"
+    else:
+        pass
     c "Even if my life is just a single drop, every drop of water leaves ripples."
     scene park day
     "She leaves before I can respond. I don't have a response, anyway. Normally, I'd be angry if someone tried to sell some trite inspirational phrase to me."
