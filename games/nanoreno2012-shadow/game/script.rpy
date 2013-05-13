@@ -10,7 +10,8 @@
     image bg bridge3e = "BG/bridge3e.png"
     image bg bridge3n = "BG/bridge3n.png"
     image bg bridge4 = "BG/bridge4.png"
-    image bg bridge5 = "BG/bridge5.png"
+    #WEETABIX NOTE: Killed bg bridge5 temporarily for great justice
+    #image bg bridge5 = "BG/bridge5.png"
     image bg bridge5n = "BG/bridge5n.png"
     image bg bridge6 = "BG/bridge6.png"
     image bg water1 = "BG/water1.png"
@@ -121,6 +122,7 @@ label start:
     #WEETABIX NOTE: Insert splash screen particulars here.
     $ love_points = 0
     $ meeting1_flag = false
+    $ money_flag = false
 label begin:
     scene black
     $renpy.pause(0.5)
@@ -699,659 +701,659 @@ label meeting1_scene:
     "And then he spotted her at the other side of the bridge."
     e "Remember it."
     jump work_scene
-#WEETABIX NOTE: Tenting up here. Delete line to continue. :3
 label food_scene:
-play music "Music/White Snow.ogg"
-$ love_points += 1
-"Ryo found himself in a daze until the end of school the next day. His mind wandered to Eve, she was so different, so unique. It made him want to talk to her again. To look forward to their next meeting."
-scene bg bridge1
-with Dissolve(.5)
-pause .5
-"Ryo stopped running when he reached the bridge. There she stood, however something was different. She wasn't looking down at the water but instead up at the clouds."
-scene bg bridge2
-with Dissolve(.5)
-pause .5
-r "Not looking at the water today?"
-show eve 4
-with Dissolve(.5)
-e "Of course not. I don't come here daily and stare at the water for hours. That would be boring and get old."
-"Ryo shrugged, he couldn't argue with that. It would get boring to just stare at water for hours on a daily basis."
-r "So you are watching the clouds today?"
-"Eve nodded, she still hadn't turned toward him. Rather the sky seemed more interesting to her, then he did."
-r "You not even going to say 'hello'?"
-e "Hello."
-r "Very funny."
-r "So you aren't even going to pay any attention to me, even though just yesterday you were crying out for me to come talk to you again."
-e "That was then, this is now."
-r "So the sky is more interesting then I am."
-"Another nod."
-show eve 4
-with Dissolve(.5)
-e "However, I'm not watching the sky. I am watching the clouds."
-r "Same thing."
-e "Not really."
-r "So the sky is more interesting than me."
-show eve 1b
-with Dissolve(.5)
-e "Dirt is more interesting than you."
-r "That's..."
-r "Really harsh."
-e "Well to a pedologist, dirt is more interesting than you."
-r "Are you one?"
-e "One what?"
-r "......."
-r "Nope, not falling for it."
-show eve 4b
-with Dissolve(.5)
-e "No, I do not study soil. Today I'm biologist."
-r "Are you sure you're not a nepholologist."
-show eve 9b
-with Dissolve(.5)
-e "Too many big words. It hurts."
-e "If you agree to stop using big words, I'll pay attention to you, okay?"
-r "But you were the one who started it."
-r "Fine."
-show eve 1
-with Dissolve(.5)
-e "Good."
-r "....."
-e "....."
-r "....."
-e "....."
-r "...So why are you studying the clouds?"
-show eve 6
-with Dissolve(.5)
-e "Who said I was studying the clouds?"
-r "You did."
-show eve 3
-with Dissolve(.5)
-e "I did not."
-e "I'm not studying the clouds. I'm watching them."
-r "Pretty much the same thing."
-scene bg bridge1
-with Dissolve(.5)
-pause 2.0
-show eve 5
-with Dissolve(.5)
-e "Nope."
-r "Why are you watching the clouds then."
-show eve 4b
-with Dissolve(.5)
-e "Because clouds are interesting. A lot of people don't like them, because they block out and ruin a 'sunny day.' But I enjoy them for they are different. If they didn't exist everything would be ruined."
-e "Without clouds everyday would be sunny thus making it get old after a while, with clouds comes change, things are different. Without clouds we would have no rain or snow."
-r "But there wouldn't be any bad storms without clouds."
-e "Sure there are elements that we don't enjoy about them, but if we took away them, things would be worse off. Don't you think life is like that, everything has a purpose."
-e "All the hardships you are going through and all the good times as well they have purpose."
-e "Without them, you might be a completely different person, everything that happens to you shapes you."
-e "How much will our meeting shape us, one can't say, but we can be sure that it will influence us. Even if we don't realize that it is, we are changing due to the stuff around us."
-e "This won't stop happening until we die, we will constantly be changing due to our experiences."
-r "How did we get from clouds to this?"
-e "Clouds also reveals just how horrid life is. At any time a storm could get worse and could take someone's life. It is really unfair, that such a thing could happen."
-e "Life is merciless and cruel, but it isn't without grace a beauty. For once the storm passes a wondrous rainbow will fill the sky."
-"A loud grumble roared out, just before Eve put a hand to her stomach."
-show eve 7b
-with Dissolve(.5)
-e "I'm hungry..."
-r "That was a quick subject change."
-e "What to do....."
-e "So hungry..."
-r "That's right. Eve might be homeless, she probably has to struggle just to get food most of the time."
-r "Don't worry Eve, I'll treat you."
-show eve 6b
-with Dissolve(.5)
-e "Really? Ryo, thank you."
-r "It's no problem. We just need to stop by the work first and tell them I need the day off."
-show eve 2
-with Dissolve(.5)
-e "Won't that get you in trouble?"
-r "Don't worry about it. It will be fine. Seeing you worried over something is weird, stop that."
-hide eve 2
-with Dissolve(1.0)
-pause 2.0
-scene black
-with Dissolve(1.0)
-"The two of them made a quick stop at Ryo's workplace to request the day off. Despite it being such short notice, he recived the day off and the two of them heading to fast food place nearby."
-scene bg food1
-with fade
-"Eve went to sit down at a booth while Ryo ordered the food. Ryo returned a few minutes later with 2 hamburgers. He gave one to Eve before sitting down across from her."
-"He was about to take a bite of his own hamburger, when he looked over at Eve. His hands became frozen, and he slowly lowered the food."
-"Eve was cutting her hamburger into little pieces with a knife and fork. She cut into the hamburger slicing it into tiny precise pieces before picking one up with her fork."
-"After she finished swallowing she took her napkin and patted it against her lips."
-show eve 4b
-with Dissolve(.5)
-e "What? What's wrong?"
-r "Uhhh... What are you doing?"
-e "Eating the food you gave to me."
-r "No... I mean with the fork and knife."
-show eve 5b
-with Dissolve(.5)
-e "I'm eating proper and politely. Is there something wrong with that?" 
-r "No... But it looks weird. A hamburger normally isn't eaten that way."
-r "......"
-r "......"
-r "I didn't mean for you to wolf down your food. You switched from being overly polite to overly messy and rude."
-show eve 11
-with Dissolve(.5)
-e "Make up, your mind. You are so picky."
-"After making that comment Eve started eating like a normal person."
-r "You were just messing with me weren't you."
-show eve 6b
-with Dissolve(.5)
-e "Me? I would never."
-show eve 16b
-with Dissolve(.5)
-"The meal continued with light conversation throughout." 
-show eve 6
-with Dissolve(.5)
-e "Ryo!"
-hide eve 6
-with Dissolve(.3)
-"Eve jumped up from her seat and ran out the door, leaving Ryo behind with a confused expression."
-r "...."
-r "What was that about?"
-r "Eve, what is going on? Why did you run out of the place?"
-scene black
-with Dissolve(.5)
-pause 1.0
-scene bg lot4
-with fade
-pause 2.0
-show eve 17
-with Dissolve(.5)
-e "Ryo, look."
-e "It is snowing!"
-"Eve began to spin around as the snow swirled around her."
-r "So?"
-show eve 19
-with Dissolve(.5)
-e "So. Snow is great. It is so wondrous and beautiful."
-e "It is so amazing. I love the snow."
-"Eve laughed and giggled as she danced around in the snow like a little kid seeing snow for the first time."
-r "What are you doing?"
-show eve 18b
-with Dissolve(.5)
-e "Dancing. Come on Ryo join me. It will be fun."
-r "Are you crazy, people could be watching."
-show eve 16b
-with Dissolve(.5)
-e "So?"
-r "Aren't you embarrassed to do something like that?"
-show eve 18
-with Dissolve(.5)
-e "Nope."
-"Eve ran over and snatched up Ryo's arm tugging on it pleadingly."
-show eve 19
-with Dissolve(.5)
-e "Come on Ryo. Dance with me."
-r "You're crazy."
-show eve 16
-with Dissolve(.5)
-e "You never know when you are going to die. When your life will be unfairly ended, so why not do something you want to do, even if others would shake their heads and laugh at such things. If you enjoy it, isn't that the point." 
-e "Who cares if people point and laugh, as long as you are laughing too."
-"Ryo gave her a pointed look."
-r "Didn't you just justify every thief and killer in the world?"
-"Eve stopped tugging on Ryo's arm, and her smile left her face."
-show eve 12
-with Dissolve(.5)
-e "No..."
-e "I would never."
-show eve 12b
-with Dissolve(.5)
-e "There is a difference between doing something that harms no one, and something that harms others. Even if you do it because 'I only have one life and I don't know when I'm going to die.' I can't accept it."
-e "Just because you can do something doesn't mean it is right, or you should do it."
-show eve 17
-with Dissolve(.5)
-e "Now enough of such a dark topic. Dance with me!"
-hide eve 17
-with Dissolve(1.0)
-"Ryo let out a sigh and let Eve have her way. He stopped resisting, and the two of them began to waltz, among lots of other classical types of dance, in the snow."
-scene black
-with Dissolve(.5)
-scene bg lot1
-with fade
-r "Why do you enjoy the snow so much Eve?"
-"Eve stopped dancing and let go of Ryo's hand."
-show eve 16b
-with Dissolve(.5)
-e "Because it feels like I've transcended. I've left the world I'm used to and entered a different wondrous world. Watching the snow fall is an amazing thing, it is something so delicate and pretty."
-e "Rain feels heavy and dark. But snow feels light and airy, it is like I'm in a fairy tale."
-r "You like that kind of feeling? Of being in an another world."
-show eve 18b
-with Dissolve(.5)
-e "Yeah."
-show eve 6
-with Dissolve(.5)
-e "Hey Ryo, do you think we could have a snowball fight?"
-show eve 2
-with Dissolve(.5)
-e "Wait..."
-e "There probably isn't enough snow yet."
-show eve 8
-with Dissolve(.5)
-e "We'll just have to hope it keeps snowing so we can do it."  
-show eve 19b
-with Dissolve(.5)
-e "I can't wait. It will be so much fun."
-show eve 5b
-with Dissolve(.5)
-e "..."
-show eve 16b
-with Dissolve(.5)
-e "Hey Ryo, you ever think about how lucky you are?"
-r "I'm lucky?"
-e "Seems that way to me. You are gifted with brains-"
-r "Something I get harassed over."
-e "People will always be jealous over something they don't have."
-r "I suppose so."
-e "Even if someone works so hard for something, and when they finally get it, even then will someone out there be envious. Even though the person earned it."
-e "Do you believe you earned your brains?"
-r "Not really."
-show eve 6b
-with Dissolve(.5)
-e "Why?"
-r "Because I've just breezed through life. Not really studying, everyone studies way harder, but I do better."
-show eve 3
-with Dissolve(.5)
-e "Then why don't you actually go for it. Do just the same effort they did, show that you deserve your smarts."
-r "I don't think that will change anyone's opinion."
-e "Did I said it would?"
-show eve 4
-with Dissolve(.5)
-e "It won't change others opinion, but it will change how you feel about it."
-e "Be confident, show that you have earned your talents, and then use them to their fullest."
-e "You are just wasting them if you don't do anything with them."
-r "So I can use my talents to graduate early, big deal."
-e "I'm sure you can use them for other things, also you probably have more talents than just that. You just haven't found them yet."
-r "And what are your talents."
-show eve 5b
-with Dissolve(.5)
-e "Hmm..."
-show eve 2b
-with Dissolve(.5)
-e "Dunno. Haven't found them out yet."
-r "Really?"
-show eve 16b
-with Dissolve(.5)
-e "Or maybe I have, but they are secret."
-"Eve put a finger to her lip and winked at Ryo."
-e "See ya tomorrow Ryo."
-"She waved to him as she called out."
-show eve 19b
-with Dissolve(.5)
-e "And you better show up!"
-hide eve 19b
-with Dissolve(.3)
-"She shouted before running off."
-scene black
-with Dissolve(.5)
-$ money_flag = False
-jump choice5_end
-
+    play music "Music/White Snow.ogg"
+    $ love_points += 1
+    "Ryo found himself in a daze until the end of school the next day. His mind wandered to Eve, she was so different, so unique. It made him want to talk to her again. To look forward to their next meeting."
+    scene bg bridge1
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(0.5)
+    "Ryo stopped running when he reached the bridge. There she stood, however something was different. She wasn't looking down at the water but instead up at the clouds."
+    scene bg bridge2
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(0.5)
+    r "Not looking at the water today?"
+    show eve 4
+    $ renpy.pause(0.5)
+    e "Of course not. I don't come here daily and stare at the water for hours. That would be boring and get old."
+    "Ryo shrugged, he couldn't argue with that. It would get boring to just stare at water for hours on a daily basis."
+    r "So you are watching the clouds today?"
+    "Eve nodded, she still hadn't turned toward him. Rather the sky seemed more interesting to her, then he did."
+    r "You not even going to say 'hello'?"
+    e "Hello."
+    r "Very funny."
+    r "So you aren't even going to pay any attention to me, even though just yesterday you were crying out for me to come talk to you again."
+    e "That was then, this is now."
+    r "So the sky is more interesting then I am."
+    "Another nod."
+    show eve 4
+    $ renpy.pause(0.5)
+    e "However, I'm not watching the sky. I am watching the clouds."
+    r "Same thing."
+    e "Not really."
+    r "So the sky is more interesting than me."
+    show eve 1b
+    $ renpy.pause(0.5)
+    e "Dirt is more interesting than you."
+    r "That's..."
+    r "Really harsh."
+    e "Well to a pedologist, dirt is more interesting than you."
+    r "Are you one?"
+    e "One what?"
+    r "......."
+    r "Nope, not falling for it."
+    show eve 4b
+    $ renpy.pause(0.5)
+    e "No, I do not study soil. Today I'm biologist."
+    r "Are you sure you're not a nepholologist."
+    show eve 9b
+    $ renpy.pause(0.5)
+    e "Too many big words. It hurts."
+    e "If you agree to stop using big words, I'll pay attention to you, okay?"
+    r "But you were the one who started it."
+    r "Fine."
+    show eve 1
+    $ renpy.pause(0.5)
+    e "Good."
+    r "....."
+    e "....."
+    r "....."
+    e "....."
+    r "...So why are you studying the clouds?"
+    show eve 6
+    $ renpy.pause(0.5)
+    e "Who said I was studying the clouds?"
+    r "You did."
+    show eve 3
+    $ renpy.pause(0.5)
+    e "I did not."
+    e "I'm not studying the clouds. I'm watching them."
+    r "Pretty much the same thing."
+    scene bg bridge1
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(2)
+    show eve 5
+    $ renpy.pause(0.5)
+    e "Nope."
+    r "Why are you watching the clouds then."
+    show eve 4b
+    $ renpy.pause(0.5)
+    e "Because clouds are interesting. A lot of people don't like them, because they block out and ruin a 'sunny day.' But I enjoy them for they are different. If they didn't exist everything would be ruined."
+    e "Without clouds everyday would be sunny thus making it get old after a while, with clouds comes change, things are different. Without clouds we would have no rain or snow."
+    r "But there wouldn't be any bad storms without clouds."
+    e "Sure there are elements that we don't enjoy about them, but if we took away them, things would be worse off. Don't you think life is like that, everything has a purpose."
+    e "All the hardships you are going through and all the good times as well they have purpose."
+    e "Without them, you might be a completely different person, everything that happens to you shapes you."
+    e "How much will our meeting shape us, one can't say, but we can be sure that it will influence us. Even if we don't realize that it is, we are changing due to the stuff around us."
+    e "This won't stop happening until we die, we will constantly be changing due to our experiences."
+    r "How did we get from clouds to this?"
+    e "Clouds also reveals just how horrid life is. At any time a storm could get worse and could take someone's life. It is really unfair, that such a thing could happen."
+    e "Life is merciless and cruel, but it isn't without grace a beauty. For once the storm passes a wondrous rainbow will fill the sky."
+    "A loud grumble roared out, just before Eve put a hand to her stomach."
+    show eve 7b
+    $ renpy.pause(0.5)
+    e "I'm hungry..."
+    r "That was a quick subject change."
+    e "What to do....."
+    e "So hungry..."
+    r "That's right. Eve might be homeless, she probably has to struggle just to get food most of the time."
+    r "Don't worry Eve, I'll treat you."
+    show eve 6b
+    $ renpy.pause(0.5)
+    e "Really? Ryo, thank you."
+    r "It's no problem. We just need to stop by the work first and tell them I need the day off."
+    show eve 2
+    $ renpy.pause(0.5)
+    e "Won't that get you in trouble?"
+    r "Don't worry about it. It will be fine. Seeing you worried over something is weird, stop that."
+    hide eve
+    $ renpy.pause(1)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(2)
+    scene black
+    $ renpy.pause(1)
+    "The two of them made a quick stop at Ryo's workplace to request the day off. Despite it being such short notice, he recived the day off and the two of them heading to fast food place nearby."
+    scene bg food1
+    #WEETABIX NOTE: A fade effect did not show up here thanks to the RenPSP engine.
+    "Eve went to sit down at a booth while Ryo ordered the food. Ryo returned a few minutes later with 2 hamburgers. He gave one to Eve before sitting down across from her."
+    "He was about to take a bite of his own hamburger, when he looked over at Eve. His hands became frozen, and he slowly lowered the food."
+    "Eve was cutting her hamburger into little pieces with a knife and fork. She cut into the hamburger slicing it into tiny precise pieces before picking one up with her fork."
+    "After she finished swallowing she took her napkin and patted it against her lips."
+    show eve 4b
+    $ renpy.pause(0.5)
+    e "What? What's wrong?"
+    r "Uhhh... What are you doing?"
+    e "Eating the food you gave to me."
+    r "No... I mean with the fork and knife."
+    show eve 5b
+    $ renpy.pause(0.5)
+    e "I'm eating proper and politely. Is there something wrong with that?" 
+    r "No... But it looks weird. A hamburger normally isn't eaten that way."
+    r "......"
+    r "......"
+    r "I didn't mean for you to wolf down your food. You switched from being overly polite to overly messy and rude."
+    show eve 11
+    $ renpy.pause(0.5)
+    e "Make up, your mind. You are so picky."
+    "After making that comment Eve started eating like a normal person."
+    r "You were just messing with me weren't you."
+    show eve 6b
+    $ renpy.pause(0.5)
+    e "Me? I would never."
+    show eve 16b
+    $ renpy.pause(0.5)
+    "The meal continued with light conversation throughout." 
+    show eve 6
+    $ renpy.pause(0.5)
+    e "Ryo!"
+    hide eve 6
+    $ renpy.pause(0.3)
+    "Eve jumped up from her seat and ran out the door, leaving Ryo behind with a confused expression."
+    r "...."
+    r "What was that about?"
+    r "Eve, what is going on? Why did you run out of the place?"
+    scene black
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(1)
+    scene bg lot4
+    #WEETABIX NOTE: More fades have been exterminated
+    $ renpy.pause(2)
+    show eve 17
+    $ renpy.pause(0.5)
+    e "Ryo, look."
+    e "It is snowing!"
+    "Eve began to spin around as the snow swirled around her."
+    r "So?"
+    show eve 19
+    $ renpy.pause(0.5)
+    e "So. Snow is great. It is so wondrous and beautiful."
+    e "It is so amazing. I love the snow."
+    "Eve laughed and giggled as she danced around in the snow like a little kid seeing snow for the first time."
+    r "What are you doing?"
+    show eve 18b
+    $ renpy.pause(0.5)
+    e "Dancing. Come on Ryo join me. It will be fun."
+    r "Are you crazy, people could be watching."
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "So?"
+    r "Aren't you embarrassed to do something like that?"
+    show eve 18
+    $ renpy.pause(0.5)
+    e "Nope."
+    "Eve ran over and snatched up Ryo's arm tugging on it pleadingly."
+    show eve 19
+    $ renpy.pause(0.5)
+    e "Come on Ryo. Dance with me."
+    r "You're crazy."
+    show eve 16
+    $ renpy.pause(0.5)
+    e "You never know when you are going to die. When your life will be unfairly ended, so why not do something you want to do, even if others would shake their heads and laugh at such things. If you enjoy it, isn't that the point." 
+    e "Who cares if people point and laugh, as long as you are laughing too."
+    "Ryo gave her a pointed look."
+    r "Didn't you just justify every thief and killer in the world?"
+    "Eve stopped tugging on Ryo's arm, and her smile left her face."
+    show eve 12
+    $ renpy.pause(0.5)
+    e "No..."
+    e "I would never."
+    show eve 12b
+    $ renpy.pause(0.5)
+    e "There is a difference between doing something that harms no one, and something that harms others. Even if you do it because 'I only have one life and I don't know when I'm going to die.' I can't accept it."
+    e "Just because you can do something doesn't mean it is right, or you should do it."
+    show eve 17
+    $ renpy.pause(0.5)
+    e "Now enough of such a dark topic. Dance with me!"
+    hide eve
+    $ renpy.pause(1)
+    "Ryo let out a sigh and let Eve have her way. He stopped resisting, and the two of them began to waltz, among lots of other classical types of dance, in the snow."
+    scene black
+    $ renpy.pause(0.5)
+    scene bg lot1
+    #WEETABIX NOTE: Another fade, another extermination
+    r "Why do you enjoy the snow so much Eve?"
+    "Eve stopped dancing and let go of Ryo's hand."
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "Because it feels like I've transcended. I've left the world I'm used to and entered a different wondrous world. Watching the snow fall is an amazing thing, it is something so delicate and pretty."
+    e "Rain feels heavy and dark. But snow feels light and airy, it is like I'm in a fairy tale."
+    r "You like that kind of feeling? Of being in an another world."
+    show eve 18b
+    $ renpy.pause(0.5)
+    e "Yeah."
+    show eve 6
+    $ renpy.pause(0.5)
+    e "Hey Ryo, do you think we could have a snowball fight?"
+    show eve 2
+    $ renpy.pause(0.5)
+    e "Wait..."
+    e "There probably isn't enough snow yet."
+    show eve 8
+    $ renpy.pause(0.5)
+    e "We'll just have to hope it keeps snowing so we can do it."  
+    show eve 19b
+    $ renpy.pause(0.5)
+    e "I can't wait. It will be so much fun."
+    show eve 5b
+    $ renpy.pause(0.5)
+    e "..."
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "Hey Ryo, you ever think about how lucky you are?"
+    r "I'm lucky?"
+    e "Seems that way to me. You are gifted with brains-"
+    r "Something I get harassed over."
+    e "People will always be jealous over something they don't have."
+    r "I suppose so."
+    e "Even if someone works so hard for something, and when they finally get it, even then will someone out there be envious. Even though the person earned it."
+    e "Do you believe you earned your brains?"
+    r "Not really."
+    show eve 6b
+    $ renpy.pause(0.5)
+    e "Why?"
+    r "Because I've just breezed through life. Not really studying, everyone studies way harder, but I do better."
+    show eve 3
+    $ renpy.pause(0.5)
+    e "Then why don't you actually go for it. Do just the same effort they did, show that you deserve your smarts."
+    r "I don't think that will change anyone's opinion."
+    e "Did I said it would?"
+    show eve 4
+    $ renpy.pause(0.5)
+    e "It won't change others opinion, but it will change how you feel about it."
+    e "Be confident, show that you have earned your talents, and then use them to their fullest."
+    e "You are just wasting them if you don't do anything with them."
+    r "So I can use my talents to graduate early, big deal."
+    e "I'm sure you can use them for other things, also you probably have more talents than just that. You just haven't found them yet."
+    r "And what are your talents."
+    show eve 5b
+    $ renpy.pause(0.5)
+    e "Hmm..."
+    show eve 2b
+    $ renpy.pause(0.5)
+    e "Dunno. Haven't found them out yet."
+    r "Really?"
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "Or maybe I have, but they are secret."
+    "Eve put a finger to her lip and winked at Ryo."
+    e "See ya tomorrow Ryo."
+    "She waved to him as she called out."
+    show eve 19b
+    $ renpy.pause(0.5)
+    e "And you better show up!"
+    hide eve
+    $ renpy.pause(0.3)
+    "She shouted before running off."
+    scene black
+    $ renpy.pause(0.5)
+    jump choice5_end
 label work_scene:
-$ love_points += 1
-play music "Music/White Snow.ogg"
-"Ryo found himself in a daze until the end of school the next day. His mind wandered to Eve, she was so different, so unique. It made him want to talk to her again. To look forward to their next meeting."
-scene bg bridge1
-with fade
-"Ryo stopped running when he reached the bridge. There she stood, however something was different. She wasn't looking at the water, but instead she was staring at the street."
-r "Not looking at the water today?"
-show eve 4
-with Dissolve(.5)
-e "Of course not. I don't come here daily and stare at the water for hours. That would be boring and get old."
-"Ryo shrugged, he couldn't argue with that. It would get boring to just stare at water for hours on a daily basis."
-r "So what are you doing?"
-scene bg bridge4
-with Dissolve(.5)
-pause 2.0
-show eve 1
-with Dissolve(.5)
-e "People watching."
-r "What for?"
-e "Haven't you ever just watched the people pass by you and make up lives for them. Where they are going, what their life is like, their hopes and dreams?"
-r "Can't say I have."
-show eve 3b
-with Dissolve(.5)
-e "I figured so. You are very boring, it is to be expected."
-e "Well, either way you should try it some time. It is interesting."
-e "You use your imagination and everything you notice about the person to create a life for them."
-r "That is... weird."
-show eve 4
-with Dissolve(.5)
-e "Is it?"
-pause 1.0
-e "I'm hungry..."
-r "Well, I have to get to work, so see ya."
-e "Bye."
-hide eve 4
-with Dissolve(2.0)
-scene black
-with Dissolve(.5)
-pause 1.0
-scene bg store1
-"Ryo tried to focus at work, but he founds his thoughts drifting back to Eve."
-r "She said she was hungry."
-"In the end he couldn't ignore it and he bought a cheap candy bar, and once his shift ended he headed off the find Eve."
-scene bg lot2
-with Dissolve(.5)
-pause 1.0
-"He didn't have to look long for he found her in the parking lot."
-r "Eve?"
-show eve 6
-with Dissolve(.5)
-e "Oh, hi Ryo."
-r "What are you doing?"
-show eve 4b
-with Dissolve(.5)
-e "Waiting for the snow."
-r "Why?"
-scene bg lot3
-with Dissolve(.5)
-pause 2.0
-show eve 4
-with Dissolve(.5)
-e "I just feel like it is going to snow, and here is such a nice place to see it." 
-"Ryo shook his head, he would never understand her."
-r "Here, this is for you."
-show eve 17
-with Dissolve(.5)
-e "Oo! Candy!"
-"Eve snatched up the candy bar and scarfed it down."
-show eve 18
-with Dissolve(.5)
-e "Thanks Ryo."
-show eve 6
-with Dissolve(.5)
-e "Ryo, look."
-show eve 17
-with Dissolve(.5)
-e "It is snowing!"
-"Eve began to spin around as the snow swirled around her."
-r "So?"
-scene bg lot4
-with Dissolve(.5)
-pause 2.0
-show eve 19
-with Dissolve(.5)
-e "So. Snow is great. It is so wondrous and beautiful."
-e "It is so amazing. I love the snow."
-"Eve laughed and giggled as she danced around in the snow like a little kid seeing snow for the first time."
-r "What are you doing?"
-show eve 18b
-with Dissolve(.5)
-e "Dancing. Come on Ryo join me. It will be fun."
-r "Are you crazy, people could be watching."
-show eve 16b
-with Dissolve(.5)
-e "So?"
-r "Aren't you embarrassed to do something like that?"
-show eve 18
-with Dissolve(.5)
-e "Nope."
-"Eve ran over and snatched up Ryo's arm tugging on it pleadingly."
-show eve 19
-with Dissolve(.5)
-e "Come on Ryo. Dance with me."
-r "You're crazy."
-show eve 16
-with Dissolve(.5)
-e "You never know when you are going to die. When your life will be unfairly ended, so why not do something you want to do, even if others would shake their heads and laugh at such things."
-e "If you enjoy it, isn't that the point. Who cares if people point and laugh, as long as you are laughing too."
-"Ryo gave her a pointed look."
-r "Didn't you just justify every thief and killer in the world?"
-"Eve stopped tugging on Ryo's arm, and her smile left her face."
-show eve 12
-with Dissolve(.5)
-e "No..."
-e "I would never."
-show eve 12b
-with Dissolve(.5)
-e "There is a difference between doing something that harms no one, and something that harms others. Even if you do it because 'I only have one life and I don't know when I'm going to die.' I can't accept it." 
-e "Just because you can do something doesn't mean it is right, or you should do it."
-show eve 17
-with Dissolve(.5)
-e "Now enough of such a dark topic. Dance with me!"
-hide eve 17
-with Dissolve(1.0)
-"Ryo let out a sigh and let Eve have her way. He stopped resisting, and the two of them began to waltz, among lots of other classical types of dance, in the snow."
-scene black
-with Dissolve(.5)
-scene bg lot1
-with fade
-r "Why do you enjoy the snow so much Eve?"
-"Eve stopped dancing and let go of Ryo's hand."
-show eve 16b
-with Dissolve(.5)
-e "Because it feels like I've transcended. I've left the world I'm used to and entered a different wondrous world. Watching the snow fall is an amazing thing, it is something so delicate and pretty."
-e "Rain feels heavy and dark. But snow feels light and airy, it is like I'm in a fairy tale."
-r "You like that kind of feeling? Of being in an another world."
-show eve 18b
-with Dissolve(.5)
-e "Yeah."
-show eve 6
-with Dissolve(.5)
-e "Hey Ryo, do you think we could have a snowball fight?"
-show eve 2
-with Dissolve(.5)
-e "Wait..."
-e "There probably isn't enough snow yet."
-show eve 8
-with Dissolve(.5)
-e "We'll just have to hope it keeps snowing so we can do it."  
-show eve 19b
-with Dissolve(.5)
-e "I can't wait. It will be so much fun."
-show eve 5b
-with Dissolve(.5)
-e "..."
-show eve 16b
-with Dissolve(.5)
-e "Hey Ryo, you ever think about how lucky you are?"
-r "I'm lucky?"
-e "Seems that way to me. You are gifted with brains-"
-r "Something I get harassed over."
-e "People will always be jealous over something they don't have."
-r "I suppose so."
-e "Even if someone works so hard for something, and when they finally get it, even then will someone out there be envious. Even though the person earned it."
-e "Do you believe you earned your brains?"
-r "Not really."
-show eve 6b
-with Dissolve(.5)
-e "Why?"
-r "Because I've just breezed through life. Not really studying, everyone studies way harder, but I do better."
-show eve 3
-with Dissolve(.5)
-e "Then why don't you actually go for it. Do just the same effort they did, show that you deserve your smarts."
-r "I don't think that will change anyone's opinion."
-e "Did I said it would?"
-show eve 4
-with Dissolve(.5)
-e "It won't change others opinion, but it will change how you feel about it."
-e "Be confident, show that you have earned your talents, and then use them to their fullest."
-e "You are just wasting them if you don't do anything with them."
-r "So I can use my talents to graduate early, big deal."
-e "I'm sure you can use them for other things, also you probably have more talents than just that. You just haven't found them yet."
-r "And what are your talents."
-show eve 5b
-with Dissolve(.5)
-e "Hmm..."
-show eve 2b
-with Dissolve(.5)
-e "Dunno. Haven't found them out yet."
-r "Really?"
-show eve 16b
-with Dissolve(.5)
-e "Or maybe I have, but they are secret."
-"Eve put a finger to her lip and winked at Ryo."
-e "See ya tomorrow Ryo."
-"She waved to him as she called out."
-show eve 19b
-with Dissolve(.5)
-e "And you better show up!"
-hide eve 19b
-with Dissolve(.3)
-"She shouted before running off."
-scene black
-with Dissolve(.5)
-$ money_flag = True
-jump choice5_end
+    $ love_points += 1
+    play music "Music/White Snow.ogg"
+    "Ryo found himself in a daze until the end of school the next day. His mind wandered to Eve, she was so different, so unique. It made him want to talk to her again. To look forward to their next meeting."
+    scene bg bridge1
+    #WEETABIX NOTE: FADEKILL!!!
+    "Ryo stopped running when he reached the bridge. There she stood, however something was different. She wasn't looking at the water, but instead she was staring at the street."
+    r "Not looking at the water today?"
+    show eve 4
+    $ renpy.pause(0.5)
+    e "Of course not. I don't come here daily and stare at the water for hours. That would be boring and get old."
+    "Ryo shrugged, he couldn't argue with that. It would get boring to just stare at water for hours on a daily basis."
+    r "So what are you doing?"
+    scene bg bridge4
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(2)
+    show eve 1
+    $ renpy.pause(0.5)
+    e "People watching."
+    r "What for?"
+    e "Haven't you ever just watched the people pass by you and make up lives for them. Where they are going, what their life is like, their hopes and dreams?"
+    r "Can't say I have."
+    show eve 3b
+    $ renpy.pause(0.5)
+    e "I figured so. You are very boring, it is to be expected."
+    e "Well, either way you should try it some time. It is interesting."
+    e "You use your imagination and everything you notice about the person to create a life for them."
+    r "That is... weird."
+    show eve 4
+    $ renpy.pause(0.5)
+    e "Is it?"
+    $ renpy.pause(1)
+    e "I'm hungry..."
+    r "Well, I have to get to work, so see ya."
+    e "Bye."
+    hide eve
+    $ renpy.pause(2)
+    scene black
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(1)
+    scene bg store1
+    "Ryo tried to focus at work, but he founds his thoughts drifting back to Eve."
+    r "She said she was hungry."
+    "In the end he couldn't ignore it and he bought a cheap candy bar, and once his shift ended he headed off the find Eve."
+    scene bg lot2
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(1)
+    "He didn't have to look long for he found her in the parking lot."
+    r "Eve?"
+    show eve 6
+    $ renpy.pause(0.5)
+    e "Oh, hi Ryo."
+    r "What are you doing?"
+    show eve 4b
+    $ renpy.pause(0.5)
+    e "Waiting for the snow."
+    r "Why?"
+    scene bg lot3
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(2)
+    show eve 4
+    $ renpy.pause(0.5)
+    e "I just feel like it is going to snow, and here is such a nice place to see it." 
+    "Ryo shook his head, he would never understand her."
+    r "Here, this is for you."
+    show eve 17
+    $ renpy.pause(0.5)
+    e "Oo! Candy!"
+    "Eve snatched up the candy bar and scarfed it down."
+    show eve 18
+    $ renpy.pause(0.5)
+    e "Thanks Ryo."
+    show eve 6
+    $ renpy.pause(0.5)
+    e "Ryo, look."
+    show eve 17
+    $ renpy.pause(0.5)
+    e "It is snowing!"
+    "Eve began to spin around as the snow swirled around her."
+    r "So?"
+    scene bg lot4
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(2)
+    show eve 19
+    $ renpy.pause(0.5)
+    e "So. Snow is great. It is so wondrous and beautiful."
+    e "It is so amazing. I love the snow."
+    "Eve laughed and giggled as she danced around in the snow like a little kid seeing snow for the first time."
+    r "What are you doing?"
+    show eve 18b
+    $ renpy.pause(0.5)
+    e "Dancing. Come on Ryo join me. It will be fun."
+    r "Are you crazy, people could be watching."
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "So?"
+    r "Aren't you embarrassed to do something like that?"
+    show eve 18
+    $ renpy.pause(0.5)
+    e "Nope."
+    "Eve ran over and snatched up Ryo's arm tugging on it pleadingly."
+    show eve 19
+    $ renpy.pause(0.5)
+    e "Come on Ryo. Dance with me."
+    r "You're crazy."
+    show eve 16
+    $ renpy.pause(0.5)
+    e "You never know when you are going to die. When your life will be unfairly ended, so why not do something you want to do, even if others would shake their heads and laugh at such things."
+    e "If you enjoy it, isn't that the point. Who cares if people point and laugh, as long as you are laughing too."
+    "Ryo gave her a pointed look."
+    r "Didn't you just justify every thief and killer in the world?"
+    "Eve stopped tugging on Ryo's arm, and her smile left her face."
+    show eve 12
+    $ renpy.pause(0.5)
+    e "No..."
+    e "I would never."
+    show eve 12b
+    $ renpy.pause(0.5)
+    e "There is a difference between doing something that harms no one, and something that harms others. Even if you do it because 'I only have one life and I don't know when I'm going to die.' I can't accept it." 
+    e "Just because you can do something doesn't mean it is right, or you should do it."
+    show eve 17
+    $ renpy.pause(0.5)
+    e "Now enough of such a dark topic. Dance with me!"
+    hide eve
+    $ renpy.pause(1)
+    "Ryo let out a sigh and let Eve have her way. He stopped resisting, and the two of them began to waltz, among lots of other classical types of dance, in the snow."
+    scene black
+    $ renpy.pause(0.5)
+    scene bg lot1
+    #WEETABIX NOTE: Here lies a fade effect, brutally killed by the RenPSP engine.
+    r "Why do you enjoy the snow so much Eve?"
+    "Eve stopped dancing and let go of Ryo's hand."
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "Because it feels like I've transcended. I've left the world I'm used to and entered a different wondrous world. Watching the snow fall is an amazing thing, it is something so delicate and pretty."
+    e "Rain feels heavy and dark. But snow feels light and airy, it is like I'm in a fairy tale."
+    r "You like that kind of feeling? Of being in an another world."
+    show eve 18b
+    $ renpy.pause(0.5)
+    e "Yeah."
+    show eve 6
+    $ renpy.pause(0.5)
+    e "Hey Ryo, do you think we could have a snowball fight?"
+    show eve 2
+    $ renpy.pause(0.5)
+    e "Wait..."
+    e "There probably isn't enough snow yet."
+    show eve 8
+    $ renpy.pause(0.5)
+    e "We'll just have to hope it keeps snowing so we can do it."  
+    show eve 19b
+    $ renpy.pause(0.5)
+    e "I can't wait. It will be so much fun."
+    show eve 5b
+    $ renpy.pause(0.5)
+    e "..."
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "Hey Ryo, you ever think about how lucky you are?"
+    r "I'm lucky?"
+    e "Seems that way to me. You are gifted with brains-"
+    r "Something I get harassed over."
+    e "People will always be jealous over something they don't have."
+    r "I suppose so."
+    e "Even if someone works so hard for something, and when they finally get it, even then will someone out there be envious. Even though the person earned it."
+    e "Do you believe you earned your brains?"
+    r "Not really."
+    show eve 6b
+    $ renpy.pause(0.5)
+    e "Why?"
+    r "Because I've just breezed through life. Not really studying, everyone studies way harder, but I do better."
+    show eve 3
+    $ renpy.pause(0.5)
+    e "Then why don't you actually go for it. Do just the same effort they did, show that you deserve your smarts."
+    r "I don't think that will change anyone's opinion."
+    e "Did I said it would?"
+    show eve 4
+    $ renpy.pause(0.5)
+    e "It won't change others opinion, but it will change how you feel about it."
+    e "Be confident, show that you have earned your talents, and then use them to their fullest."
+    e "You are just wasting them if you don't do anything with them."
+    r "So I can use my talents to graduate early, big deal."
+    e "I'm sure you can use them for other things, also you probably have more talents than just that. You just haven't found them yet."
+    r "And what are your talents."
+    show eve 5b
+    $ renpy.pause(0.5)
+    e "Hmm..."
+    show eve 2b
+    $ renpy.pause(0.5)
+    e "Dunno. Haven't found them out yet."
+    r "Really?"
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "Or maybe I have, but they are secret."
+    "Eve put a finger to her lip and winked at Ryo."
+    e "See ya tomorrow Ryo."
+    "She waved to him as she called out."
+    show eve 19b
+    $ renpy.pause(0.5)
+    e "And you better show up!"
+    hide eve
+    $ renpy.pause(0.3)
+    "She shouted before running off."
+    scene black
+    $ renpy.pause(0.5)
+    $ money_flag = true
+    jump choice5_end
 
 label choice5_end:
-play music "Music/Firefly.ogg"
-r "What I have?"
-r "I should be working just as hard as everyone else? Would that really help?"
-r "Compared to Eve, I have so much, and she has almost nothing."
-r "I have a home to return to each night. That is something not everyone has. I have food that is always given to me, which I don't accept."
-r "...."
-r "I have been taking things for granted. I should be thankful for what I have."
-r "I guess my smarts should be one of those too."
-r "Work hard, and use my talents."
-r "I guess that is what I should really be doing."
-
-
-
-#(School)
-play music "Music/Water's Surface.ogg"
-Chika "Hey, Ryo. You're been acting different all day."
-Jiro "I see, I wasn't the only one who noticed."
-Shigeru "Yeah, what's up."
-r "Nothing really, I've just decided to appreciate what I have, and use my talents, instead of do nothing."
-Jiro "So does that mean you are going to do all our homework for us, from now on?"
-r "No."
-r "You wouldn't learn anything if I just did all your homework. I'm still only going to help you guys with studying."
-Jiro "Rats."
-Shigeru "Ryo, we could really use your help. How about a study session right now. You don't have to work today, right?"
-Chika "Awesome, I was having trouble with the homework."
-r "Sorry, I can't."
-Shigeru "So you do have to work?"
-r "No, I don't have to work, but I do have other plans." 
-Chika "Oh. Okay, we will just have to do it some other time then."
-Shigeru "Yeah, no big deal. See ya Ryo."
-
-
-
-#(Meeting)[snowball fight]
-play music "Music/Peaceful Days.ogg"
-scene bg bridge1
-with fade
-"Ryo found himself running to get to the bridge. He was looking forward to spending time with Eve again."
-r "She isn't here."
-"Ryo frowned as he looked around for Eve."
-r "And she was the one who ordered me to be here."
-e "Alright troops. Fire! Annihilate the target!"
-"A small army of little kids along with Eve suddenly ran out from under the shadow of the bridge. And in seconds Ryo was pelted with snowballs."
-show eve 21b
-with Dissolve(.5)
-e "Keep going! Don't let up until the enemy surrenders!"
-"Ryo had no time to react as snowballs flew at him with the rapid pace akin to that of a machine gun."
-r "I surrender. I surrender"
-e "Alright troops you heard him. Stop firing."
-"Once the bombardment had stopped Ryo stood and addressed Eve."
-r "What was that about?"
-show eve 16b
-with Dissolve(.5)
-e "I told you I wanted to have a snowball fight, didn't I?"
-r "You did, but what is with the little kids."
-e "I thought it would be funner if we had our own little armies, and they didn't seem to be doing anything. Plus they thought it sounded fun, and agreed to play."
-"Ryo looked down at the kids, they all appeared to be as Eve had said, really excited to play."
-"Letting out a sigh, Ryo didn't protest."
-r "Alright. They seem to really want to play, so I won't say anything."
-show eve 19b
-with Dissolve(.5)
-e "Great. Okay, these three are on your team. They are you army, and you are the commander."
-show eve 16
-with Dissolve(.5)
-e "If your solders get hit twice they are out of the game. But we only have to be hit once."
-e "No making rocks in your snowballs, and so on. You can only use snowballs on each other."
-r "I would be worried if that wasn't the case."
-e "Your base will be the park. Mine will be the parking lot."
-e "And will begin the game in 5 minutes, so be ready."
-show eve 18
-with Dissolve(.5)
-e "Alright troops, march with me as we discuss strategy."
-show eve 19
-with Dissolve(.5)
-e "Everyone sing with me."
-e "I don't know what you've been told."
-k5 "I don't know what you've been told."
-hide eve 19
-with Dissolve(1.0)
-e "But Ryo's heart is ice cold."
-k5 "But Ryo's heart is ice cold."
-e "Second verse."
-e "I don't know what you've been told."
-k5 "I don't know what you've been told."
-e "But his arm is as strong as mold."
-"Ryo burst out laughing at Eve antics until she was out of sight."
-r "Alright. Here is the plan. We are just going to be on the defensive. I doubt Eve will play defensively, so she will probably charge us as soon as the game starts."
-scene black
-with Dissolve(.5)
-pause 2.0
-scene bg park2
-with Dissolve(.5)
-"Ryo's group stayed huddled up in the arbor, waiting for the enemy to strike back."
-"Minutes passed by, but still they hadn't seen any sign of the enemy. Ryo was about to say he was wrong about Eve, when he assumptions were proven correctly."
-scene bg park1
-with Dissolve(.5)
-"Eve put down the trumpet and lifted a wooden sword into the air." 
-show eve 21b
-with Dissolve(.5)
-e "Charge! Take no prisoners!"
-hide eve 21b
-with Dissolve(.2)
-r "Get ready. Here they come."
-"Three little kids rushed out from behind a large mound of snow. In their hands they held trash can lids. They used their make shift shields to block all incoming snowballs"
-r "They have shields. Eve that is cheating, you said only snowballs."
-e "I said you can only use snowballs on each other, I never said you couldn't use shields."
-r "You had this planned. That's cheating."
-e "Is not. War is all about being prepared. The one who uses the most strategy and cunning wins."
-k1 "Fear not captain I will get them."
-"The kid ran by Ryo and burst out of the arbor and rushed toward the incoming army."
-k2 "Man down! Man down!"
-"Ryo shook his head at the whole event."
-r "Well that was pointless."
-e "Keep advancing, they are already down to 3. We shall not fall. The unstoppable army from the kingdom of Evenia shall prevail."
-r "We can't give up. So what if we are out numbered now and they have shields. We can still win right?!"
-k4 "Yeah!"   
-r "Just keep firing, they can't block everything. Eventually we will hit."
-k2 "No, Takashi."
-r "Mika, don't give out on me now. It is just you and me now. I need all the help I can get."
-k2 "Yes, Sir."
-e "You are finished Ryo. You are trapped."
-scene bg park2
-with Dissolve(.5)
-pause 1.0
-scene bg park3
-with Dissolve(.5)
-"Ryo had already noticed it. There was only 2 ways to leave the arbor, and Eve had dispatched at least one child to each side."
-r "Mika, I have a plan. We will both rush the exit that only has 1 child. I will draw his attention, and then you run by him, and head for Eve. It is up to you, you have to take her out."
-k2 "I'm sorry. I've been hit."
-r "Mika! Noooo!"
-show eve 21b
-with Dissolve(.5)
-e "This is the end Ryo. You are the only one left alive. It won't be long, before we capture you, and torture you until you reveal the secrets on to take down the kingdom of Ryoddela."
-r "Never! I will spill nothing!"
-"Ryo climbed over the railing of the arbor and made a break for the the large snow pile Eve stood in front of."
-r "This is between me and you now general of Evenia"
-"Eve smirked."
-show eve 21b
-with Dissolve(.5)
-e "That is what you think general. Rule 2 of war, always have a trap set."
-"Another child, a fourth solider of Evenia rushed out from behind the snow pile."
-e "Fire. Take him down. But don't hit any vital points. We still need him to talk!"
-e "Yes! We won! We are the top kingdom. Evenia will never fall!"
-r "You cheated you had 1 extra unit."
-show eve 20b
-with Dissolve(.5)
-e "I never said we had the same amount of kids. If fact I even gave you a clue. You were 'Ryoddela,' which contains the word 'odd', and my country was 'Evenia' which has the word 'even' in it."
-r "Still was unfair."
-show eve 21b
-with Dissolve(.5)
-e "All is fair in war, General."
-scene black
-with Dissolve(.5)
-
-#(Parents)
-
+    play music "Music/Firefly.ogg"
+    r "What I have?"
+    r "I should be working just as hard as everyone else? Would that really help?"
+    r "Compared to Eve, I have so much, and she has almost nothing."
+    r "I have a home to return to each night. That is something not everyone has. I have food that is always given to me, which I don't accept."
+    r "...."
+    r "I have been taking things for granted. I should be thankful for what I have."
+    r "I guess my smarts should be one of those too."
+    r "Work hard, and use my talents."
+    r "I guess that is what I should really be doing."
+    play music "Music/Water's Surface.ogg"
+    Chika "Hey, Ryo. You're been acting different all day."
+    Jiro "I see, I wasn't the only one who noticed."
+    Shigeru "Yeah, what's up."
+    r "Nothing really, I've just decided to appreciate what I have, and use my talents, instead of do nothing."
+    Jiro "So does that mean you are going to do all our homework for us, from now on?"
+    r "No."
+    r "You wouldn't learn anything if I just did all your homework. I'm still only going to help you guys with studying."
+    Jiro "Rats."
+    Shigeru "Ryo, we could really use your help. How about a study session right now. You don't have to work today, right?"
+    Chika "Awesome, I was having trouble with the homework."
+    r "Sorry, I can't."
+    Shigeru "So you do have to work?"
+    r "No, I don't have to work, but I do have other plans." 
+    Chika "Oh. Okay, we will just have to do it some other time then."
+    Shigeru "Yeah, no big deal. See ya Ryo."
+    play music "Music/Peaceful Days.ogg"
+    scene bg bridge1
+    #WEETABIX NOTE: Whoops, was that a fade effect? Sorry.
+    "Ryo found himself running to get to the bridge. He was looking forward to spending time with Eve again."
+    r "She isn't here."
+    "Ryo frowned as he looked around for Eve."
+    r "And she was the one who ordered me to be here."
+    e "Alright troops. Fire! Annihilate the target!"
+    "A small army of little kids along with Eve suddenly ran out from under the shadow of the bridge. And in seconds Ryo was pelted with snowballs."
+    show eve 21b
+    $ renpy.pause(0.5)
+    e "Keep going! Don't let up until the enemy surrenders!"
+    "Ryo had no time to react as snowballs flew at him with the rapid pace akin to that of a machine gun."
+    r "I surrender. I surrender"
+    e "Alright troops you heard him. Stop firing."
+    "Once the bombardment had stopped Ryo stood and addressed Eve."
+    r "What was that about?"
+    show eve 16b
+    $ renpy.pause(0.5)
+    e "I told you I wanted to have a snowball fight, didn't I?"
+    r "You did, but what is with the little kids."
+    e "I thought it would be funner if we had our own little armies, and they didn't seem to be doing anything. Plus they thought it sounded fun, and agreed to play."
+    "Ryo looked down at the kids, they all appeared to be as Eve had said, really excited to play."
+    "Letting out a sigh, Ryo didn't protest."
+    r "Alright. They seem to really want to play, so I won't say anything."
+    show eve 19b
+    $ renpy.pause(0.5)
+    e "Great. Okay, these three are on your team. They are you army, and you are the commander."
+    show eve 16
+    $ renpy.pause(0.5)
+    e "If your solders get hit twice they are out of the game. But we only have to be hit once."
+    e "No making rocks in your snowballs, and so on. You can only use snowballs on each other."
+    r "I would be worried if that wasn't the case."
+    e "Your base will be the park. Mine will be the parking lot."
+    e "And will begin the game in 5 minutes, so be ready."
+    show eve 18
+    $ renpy.pause(0.5)
+    e "Alright troops, march with me as we discuss strategy."
+    show eve 19
+    $ renpy.pause(0.5)
+    e "Everyone sing with me."
+    e "I don't know what you've been told."
+    k5 "I don't know what you've been told."
+    hide eve
+    $ renpy.pause(0.5)
+    e "But Ryo's heart is ice cold."
+    k5 "But Ryo's heart is ice cold."
+    e "Second verse."
+    e "I don't know what you've been told."
+    k5 "I don't know what you've been told."
+    e "But his arm is as strong as mold."
+    "Ryo burst out laughing at Eve antics until she was out of sight."
+    r "Alright. Here is the plan. We are just going to be on the defensive. I doubt Eve will play defensively, so she will probably charge us as soon as the game starts."
+    scene black
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(2)
+    scene bg park2
+    $ renpy.pause(0.5)
+    "Ryo's group stayed huddled up in the arbor, waiting for the enemy to strike back."
+    "Minutes passed by, but still they hadn't seen any sign of the enemy. Ryo was about to say he was wrong about Eve, when he assumptions were proven correctly."
+    scene bg park1
+    $ renpy.pause(0.5)
+    "Eve put down the trumpet and lifted a wooden sword into the air." 
+    show eve 21b
+    $ renpy.pause(0.5)
+    e "Charge! Take no prisoners!"
+    hide eve
+    $ renpy.pause(0.2)
+    r "Get ready. Here they come."
+    "Three little kids rushed out from behind a large mound of snow. In their hands they held trash can lids. They used their make shift shields to block all incoming snowballs"
+    r "They have shields. Eve that is cheating, you said only snowballs."
+    e "I said you can only use snowballs on each other, I never said you couldn't use shields."
+    r "You had this planned. That's cheating."
+    e "Is not. War is all about being prepared. The one who uses the most strategy and cunning wins."
+    k1 "Fear not captain I will get them."
+    "The kid ran by Ryo and burst out of the arbor and rushed toward the incoming army."
+    k2 "Man down! Man down!"
+    "Ryo shook his head at the whole event."
+    r "Well that was pointless."
+    e "Keep advancing, they are already down to 3. We shall not fall. The unstoppable army from the kingdom of Evenia shall prevail."
+    r "We can't give up. So what if we are out numbered now and they have shields. We can still win right?!"
+    k4 "Yeah!"   
+    r "Just keep firing, they can't block everything. Eventually we will hit."
+    k2 "No, Takashi."
+    r "Mika, don't give out on me now. It is just you and me now. I need all the help I can get."
+    k2 "Yes, Sir."
+    e "You are finished Ryo. You are trapped."
+    scene bg park2
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Actual pause below
+    $ renpy.pause(1)
+    scene bg park3
+    $ renpy.pause(0.5)
+    "Ryo had already noticed it. There was only 2 ways to leave the arbor, and Eve had dispatched at least one child to each side."
+    r "Mika, I have a plan. We will both rush the exit that only has 1 child. I will draw his attention, and then you run by him, and head for Eve. It is up to you, you have to take her out."
+    k2 "I'm sorry. I've been hit."
+    r "Mika! Noooo!"
+    show eve 21b
+    $ renpy.pause(0.5)
+    e "This is the end Ryo. You are the only one left alive. It won't be long, before we capture you, and torture you until you reveal the secrets on to take down the kingdom of Ryoddela."
+    r "Never! I will spill nothing!"
+    "Ryo climbed over the railing of the arbor and made a break for the the large snow pile Eve stood in front of."
+    r "This is between me and you now general of Evenia"
+    "Eve smirked."
+    show eve 21b
+    $ renpy.pause(0.5)
+    e "That is what you think general. Rule 2 of war, always have a trap set."
+    "Another child, a fourth solider of Evenia rushed out from behind the snow pile."
+    e "Fire. Take him down. But don't hit any vital points. We still need him to talk!"
+    e "Yes! We won! We are the top kingdom. Evenia will never fall!"
+    r "You cheated you had 1 extra unit."
+    show eve 20b
+    $ renpy.pause(0.5)
+    e "I never said we had the same amount of kids. If fact I even gave you a clue. You were 'Ryoddela,' which contains the word 'odd', and my country was 'Evenia' which has the word 'even' in it."
+    r "Still was unfair."
+    show eve 21b
+    $ renpy.pause(0.5)
+    e "All is fair in war, General."
+    scene black
+    $ renpy.pause(0.5)
+    #WEETABIX NOTE: Let's set camp here!
+$ renpy.quit()
 "They played a few more times switching up the teams, and even doing a game where it was Ryo and Eve verses the children, before saying goodbye to the war front."
 scene bg bridge1
 with fade
