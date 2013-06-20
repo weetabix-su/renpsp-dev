@@ -53,9 +53,10 @@ function ENGINE:ClearChars()
 
 end
 
-function ENGINE:ShowChar(name)
+function ENGINE:ShowChar(name,numval)
 	ch = self.state.chars[name]
 	img = self.media.images
+	isNum = numval
 
 	if ch==nil or img[name..' '..ch.state]==nil then
 		self:ErrorState('ENGINE:ShowChar('..name..') failed to find character')
@@ -79,28 +80,46 @@ function ENGINE:ShowChar(name)
 	surf = self.media.imgcache[name].surf
 
 	state = name .. ' ' .. ch.state
-	if ch.position == 'left' then
-		screen:blit(100-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == 'right' then
-		screen:blit(380-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == 'twoleft' then
-		screen:blit(160-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == 'tworight' then
-		screen:blit(320-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == 'center' then
-		screen:blit(240-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == 'offscreenleft' then
-		screen:blit(25-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == 'offscreenright' then
-		screen:blit(455-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == '1four' then
-		screen:blit(96-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == '2four' then
-		screen:blit(192-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == '3four' then
-		screen:blit(288-GAME_imagewidth(surf)/2, 0, surf)
-	elseif ch.position == '4four' then
-		screen:blit(384-GAME_imagewidth(surf)/2, 0, surf)
+	if isNum == true then
+		if (ch.position <= 1) then
+			charPos = 240 + (tonumber(240 * ch.position))
+			screen:blit(charPos-GAME_imagewidth(surf)/2, 0, surf)
+		elseif (ch.position > 1) then
+			charPos = ch.position
+			screen:blit(charPos-GAME_imagewidth(surf)/2, 0, surf)
+		end
+	elseif isNum ~= true then
+		if ch.position == 'left' then
+			screen:blit(100-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == 'right' then
+			screen:blit(380-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == 'twoleft' then
+			screen:blit(160-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == 'tworight' then
+			screen:blit(320-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == 'center' then
+			screen:blit(240-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == 'offscreenleft' then
+			screen:blit(25-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == 'offscreenright' then
+			screen:blit(455-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == '1four' then
+			screen:blit(96-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == '2four' then
+			screen:blit(192-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == '3four' then
+			screen:blit(288-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == '4four' then
+			screen:blit(384-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf), surf)
+		elseif ch.position == 'top' then
+			screen:blit(240-GAME_imagewidth(surf)/2, 0, surf)
+		elseif ch.position == 'topleft' then
+			screen:blit(100-GAME_imagewidth(surf)/2, 0, surf)
+		elseif ch.position == 'topright' then
+			screen:blit(380-GAME_imagewidth(surf)/2, 0, surf)
+		elseif ch.position == 'truecenter' then
+			screen:blit(240-GAME_imagewidth(surf)/2, 272-GAME_imageheight(surf)/2, surf)
+		end
 	end
 end
 
