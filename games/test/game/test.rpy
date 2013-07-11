@@ -18,7 +18,7 @@ label never:
 
 label start:
     scene black
-    menu:
+	menu:
         "persistent":
             "before"
             if not persistent.x:
