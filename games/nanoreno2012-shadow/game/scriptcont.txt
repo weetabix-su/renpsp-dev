@@ -1,0 +1,2367 @@
+"They played a few more times switching up the teams, and even doing a game where it was Ryo and Eve verses the children, before saying goodbye to the war front."
+scene bg bridge1
+with fade
+pause 2.0
+show eve 18
+with Dissolve(.5)
+e "Well that was tons of fun."
+r "It actually was."
+show eve 2
+with Dissolve(.5)
+e "We should do it again. Actually on second thought, we shouldn't. It won't be as good as this time, so it would be better to just preserve our memories of this time."
+r "Eve, what is wrong, you're shaking."
+"Ryo wanted to slap himself for not noticing it until now. With what she was wearing of course she would be cold after being outside for sure long."
+r "Come on, my house isn't too far. You should warm up."
+show eve 1
+with Dissolve(.5)
+e "That's okay Ryo, I'm fine."
+r "No. I insist."
+show eve 2b
+with Dissolve(.5)
+e "Are you sure your parent's won't mind?"
+r "Yeah, it will be fine."
+show eve 4
+with Dissolve(.5)
+e "Alright."
+hide eve 4
+with Dissolve(1.0)
+scene black
+with Dissolve(.5)
+pause 1.0
+scene bg house1e
+with fade
+pause 1.0
+scene bg house_in1
+with Dissolve(.5)
+show eve 4
+with Dissolve(.5)
+e "You have a very nice house, Ryo."
+r "Yeah, I guess so."
+mom "Ryo, who is this?"
+show eve 16b
+with Dissolve(.5)
+e "I'm please to meet you. I am Eve. Your son invited me to come over and warm up. I thank you for your hospitality."
+mom "Oh wow, you're really polite. Maybe you can rub some of that off on Ryo."
+e "I'll try."
+mom "Eve, why don't you stay for dinner."
+show eve 2b
+with Dissolve(.5)
+e "I couldn't impose."
+mom "Nonsense, it is in return for enduring my son."
+hide eve 2b
+with Dissolve (1.0)
+scene black
+with Dissolve(1.0)
+"Ryo could do nothing but watch as his mother and Eve began talking to each other at a mile a minute."
+"Dinner went very awkwardly. Ryo answered with one word responses when addressed. He remained silent otherwise, no matter how hard his parents tried to get him to talk."
+"After dinner Eve waved goodbye to Ryo's parents before heading out the door with Ryo."
+scene bg house1e
+with fade
+play music "Music/Water's Surface.ogg"
+show eve 16
+with Dissolve(.5)
+e "That was fun. You have nice parents Ryo. You're really lucky."
+r "You think so?"
+show eve 16
+with Dissolve(.5)
+e "Yep, you should really appreciate them more. Either that, or give them to me."
+r "Appreciate them.."
+show eve 3
+with Dissolve(.5)
+e "Yeah, you only have them for so long. You should really enjoy them."
+e "Even if they bug you a lot or push you into doing something. They are just doing it because they love you, and care about you."
+e "But that doesn't make all their actions right. Even parents can be wrong to, but you should still love them no matter what."
+r "Not everyone wants that, nor is is possible sometimes."
+show eve 4b
+with Dissolve(.5)
+e "That's true, there is always exceptions to things. That is why people need to try their best to get along, so that there isn't very many exceptions."
+scene black
+with Dissolve(.5)
+pause 1.0
+scene bg bridge1e
+with fade
+pause 1.0
+show eve 6b
+with Dissolve(.5)
+e "Oh, this is fine Ryo. I can go the rest of the way by myself."
+menu:
+    "Bid Eve goodnight.":
+        jump choice6_night
+
+    "Refuse and take her the rest of the way.":
+        jump choice6_home
+ 
+label choice6_night:
+show eve 4
+with Dissolve(.5)
+$ house_flag = False
+e "Goodnight Ryo."
+e "Thanks for walking me back. See you tomorrow."
+
+jump choice7_end
+
+label choice6_home:
+$ love_points += 1
+scene bg bridge2e
+with Dissolve(.5)
+pause 3.0
+show eve 7
+with Dissolve(.5)
+e "Really it is fine. I can get home by myself."
+r "No, I insist. I'm going to make sure you get back safety."
+e "Ryo, I appreciate the gesture, but really, I can get back by myself."
+
+menu:
+    "Bid Eve goodnight.":
+        jump choice7_night
+
+    "Refuse.":
+        jump choice7_home
+
+label choice7_night:
+show eve 4b
+with Dissolve(.5)
+$ house_flag = False
+e "Goodnight Ryo."
+e "Thanks for walking me back. See you tomorrow."
+scene black
+with Dissolve(.5)
+jump choice7_end
+
+label choice7_home:
+$ love_points -= 1
+show eve 12b
+with Dissolve(.5)
+$ house_flag = True
+e "You really aren't going to take no for an answer are you."
+show eve 12
+with Dissolve(.5)
+e "Fine. Let's go."
+scene black
+with Dissolve(.5)
+scene bg street1n
+with fade
+pause 3.0
+scene bg house2n
+with Dissolve(.5)
+pause 2.0
+show eve 1b
+with Dissolve(.5)
+e "Here this is where I live."
+r "Wait, you live in a house?"
+show eve 20b
+with Dissolve(.5)
+e "Of course. What did you think I lived in dumpster or a box?"
+r "Not...exactly."
+e "Alright, you've seen, where I live, now go."
+r "That's awfully rude."
+e "Go."
+r "What is with you?"
+e "I turn into a rude monster called Eve2 when the sun goes down."
+r "Geez, alright. I'm leaving."
+hide eve 20b
+with Dissolve(1.0)
+e "Thanks for walking me back."
+r "Huh?"
+r "I thought I heard Eve."
+r "It must have been in my head."
+scene black
+with Dissolve(.5)
+
+jump choice7_end
+
+#(Morning Meeting)
+
+label choice7_end:
+play music "Music/White Snow.ogg"
+mom "Ryo time to get up."
+"With groan Ryo turned off his alarm and got ready for school."
+scene bg house_in1
+with fade
+mom "You will eat breakfast today. So sit down."
+r "No th-"
+r "Appreciate them.."
+"The memories of what Eve said flooded into Ryo's mind."
+r "I guess it wouldn't hurt to make an effort."
+r "Okay."
+"Ryo Mom's mouth fell open as she watched her son sit down, ready to eat breakfast." 
+"After some light conversation while eating breakfast Ryo finished getting ready for school."
+mom "I wonder who that could be. Ryo could you get the door?"
+r "Yeah sure."
+scene bg house1
+with Dissolve(.5)
+pause 2.0
+show eve 17
+with Dissolve(.5)
+e "Good morning Ryo!"
+r "Eve. What are you doing here? I have school today."
+e "I know. I just figured I would walk with you to school, so you have some company. It is the least I can do after yesterday."
+show eve 16b
+with Dissolve(.5)
+e "Thanks again for allowing me to stay for dinner. Thank your parents for me later okay."
+scene black
+with Dissolve(.5)
+
+#(Talking)
+ 
+Chika "Ryo, is today a good day to study?"
+r "Sorry guys, but I have plans already."
+Shigeru "Alright, but remember we are your friends too, make some room for us."
+r "I will."
+play music "Music/Water's Surface.ogg"
+scene bg bridge1
+with fade
+pause 2.0
+r "Hi Eve."
+show eve 16
+with Dissolve(.5)
+e "Hello Ryo."
+r "Watching the water again?"
+e "Yep, I decided to watch the water while waiting for you."
+r "You know, I've been wondering this, what is with the outfit you are always wearing? Why don't you ever change clothes, and why are you wearing something like that at this time of year?"
+show eve 16b
+with Dissolve(.5)
+e "Those are good questions."
+r "......."
+r "......."
+r "Are you going to answer them?"
+show eve 6b
+with Dissolve(.5)
+e "Did you want me to?"
+"Ryo gave Eve a pointed look."
+show eve 4b
+with Dissolve(.5)
+e "What if I don't want to answer?"
+r "Are they some kind of secret?"
+e "Come closer."
+"Eve whispered gesturing Ryo closer with her hand."
+show eve 1b
+with Dissolve(.5)
+e "Closer."
+e "Closer."
+r "It is impossible to get closer without us being on top of each other."
+show eve 3b
+with Dissolve(.5)
+e "I'm here on a secret mission. I'm a spy."
+r "Wearing clothes that make you stand out?"
+show eve 4
+with Dissolve(.5)
+e "Haven't you ever heard the most inconspicuous is the one who stands out the most."
+r "No."
+e "Neither had I, I was hoping you had."
+r "So, are you going to answer the questions."
+show eve 10
+with Dissolve(.5)
+e "You're still on that? Geez, move on already. You shouldn't be held up by one thing for so long, you will start to brood over it and then after a while it will control your whole life."
+r "I don't care. Answer the question."
+show eve 8b
+with Dissolve(.5)
+e "Look at the time. I have to get home. See you tomorrow Ryo."
+r "Nice try, but you were waiting for me remember, so that means you have to have some free time."
+show eve 2b
+with Dissolve(.5)
+e "Rats."
+r "If you really don't want to answer the questions just tell me so."
+show eve 6b
+with Dissolve(.5)
+e "I really don't want to answer the questions."
+r "Too bad, answer them."
+show eve 15b
+with Dissolve(.5)
+e "Why are you so mean Ryo? You're such a nasty person."
+r "Good, answer."
+show eve 7b
+with Dissolve(.5)
+e "There is no getting out of this is there.."
+r "Nope, I'm not falling for any tricks."
+show eve 5b
+with Dissolve(.5)
+pause 1.0
+show eve 3b
+with Dissolve(.5)
+e "Fine, you win. I'll tell you."
+pause 2.0
+show eve 1b
+with Dissolve(.5)
+e "I'm from another world."
+show eve 9b
+with Dissolve(.5)
+e "Ow."
+"Ryo lightly smacked Eve on the head."
+r "Stop joking around. I really want to know."
+show eve 2b
+with Dissolve(.5)
+e "Fine. Fine. Meanie."
+e "....."
+r "....."
+r "....."
+r "Stop stalling."
+show eve 3
+with Dissolve(.5)
+e "I'm not stalling. I'm trying to think of an answer."
+r "You don't have one?"
+show eve 6b
+with Dissolve(.5)
+e "I do, but I don't want to tell you, so I'm thinking of another one."
+r "I see."
+pause 1.0
+e "Okay, I've got it. I like to dress up."
+r "I want the real reason."
+show eve 5b
+with Dissolve(.5)
+pause 1.0
+e "Alright."
+e "This outfit has a special meaning to it. My mom used to wear an outfit just like this all the time."
+r "So why do you wear it."
+show eve 7b
+with Dissolve(.5)
+e "...."
+e "Forget it. You will think it is silly."
+r "Tell me. I'll decided that."
+e "I wear it in memory of my mother, so I won't ever forget her."
+r "That isn't silly."
+e "I wasn't finished."
+e "I also wear it in hopes that it will make things better."
+r "Better? What do you mean?"
+show eve 3b
+with Dissolve(.5)
+e "It is nothing. Forget it."
+r "And the pearls and cloak with hood?"
+show eve 6b
+with Dissolve(.5)
+e "Oh this. I just like dressing up."
+r "Uh-huh."
+show eve 4b
+with Dissolve(.5)
+e "What don't you believe me?"
+r "Knowing you there has to be more."
+show eve 1b
+with Dissolve(.5)
+e "Have you ever wanted a different life. To be someone completely different."
+r "And what does this have to do with my question?"
+show eve 1
+with Dissolve(.5)
+e "Shh.. I'm getting to that. So just listen."
+show eve 7b
+with Dissolve(.5)
+e "Looking down at the water. The ripples and the rushing sounds I've wished for a different life. Many times have a wished that the water I was looking at was just a dream, and I would wake up to my real life."
+show eve 14b
+with Dissolve(.5)
+e "So many times that I've lost count even. I've convinced myself that maybe if I dress differently one of these times I will wake up somewhere else. This dream will vanish and I will be back."
+show eve 15b
+with Dissolve(.5)
+e "Don't you just wish, your life was just a dream sometimes. So that you can wake up from this cruel reality."
+show eve 22b
+with Dissolve(.5)
+e "Look at me, spouting out all this stuff."
+r "Dark times won't last forever. Have faith." 
+show eve 6b
+with Dissolve(.5)
+e "Why are you giving me that weepy teary look?"
+show eve 8b
+with Dissolve(.5)
+e "Don't tell me you actually fell for that sob story."
+r "It was just another trick?"
+show eve 18b
+with Dissolve(.5)
+e "Really you're pathetic, you still fall for the simplest tricks. You shouldn't believe every word spoken to you."
+r "It was a trick?"
+show eve 19b
+with Dissolve(.5)
+e "Oh course dummy. Why would I wish for something so silly? Why would I believe in such a silly hope? It is a just foolish thought, why would anyone believe in it?"
+e "I'm going to head home now. I'm not feeling all that well today. I think the cold might be getting to me."
+r "Are you really okay Eve."
+show eve 17b
+with Dissolve(.5)
+e "Stop believe stupid tricks, dummy. You are making me feel bad for tricking you. See, I'm crying because I feel such pity for a fool like you."
+hide eve 17b
+with Dissolve(.5)
+r "...."
+r "Is that really true."
+e "You've changed Ryo."
+r "Huh? What? Wait, Eve. What did you mean?"
+r "And she is gone..."
+scene black
+with Dissolve(.5)
+
+#(Night)
+play music "Music/Firefly.ogg"
+r "I've changed?"
+"Ryo's mind became stuck on that one line. It bothered Ryo so much that he couldn't sleep. Frustrated at his lack of sleep he dressed himself and stepped outside hoping the night air would clear his mind."
+r "I don't feel like I've changed."
+r "Nothing really feels that different."
+r "What did Eve mean?"
+"Ryo let out a frustrated groan as he ran a hand through his hair."
+r "I don't get it. What did she mean? Have I really made a noticeable change? When did I change? What changed about me?"
+r "Have I really changed?"
+r "....."
+r "I will just have to ask Eve what she meant tomorrow."
+
+
+#(Friends)
+play music "Music/Harmony.ogg"
+mom "Ryo wake up, you have visitors."
+r "Is it Eve?"
+scene bg house_in1
+with fade
+"Ryo got ready in a flash and headed out to greet his guest."
+Chika "Good morning Ryo."
+Jiro "Ready to study?"
+r "Oh its you guys."
+Shigeru "Were you expecting someone else?"
+Chika "Oooh was Ryo waiting for someone?"
+Jiro "How interesting."
+r "Alright, alright, let's go study."
+Shigeru "Okay group move out."
+Chika "Thanks for the snacks, Ryo's mother."
+Jiro "Yeah, they were great."
+scene black
+with Dissolve(.5)
+pause 1.0
+scene bg food1
+with fade
+pause 2.0
+r "Alright, so you take this, and then do this, then this, and then keep following it down. You should be able to do the rest of it."
+Jiro "Ryo what about this section of the homework."
+"Let out a sigh and began to explain yet another part of the homework."
+"Ryo stopped in the middle of his explanation as he spotted Eve outside of the building."
+Shigeru "Ryo? Is everything alright?"
+r "Uh.. yeah. I just saw someone I know."
+Chika "Is it the person Ryo was expecting? We should go and introduce ourselves."
+Jiro "Excellent idea, that means break time."
+r "Come on guys, we shouldn't stop now."
+Chika "You read my mind, 'I want a break' was what was on it."
+Shigeru "Alright then, I declare it, break time."
+scene black 
+with Dissolve(.5)
+pause 1.0
+"Ryo gave up and let his friends have their way. He had studied with all of them enough to know it was pointless to fight it, when a break was decided upon, their was no stopping it at that point."
+scene bg lot3
+with fade
+Chika "Who is it Ryo? Where is your friend?"
+"Ryo let out a sigh and pointed to Eve."
+"Chika excitedly bounced over to Eve and snatched up her hand." 
+scene bg lot4
+with Dissolve(.5)
+Chika "Nice to meet you. I'm Chika, I'm a friend of Ryo's as well."
+show eve 4
+with Dissolve(.5)
+e "Umm.... hello. I'm Eve."
+show eve 5
+with Dissolve(.5)
+e "Um..."
+show eve 7
+with Dissolve(.5)
+show eve 9
+with Dissolve(.5)
+show eve 10
+with Dissolve(.5)
+e "Could you stop shaking my hand. My arm is starting to hurt."
+"Eve winced as she pleaded for Chika to stop."
+Chika "Oh, sorry about that. Sometimes I just space out and don't realize what I'm doing."
+show eve 9
+with Dissolve(.5)
+e "You are still doing it."
+Chika "Opps, like I said, I sometimes act the like spas."
+"Chika released Eve, laughing at her own stupidity."
+show eve 4b
+with Dissolve(.5)
+Shigeru "Hello Eve, I'm Shigeru. It is pleasure to meet you."
+Jiro "Name's Jiro. And any friend of Ryo's is a friend of ours."
+e "It is nice to meet both of you."
+"Chika leaned in close to Eve almost as if studying her."
+Chika "Hmmmm... You approve."
+show eve 6b
+with Dissolve(.5)
+e "I approve? For what?"
+Chika "For the requirements for me to want to get to know you."
+"Chika snatched up Eve's arm again and started pulling her inside."
+Chika "Come on, we need to get to know each other better."
+show eve 2b
+with Dissolve(.5)
+e "I really don't."
+show eve 7b
+with Dissolve(.5)
+e "Please stop."
+show eve 10b
+with Dissolve(.5)
+e "It is really starting to hurt."
+show eve 9b
+with Dissolve(.5)
+e "Don't pull so hard."
+Chika "Oh come on, don't be such a baby. A little chat won't hurt."
+"Ryo chuckled walking up next to Eve and whispering to her."
+r "How does it feel for a change? Normally you are the one always pulling me along."
+"Eve stuck her tongue out at Ryo."
+show eve 17b
+with Dissolve(.5)
+e "Alright, let's get to know each other."
+hide eve 17b
+with Dissolve(.5)
+scene black
+with Dissolve(.5)
+"She no longer fought against Chika and instead starting walking with her."
+"The two girls began chatting while sitting in one of the booths."
+scene bg food1
+with fade
+play music "Music/Dreamland.ogg"
+pause 2.0
+show eve 7b
+with Dissolve(.5)
+e "...."
+e "I think I'm going to head home."
+Chika "Awww, why? We barely got a chance to talk even."
+e "I'm not feeling too well, sorry."
+Chika "Oh, okay."
+Shigeru "It was nice meeting you."
+Chika "Yeah, let's talk again, okay."
+r "Alright then, see-"
+show eve 3b
+with Dissolve(.5)
+e "Goodbye."
+hide eve 3b
+with Dissolve(.1)
+menu:
+    "Go after Eve":
+        jump choice10_Eve
+
+    "Stay and help your friends study.":
+        jump choice10_friends
+
+label choice10_friends:
+$ friend_flag = True
+r "I'm sure Eve is fine. I'm probably just imagining things."
+Chika "Alright let's get back to studying then."
+Shigeru "Right the homework is due tomorrow, so today is the last day."
+Jiro "It is good thing we have Ryo to help us."
+r "Alright enough stalling. Time to get to work."
+
+jump choice10_end
+
+label choice10_Eve:
+$ love_points += 1
+$ friend_flag = False
+r "Eve, wait!"
+Jiro "Ryo where are you going?"
+Shigeru "What about studying."
+r "I'm sorry guys, we'll have to continue some other time."
+Jiro "But the homework is due tomorrow."
+r "I'm really sorry, but I have to go."
+Chika "Ryo!"
+r "I'll make it up to you guys."
+scene black
+with Dissolve(.5)
+
+#(Tears)
+scene bg bridge1n
+with fade
+"Eve stood on the bridge staring down at the water."
+r "Eve, are you okay?"
+scene bg bridge2n
+with Dissolve(.5)
+pause 2.0
+show eve 4b
+with Dissolve(.5)
+e "Yeah I'm fine. Just a little tired."
+r "Is there something wrong?"
+show eve 5b
+with Dissolve(.5)
+e "No, nothing is wrong. Why would think something is wrong?"
+"Ryo shrugged as his glance changed from Eve to the water."
+r "Just a feeling I have."
+show eve 3b
+with Dissolve(.5)
+e "You shouldn't trust something as silly as that. Taking it as a fact will only get you in trouble someday."
+r "You aren't acting like yourself."
+show eve 3b
+with Dissolve(.5)
+play music "Music/Cold Mind.ogg"
+e "......"
+hide eve 5b
+with Dissolve(.5)
+scene bg bridge3n
+with Dissolve(.5)
+"Eve turned from Ryo and stared back at the water instead."
+show eve 4b
+with Dissolve(.5)
+e "Ryo, can you tell what is in the water?"
+r "Huh? What?"
+show eve 11b
+with Dissolve(.5)
+e "Just answer."
+r "What is in the water? As in underwater?"
+e "Yes, what is underwater?"
+r "Nothing."
+show eve 7b
+with Dissolve(.5)
+e "...."
+scene bg bridge2n
+with Dissolve(.5)
+r "Was that wrong?"
+e "...."
+r "Eve?"
+show eve 3b
+with Dissolve(.5)
+e "Just stop okay."
+r "Eve?"
+show eve 12
+with Dissolve(.5)
+e "Yes." 
+e "Yes it was wrong."
+show eve 20b
+with Dissolve(.5)
+e "The answer is that their is a huge shark underwater, and so if you go in the water it will eat you."
+r "In this river? Impossible."
+"Eve's hand's clenched around the railing."
+e "How do you know?"
+r "Logically speaking it is silly."
+show eve 3b
+with Dissolve(.5)
+e "Then why does no one swim in this river. Why is there never anyone near the water's edge?"
+r "The current is too fast."
+show eve 8b
+with Dissolve(.5)
+e "Is that really the case, maybe it is because of the shark. It is possible that only adults know of its existence, a horrible creature that lives under the surface."
+r "With how deep this river is? Are you messing with me?"
+show eve 11b
+with Dissolve(.5)
+e "Ryo, stop. You aren't getting it. Stop taking it literally. Open your eyes!"
+"Ryo stepped back, surprised by Eve's harsh tone."
+r "Well, I suppose I can't say for 100 percent certain that something like that is impossible I guess."
+show eve 12
+with Dissolve(.5)
+e "And why can't we know for certain the answer? Why is it we can't be sure if my shark does, or doesn't not exist?"
+r "Because we can't see under the surface of the water, so it is impossible to tell what is really under it. Is the answer you are looking for, but that isn't fully true."
+show eve 20b
+with Dissolve(.5)
+e "Alright, and since you still aren't getting it. I'll finish it up for you. I'll spell it out. I'm just like that example."
+e "You only have been seeing what is on the surface. You know nothing about me. So don't go making statements like you know me. You don't. You are just a stupid person who thinks they know everything when they know nothing."
+e "You don't know me. You don't understand anything at all, so just shut up!"
+r "What do you mean I don't know you? I know we've just been hanging out this week, but we have spent hours spending time with each other and talking. How can you say I don't know you?"
+e "Ryo, not everyone is simple like you are. Not everyone leaves themselves bare. You do it either because you don't care, or are too stupid to understand."
+r "What is that supposed to mean?!"
+show eve 11b
+with Dissolve(.5)
+e "Take it however you want. It matters not to me."
+r "What is going on? Why are you acting like this?"
+play music "Music/Toy's Dance.ogg"
+show eve 12b
+with Dissolve(.5)
+e "Why don't you understand? For a genius you are so stupid. How do you not get it!?"
+show eve 20b
+with Dissolve(.5)
+e "Or maybe you understand, but you just don't want to accept it. That really is the answer most of the time isn't it." 
+e "When people say they don't understand and want you to explain that is the case a lot isn't it. They actually know the answer but they just don't want to believe it."
+e "So they want you to explain in a naive hope that they were thinking wrong."
+e "So since you want me to explain, I will."
+show eve 12
+with Dissolve(.5)
+e "You wear nothing. You don't hide yourself. You act the same inside as you do on the outside. There is no lie being reflected from your eyes."
+show eve 11
+with Dissolve(.5)
+e "However for most people this is not the case. People mask themselves behind layers of lies and hide everything about their true feelings behind all those closed doors. They seal them away with a key and refuse to never open them."
+e "They do this to prevent themselves from getting hurt, for they feel if people knew their real self they would not be excepted, or that things would change."
+e "They fear both change and getting hurt, so in a hope to avoid this they lock their heart and mind up. Concealing it behind a curtain of lies and masks."
+show eve 20b
+with Dissolve(.5)
+e "I'm sure you understand. In fact I'm sure you understood from my water example, you just don't want to except it."
+e "I'm one of those people Ryo. I'm not like you, I cover myself up. I have cages around myself and layers of masks. So what you've seen is only just a mask. You know nothing about my true self. You don't understand. You can't understand."
+r "You've been saying that 'I don't know you' and 'You can't understand.' But I don't see where that is coming from."
+r "Are you going to say that all this time, I've been hanging out with an mask, almost another personality that you use to hide away with."
+show eve 7b
+with Dissolve(.5)
+e "That is the truth. It is up to you, if you are going to face it or not. They say the truth will set you free, but I don't see it. I feel like the truth causes farewells."
+r "If there wasn't a lie or deception in the first place, then such pain would not occur."
+show eve 10b
+with Dissolve(.5)
+e "Not everyone is strong enough to go through life like that. We hide behind masks and cover up our feelings so that drama will not occur. Simply because people can not accept the truth. So all it brings is heartache."
+r "I don't think there is anything wrong with that. Covering up your feelings so that arguments won't happen."
+show eve 7b
+with Dissolve(.5)
+e "So you don't mind lies, in fact you approve of them?"
+r "I didn't say that."
+show eve 3
+with Dissolve(.5)
+e "Yes you did. When you are covering up your feelings you are lying, maybe not to someone else, but to yourself. Nonetheless I agree with you, harmless white lies are not something to be ashamed up."
+r "So there is nothing wrong with you covering yourself up."
+show eve 11b
+with Dissolve(.5)
+e "You aren't understanding at all. I'm not asking for your approval. I'm telling you I've just been using you and watching from the sidelines like a 3rd person. I've been deceiving you and just playing with you."
+r "That..."
+show eve 20b
+with Dissolve(.5)
+e "Don't say it. It is true. I might not have any ill intent, but does that still make it right? The me you were hanging out with was just a fictional character, a made up persona."
+r "You keep saying that, but I don't believe you. All that time, I don't believe the person I was talking to was just a persona. Maybe you're right, not everything you told me was the truth, maybe you tricked me and lied to me at times."
+r "Maybe you acting differently then you really felt."
+r "However, not everything about that girl, 'you', was fake. If you really want me to believe that everything was lie, then look me in the eye and tell me everything, every emotion, every thought, every action you did while hanging out with me is a lie."
+"Eve let out a sigh and stared straight at Ryo's face, her eyes cold and filled with conviction."
+show eve d4b
+with Dissolve(.5)
+e "Everything that I did, said, and felt was a lie." 
+show eve d8b
+with Dissolve(.5)
+e "That is the cold truth Ryo. Everything was just a lie. It was simply a game a pretend. I'm sorry, the person you hung around with doesn't exist. She was a lie, a made up being."
+e "So forget about her. I don't want to play with you like this, not anymore. It isn't fair to you."
+r "What is wrong with playing pretend?"
+show eve d9b
+with Dissolve(.5)
+e "Ryo don't you get it. This isn't real. Make believe is something that should stay with kids. Something like this is better left to die."
+r "That isn't true, it was real."
+e "I just told you-"
+r "You are deceiving yourself. You are lying to yourself to keep yourself from possibly getting hurt."
+r "I don't know why, but for some reason you feel you will go through pain if we stay friends, so you are cutting ties. You are holding the scissors and the thread of our friendship and trying to cut it in two."
+r "You may say everything was just a lie, but I don't believe that is the truth, and I don't think you do either."
+r "Maybe it is true you weren't being truthfully all the time, maybe you held up a mask and hid your real feelings at times, but everyone does that. It is nothing to be ashamed of."
+r "But you can't tell me that everything was just a big act. At some point your real self and this Eve intermixed, but you don't want to admit it."
+show eve d6b
+with Dissolve(.5)
+e "Not everyone is so simple minded as to let their real self come out. No, they hid it in the deepest darkest depths. They swallow it whole and drown it in an endless sea."
+r "I'll believe. I'll believe that all that time we spent together wasn't meaningless for you. That some of the 'fun' you had shown was real."
+show eve 3b
+with Dissolve(.5)
+show eve 5b
+with Dissolve(.5)
+e "...."
+show eve 15
+with Dissolve(.5)
+e "Why.."
+show eve 15b
+with Dissolve(.5)
+e "Why do you care so much?"
+menu:
+        "Because I love you.":
+            jump choice11_love
+
+        "Because we are friends.": 
+            jump choice11_friend
+
+
+label choice11_love:
+play music "Music/Approaching Shadows.ogg"
+scene bg bridge1n
+with Dissolve(.5)
+pause 2.0
+show eve d8
+with Dissolve(.5)
+e "I see."
+show eve d3
+with Dissolve(.5)
+e "So it is something like that."
+r "Eve?"
+show eve d1
+with Dissolve(.5)
+e "Ryo, let me tell you something."
+show eve d4b
+with Dissolve(.5)
+e "Love is a lie. It is just a fake illusion. It is a fleeting thing that is their one minute and then gone the next."
+r "You can't be serious, love is-"
+show eve d9b
+with Dissolve(.5)
+e "Fake! There is so much thing, not the way you are thinking of it at least. It is a just a passing affection, that one day will vanish. Love is just another word for 'interest' and like with all interests, it will vanish."
+r "That isn't-"
+show eve d6b
+with Dissolve(.5)
+e "It is true. You want to know how I know this. Because I've seen it. Love is fleeting, love is passing, it will fade it time, so it is pointless to do long term or big actions based on it."
+r "I don't believe that."
+show eve d10b
+with Dissolve(.5)
+e "Well I do. You say you hold this kind of interest in me, but the fact is that it will fade. Your care and affection is only temporary." 
+show eve d9b
+with Dissolve(.5)
+e "I don't need passing pity!"
+r "That isn't-"
+e "Goodbye Ryo! This is the end. I'm cutting the string now. Don't talk to me again."
+r "Eve wait."
+"Ryo grasp Eve's arm and held it tight."
+show eve d5
+with Dissolve(.5)
+e "You're hurting me."
+r "Eve listen to me."
+show eve d10b
+with Dissolve(.5)
+e "No. I will not be used and then throw away!"
+"Eve broke away from Ryo and ran off into the night."
+hide eve d10b
+with Dissolve(.3)
+r "Eve..."
+r "It doesn't look like Eve is going to show up."
+r "Eve..."
+r "Are you really okay with letting things end this way."
+r "...."
+r "I'll try again tomorrow."
+r "...."
+r "It looks like you really meant it."
+r "So that really was goodbye."
+"A tear slid down Ryo's face."
+r "Goodbye...Eve."
+jump bad_end
+
+label choice11_friend:
+play music "Music/Firefly.ogg"
+scene bg bridge1n
+with Dissolve(.5)
+pause 2.0
+show eve 6
+with Dissolve(.5)
+e "Yeah, that's right."
+show eve 6b
+with Dissolve(.5)
+e "I'm just surprised. I didn't know such things happened. I've experienced this type of thing before."
+show eve 8b
+with Dissolve(.5)
+e "So this is what a real friend is like. It is interesting. So much different then what I have had before."
+r "Eve, it is okay. You don't have to hold up your masks anymore. I'll accept you for who you are. Like any real friend would."
+show eve 4b
+with Dissolve(.5)
+e "Ryo..."
+"Eve turned and walked away."
+show eve 16
+with Dissolve(.5)
+e "See you tomorrow."
+hide eve 16
+with Dissolve(.5)
+pause 2.0
+scene black
+with Dissolve(.5)
+jump choice10_end 
+
+#(White Day)
+
+label choice10_end:
+pause 3.0
+play music "Music/Harmony.ogg"
+scene bg bridge1
+with fade
+pause 2.0
+show eve 19
+with Dissolve(.5)
+e "Good morning Ryo!"
+"Ryo stared at the chipper girl. He stifled a yawn before addressing her."
+r "You're awfully excited today. Much better than you being gloomy like yesterday."
+show eve 16
+with Dissolve(.5)
+e "Yeah... that. I was just being silly okay. So never bring that up again."
+r "Alright."
+show eve 18b
+with Dissolve(.5)
+e "I mean it. Never bring it up. Or else you will suffer the rather of the world champion tickler."
+e "But I must say it surprised me to see you have friends, other than me that is."
+r "Really? Why?"
+show eve 16b
+with Dissolve(.5)
+e "Because of how socially awkward and boring you are."
+r "That is the normal Eve right there."
+e "No, You just seem like a lone wolf type."
+r "Really?"
+show eve 17
+with Dissolve(.5)
+e "Yep. So I was surprised to learn you have a pack. It is like I just watched you grow up. From a little pup to a full fledged wolf."
+"Eve ruffled Ryo's hair like a child."
+r "Stop that."
+show eve 19b
+with Dissolve(.5)
+e "Aww~ Little Ryo is getting grumpy."
+r "You're really in a playful mood."
+r "I'm glad."
+show eve 2
+with Dissolve(.5)
+e "Hmm?"
+r "It is weird seeing you not like this."
+e "It was?"
+r "Yeah, you are the type of person who always acts goofy and energetic."
+show eve 6
+with Dissolve(.5)
+e "I am?"
+r "I've learned my lesson, I'm not falling for it."
+show eve 16
+with Dissolve(.5)
+e "You really are getting better. I can't fool you anymore."
+show eve 5
+with Dissolve(.5)
+e "Ummm... Ryo."
+r "Yeah?"
+"Eve stared at the ground before glancing back up a Ryo. She pulled out a small box hidden behind her back."
+show eve 4
+with Dissolve(.5)
+e "Here, this is for you."
+r "Huh? What is this for?"
+e "Just open it."
+"Ryo opened the small box and found a set of neatly wrapped chocolates inside."
+r "Did you make these yourself?"
+"Eve responded with a nod."
+show eve 18b
+with Dissolve(.5)
+e "Yeah... It is a thank you gift for the dinner, walking me home, the food, and of course your jacket."
+r "Today is white today, the opposite is supposed to happen. Guys give gifts to the girls who gave you chocolate on Valentine's day."
+e "I know how the holiday works."
+show eve 17b
+with Dissolve(.5)
+e "I just figured you probably weren't going to do anything for it, and that is no fun. So you have to give me something in return for white day."
+r "That is only if the chocolate was on Valentines day."
+e "Just pretend you got it on valentines day then."
+show eve 21b
+with Dissolve(.5)
+e "So make sure you get me a gift okay. It doesn't have to be anything special. Have fun picking it out."
+hide eve 21b
+with Dissolve(.5)
+r "...."
+"Ryo let out a sigh before containing on to school."
+r "'Have fun' she says. This is going to be a big pain. Ugh.."
+scene black
+with Dissolve(.5)
+
+#(Gift)
+if money_flag:
+        jump store_ver2
+                
+else:
+        jump store_ver1
+                
+label store_ver1:
+    "Ryo glanced down the aisles, trying to find a good gift for Eve."
+r "What should I buy? Oh wait, I better make sure I have enough money first."
+r "Of the money I have a good choice might be."
+r "They seem to have a few types of flowers for cheap"
+r "Hmmm.... What should I buy?"
+
+menu:
+
+    "Yellow and Purple Carnations":
+        $ f1_flag = True
+        $ book_flag = False
+        jump choice13_flowergift_end
+
+    "Mauve Carnations":
+        $ f2_flag = True
+        $ f1_flag = False
+        $ book_flag = False
+        jump choice13_flowergift_end
+
+    "Peonies":
+        $ f3_flag = True
+        $ f1_flag = False
+        $ f2_flag = False
+        $ book_flag = False
+        jump choice13_flowergift_end
+                
+label store_ver2:
+"Ryo glanced down the aisles, trying to find a good gift for Eve."
+r "What should I buy? Oh wait, I better make sure I have enough money first."
+r "Of the money I have a good choice might be."
+r "They seem to have a few types of flowers for cheap, There is also the possibility of a fantasy book."
+r "Hmmm.... What should I buy?"
+menu:
+    "Flowers":
+        jump choice13_flowers
+
+    "A book":
+        $ book_flag = True
+        jump choice13_book
+
+label choice13_flowers:
+r "Okay I'll buy some flowers, now the question is what kind of flower. They have striped yellow and purple carnations, solid mauve carnations, and peonies."
+menu:
+
+    "Yellow and Purple Carnations":
+        $ f1_flag = True
+        $ book_flag = False
+        jump choice13_flowergift_end
+
+    "Mauve Carnations":
+        $ f2_flag = True
+        $ f1_flag = False
+        $ book_flag = False
+        jump choice13_flowergift_end
+
+    "Peonies":
+        $ f3_flag = True
+        $ f1_flag = False
+        $ f2_flag = False
+        $ book_flag = False
+        jump choice13_flowergift_end
+
+label choice13_flowergift_end:
+"Ryo scooped up a few of the flowers and paid for them before heading back to the bridge to meet."
+jump choice13_end
+
+label choice13_book:
+"Ryo looked at the back of many books before he gave up and just grabbed the next book that seemed interesting." 
+jump choice13_end
+
+
+label choice13_end:
+scene bg bridge2e
+with fade
+r "Hopefully this turns out alright."
+show eve 1
+with Dissolve(.5)
+e "You're late."
+r "Sorry about that, it took me a while to decide on what to buy you."
+show eve 6
+with Dissolve(.5)
+pause .5
+show eve 2
+with Dissolve(.5)
+e "Um...."
+show eve d10b
+with Dissolve(.5)
+e "I wasn't actually serious about you having to get me a gift."
+show eve 19
+with Dissolve(.5)
+e "Oh well, it you bought me one I'll take it anyway."
+label gift_check:
+if book_flag:
+        jump gift_version1
+else: 
+    if f1_flag:
+        jump gift_version2
+    else:
+        if f2_flag:
+                jump gift_version4
+        else:
+            if f3_flag:
+                jump gift_version3
+            else:
+                jump gift_check
+#label flower_check1
+#if yp_carnations go to gift_version2
+#if mauve_carnations go to gift_version4
+#if peony go to go to gift_version3
+
+label gift_version1:
+$ love_points += 1
+r "Here you go Eve."
+show eve 6
+with Dissolve(.5)
+e "A book. When you said you got a me a gift I did not expect something like this."
+r "Don't you like it?"
+e "A fantasy story about an another world."
+r "..."
+e "..."
+r "..."
+e "..."
+r "Do you not like it."
+show eve 17
+with Dissolve(.5)
+e "Nope, I love it silly. This kind of books are something I enjoy."
+r "I figured that would be the case. She you said you liked thinking about other worlds."
+e "Oh, so you have been listening to me. I'm shocked."
+r "I do sometimes manage to remember things people say."
+show eve 16b
+with Dissolve(.5)
+e "Don't worry we all have our faults. You just are unlucky and have way more than the average person."
+r "Even when I know you are just joking around comments like that still sting a little."
+show eve 6b
+with Dissolve(.5)
+e "Ooh wow this book follows the principle of belief."
+r "Principle of what?"
+show eve 16
+with Dissolve(.5)
+e "It is just a thing you find in some novels and stuff. Basically it is a theory where if you believe and wish for something with all your heart you can create a cause and effect."
+r "That is kind of silly."
+show eve 11b
+with Dissolve(.5)
+e "Says you."
+r "It isn't logical at all."
+show eve 3b
+with Dissolve(.5)
+e "That is why I said it was in books. It basically means if you believe you can make something happen, but you have to suspend your belief of what you know is true."
+r "Like I said it is silly."
+show eve 16b
+with Dissolve(.5)
+e "That it might be, but wouldn't it be cool if that was the case."
+r "No."
+show eve 2b
+with Dissolve(.5)
+e "Why not?"
+r "Because then we would have all these mythological stuff running around the streets, dragons, fairies. Need I go on?"
+show eve 3b
+with Dissolve(.5)
+e "It isn't that simple dummy. You have a create a mass, basically you have to convince more people of your truth. You have to make the mass question what is the truth."
+r "I still think it is silly. Wait a minute. You actually believe it don't you?"
+show eve 6b
+with Dissolve(.5)
+e "What? I told you I thought it was silly too."
+r "Oh no, before you told me you believed that you could maybe change things wake up in another world and such."
+show eve 7b
+with Dissolve(.5)
+e "..."
+show eve 10b
+with Dissolve(.5)
+e "So what... So what if I believe in it. You going to make fun of me for it?"
+r "No, it just is interesting."
+show eve 1
+with Dissolve(.5)
+e "What is?"
+r "For you the believe in that, means you have something you really want to change."
+e "Yeah so, doesn't everyone have things they wish they could change."
+r "Not to that level."
+show eve 20b
+with Dissolve(.5)
+e "Haha."
+e "Yeah I got it. Not to the level where you would become a nut-job and believe in fantasies."
+r "I didn't say that."
+e "You didn't have to."
+show eve 18b
+with Dissolve(.5)
+e "Anyway don't worry about it. I know what you meant. I just like the idea of it being possible to change something if you made enough people think that certain way."
+r "That is kind of creepy, forcing everyone to believe one way."
+scene bg bridge1e
+with Dissolve(.5)
+pause 2.0
+show eve 20b
+with Dissolve(.5)
+e "That wasn't what I meant. And just for that I'm done talking to you for the day."
+r "Huh?"
+show eve 5b
+with Dissolve(.5)
+e "..."
+r "..."
+show eve 5
+with Dissolve(.5)
+e "..."
+r "Are you really actually not going to talk?"
+e "..."
+show eve 3
+with Dissolve(.5)
+e "Loan me a piece of paper and a pen."
+r "I don't have either of those things."
+show eve 5
+with Dissolve(.5)
+e "Fine."
+"Eve shook her head and walked away."
+r "Where are you going?"
+show eve 3b
+with Dissolve(.5)
+e "If you would have had a pen and some paper, you would find out."
+hide eve 3b
+with Dissolve(.5)
+"Ryo chuckled and shook his head."
+r "Why couldn't you just tell me, instead of saying that."
+scene black
+with Dissolve(.5)
+$ dream_flag = False
+jump gift_end
+
+label gift_version2:
+r "Here you go Eve."
+show eve 6
+with Dissolve(.5)
+e "Flowers."
+e "..."
+show eve 3b
+with Dissolve(.5)
+e "Yellow and purple striped carnations? Umm.. Ryo do you know what these flowers mean?"
+r "No, what do they mean?"
+show eve 19b
+with Dissolve(.5)
+"Eve shook her head back and forth while laughing."
+e "Don't worry about it. It isn't important."
+r "Now you have to tell me. I'm curious now."
+show eve 18
+with Dissolve(.5)
+e "Alright. Alright I'll tell you."
+e "The yellow means rejection. The purple park means unreliability. And because they are stripped it means a refusal."
+r "I didn't know they meant that. I wasn't trying to insult or hurt your feelings."
+e "Don't worry, I know that."
+show eve 6
+with Dissolve(.5)
+show eve 16
+with Dissolve(.5)
+e "Oh man. I just remembered something I have to take care of. I'll see you tomorrow Ryo."
+hide eve 16
+with Dissolve(.5)
+pause 2.0
+scene black
+with Dissolve(.5)
+$ dream_flag = False
+jump gift_end
+
+label gift_version3:
+$ love_points += 2
+r "Here you go Eve."
+show eve 6b
+with Dissolve(.5)
+pause 1.0
+show eve 19b
+with Dissolve(.5)
+e "Hahaha!"
+e "That flower."
+e "Heheheh, hahaha! My sides they hurt."
+r "What?"
+show eve 18b
+with Dissolve(.5)
+e "This flower. Heheheh."
+e "That was a good one. I didn't except you to get me back in such a way."
+r "I don't understand."
+show eve 17b
+with Dissolve(.5)
+e "Haha then this is even funnier. This flower means masculinity."
+e "You are lucky I'm not a more sensitive person otherwise they might get upset at getting a flower like this."
+r "I didn't know what it meant; honest."
+show eve 18
+with Dissolve(.5)
+e "I believe you. Interestingly enough in other parts of the world this flower means 'shame' instead."
+show eve 6
+with Dissolve(.5)
+e "Oh man. I just remembered something I have to take care of. I'll see you tomorrow Ryo."
+pause 2.0
+scene black
+with Dissolve(.5)
+$ dream_flag = False
+jump gift_end
+
+#(Dreams)
+label gift_version4:
+play music "Music/Dreamland.ogg"
+$ dream_flag = True
+r "Here you go Eve."
+show eve 6
+with Dissolve(.5)
+e "This... this flower."
+r "Do you not like it."
+"Eve shook her head."
+show eve 5
+with Dissolve(.5)
+e "No, its not that."
+r "The what is it?"
+show eve 5b
+with Dissolve(.5)
+e "Its nothing."
+show eve 4b
+with Dissolve(.5)
+e "Ryo what do you think of dreams?"
+r "Dreams, as in fantasies or dreams you have at night?"
+e "Hmm... both."
+r "Well, taking them one at a time. I would say that dreams as a fantasy are good things to have, as long don't need them to come true."
+r "You would like it to come true, but you don't need it. And most likely if it does come true it won't be the same as your fantasy."
+e "And dreams?"
+r "Well, it is hard to say if they have any real value. A lot of dreams you have you don't even want." 
+show eve 1b
+with Dissolve(.5)
+e "I like dreams. Windows into the soul they say, I said windows into other worlds."
+e "Wouldn't it be funny if this world was just a dream. It would be an interesting twist wouldn't it."
+r "Not really."
+show eve 12b
+with Dissolve(.5)
+e "You are boring sometimes you know that. You want things to stay the same, with no twist."
+show eve 4b
+with Dissolve(.5)
+e "Haven't you ever wish you could wake up. That this is just a dream and you can stop and wake up at any time."
+r "I suppose so. There have been times I've wished for change. For something like that, to wake up from this life and being in a different one."
+show eve 6b
+with Dissolve(.5)
+e "It is funny. Dreams are something I have want to end, but I always wanted this to end. But if it is a dream, I don't want to wake up now."
+show eve 7b
+with Dissolve(.5)
+e "Oh no, it is already this late."
+e "I forgot I have something really important to do. I'll see you tomorrow Ryo."
+pause 2.0
+scene black
+with Dissolve(.5)
+jump gift_end
+
+#(Missing)
+label gift_end:
+play music "Music/Life.ogg"
+scene bg bridge1
+with fade
+pause 3.0
+scene bg bridge1e
+with Dissolve(3.0)
+"Ryo rubbed his hands together trying to keep them warm."
+r "It doesn't look like she is coming."
+r "She said she was going to come though."
+r "I wonder what happened to her."
+scene bg bridge1n
+with Dissolve(3.0)
+"As the sky started blacken Ryo decided to give up and head home."
+scene black
+with Dissolve(.5)
+
+#(Priority)
+
+"Ryo's mind played with him all night long. His thoughts were plagued with thoughts about Eve and why she didn't show up. With none of them being good things."
+"Even at school his mind continued to haunt him. He began to count down the seconds until he felt the bell freed him from the school day."
+r "I have to check on Eve."
+Chika "Ryo, where are you going?"
+r "I have to do something."
+Shigeru "Ryo can it wait? We need your help. The paper that is due today, we need your help with it."
+Chika "Please Ryo, this paper is said to be 25 percent of our grade. If we fail it, we're dead."
+Jiro "Come on Ryo, don't let us down."
+Chika "We really need you."
+r "I'm sorry. I have something I need to do. I'm really sorry."
+"Ryo walked away from his friends before he heard their response. He was afraid that he might change his mind and help them, but then he would be worried about Eve the whole time. He needed to find about what happened to her."
+
+#(Abuse; What you have)
+play music "Music/Water's Surface.ogg"
+scene bg bridge1
+with fade
+"Ryo let out a sigh of relief when he stopped Eve standing the on bridge."
+r "Oh good you are here."
+"Eve didn't turn around she kept her back towards Ryo."
+e "Yeah sorry, yesterday I had some things I needed to take care of."
+r "Are you alright."
+e "Yes, I'm perfectly fine."
+r "Then why aren't you turning around."
+e "I like facing this way. I like looking at the other end the bridge. It makes me think of life or something. How we always have a long road ahead of us."
+r "Sure..."
+e "So how was school?"
+r "Fine."
+r "You could at least look at me while you are talking."
+e "But I like this view."
+r "Alright what is really going on?"
+e "Nothing."
+"Ryo frown and walked around Eve, but when he did she spun around she so was facing the other way."
+e "I like this view too."
+r "What are you hiding?"
+r "Are you mad at me?"
+e "No."
+r "Then what is it?"
+e "I don't you I just like looking at this view."
+r "I don't believe you."
+"Ryo snatched up Eve's hand and spun her around."
+play music "Music/Toy's Dance.ogg"
+scene bg bridge2
+with Dissolve(.5)
+r "..."
+"Ryo's mouth fell open in shock. Around Eve's eye was swelled up purple mark. She had a black eye."
+r "How?"
+show eve d8
+with Dissolve(.5)
+e "It is nothing. Don't worry about it."  
+r "If you don't want to tell me how you got it, then it is not nothing. If it was an accidental thing, then you would laugh it off and tell me. The fact that you are hiding it shows something is up."
+show eve d4b
+with Dissolve(.5)
+e "I told you it is nothing, so just drop it."
+r "Eve... you aren't being abused are you?"
+show eve d2b
+with Dissolve(.5)
+e "Where did you come up with that?"
+r "It is something people hide, and it would explain a few other things."
+show eve d7b
+with Dissolve(.5)
+e "I am not abused, so let those thoughts leave your mind."
+show eve d2
+with Dissolve(.5)
+e "I was just in the way, it was totally my fault. It was just a punishment don't worry about it."
+r "That!"
+r "That is not something to just laugh off. If you are being abused Eve you shouldn't make excuses. Your parents are just being demons."
+show eve d9b
+with Dissolve(.5)
+e "You know Ryo, sometimes you should just die."
+r "Huh.."
+show eve d4b
+with Dissolve(.5)
+e "Sometimes you are so annoying. Geez, there is nothing strange about my situation, so stop making a big deal out of it. I'm used to it so just stop, it doesn't even bother me anymore."
+r "You should get help. The one who is abusing you should pay."
+show eve d4
+with Dissolve(.5)
+e "Geez stop playing the goodie-goodie, it is annoying."
+r "I'm trying to help-"
+show eve d9b
+with Dissolve(.5)
+e "Well don't!"
+e "I don't need your pity, nor your help. So just shut up and drop it. And if you can't just leave me alone!"
+e "Not everyone has a nice home and family like yours! Some people have to endure things too. Most people don't get to be that lucky."
+e "So instead of griping over what I don't have, why don't you try and look at what you have for once. You want me to have it, yet you are calling it annoying and frustrating. You are nothing but a hypocrite."
+hide eve d9b
+with Dissolve(.5)
+"Ryo stood there stunned. He didn't know what to say. He didn't know what to think."
+r "Have I really been a hypocrite?"
+scene black
+with Dissolve(.5)
+#(Exam Results)
+pause 2.0
+play music "Music/Dreamland.ogg"
+mom "Ryo, time to wake up."
+"Ryo's mother was greeted with a surprise as the door opened and Ryo stepped out all ready for school already."
+r "Thanks mom."
+mom "Huh? What?"
+r "For always waking me up and making breakfast."
+mom "Huh?"
+mom "What?"
+mom "..."
+mom "You're welcome."
+"Ryo ate breakfast with his mom before heading off to school."
+girlA "Look there is he is again. Look at him always acting like he is better than the rest of us."
+girlB "Can you believe it."
+r "We must have gotten our exams posted today."
+"Ryo didn't even bother to look at the results. He didn't care."
+
+#(Betrayal)
+
+"The day was filled with the constant whispers of his classmates. He was like normal the talk of the school."
+r "Hey, guys."
+"Ryo called out to his friends, however they just ignored him and left school."
+r "They must be mad about yesterday."
+"Ryo let out a sigh, he knew he would have no choice but to wait for his friends to calm down."
+r "Eve isn't coming.."
+r "..."
+r "Have I messed everything up? Did I lose both my friends and Eve?"
+r "I'm such an idiot."
+if friend_flag:
+        jump envy_end
+        
+else:
+        jump choice14_end
+        
+label envy_end:
+menu:
+     "Answer the phone":
+         jump choice14_study
+
+     "Let it ring":
+         jump choice14_water
+
+#(Water)
+label choice14_water:
+"Ryo decided to just ignore the phone. He didn't feel like talking to anyone."
+
+if dream_flag:
+        jump dream_end 
+else:
+        jump choice14_end
+#(Enternal Dream)
+label dream_end:
+play music "Music/Life.ogg"
+"After a while Ryo got fed up with being in his room, and he decided to take a walk."
+scene bg bridge1n
+with fade
+r "Someone is on the bridge."
+r "Eve, what are you doing out here?"
+show eve d1b
+with Dissolve(.5)
+e "Oh... Ryo... It is you."
+r "Eve... what happened."
+show eve d3
+with Dissolve(.5)
+e "It is nothing, I just got in the way again."
+e "I'm always in the way."
+r "Eve you should be treated this way."
+show eve 4b
+with Dissolve(.5)
+e "...."
+show eve d5b
+with Dissolve(.5)
+e "Ryo, don't start that again."
+r "No, I will. I understand I didn't accept my parents before. I didn't realize how good I had things."
+scene bg bridge3n
+with Dissolve(.5)
+e "Ryo, do you remember what I said about dreams."
+r "Yeah?"
+show eve d3b
+with Dissolve(.5)
+e "I want this dream to end now."
+r "What?!"
+show eve d10b
+with Dissolve(.5)
+e "You heard me. I want this dream to end. I want to move onto the next one."
+r "What is their isn't one?"
+show eve d5b
+with Dissolve(.5)
+e "Then I guess that is it."
+e "But... I'm scared."
+scene bg bridge1n
+with Dissolve(.5)
+"Ryo's eyes went wide as Eve dove into him. Unsure he closed his arms around Eve and tried to comfort her."
+r "Come on, I'll take you home."
+pause 3.0
+scene bg bridge6
+with Dissolve(.5)
+pause 2.0
+show eve d6b
+with Dissolve(.5)
+e "I'm... sorry."
+e "I'm taking the cowards way out, and I still can't even do it by themselves."
+r "What?"
+show eve d10b
+with Dissolve(.5)
+e "I'm sorry."
+e "Let's go to an eternal dream."
+hide eve d10b
+with Dissolve(.5)
+pause 2.0
+scene black
+with Dissolve(2.0)
+"Ryo had no time to react, by the time he knew what was going on it was too late. With one strong shove Eve had used her weight to push both of them back and down the hill toward the water below."
+scene bg water1n
+with Dissolve(1.0)
+e "I'm sorry, Ryo...."
+e "Please.."
+e "Don't hate me..." 
+jump bad_end
+
+#(Study Session)
+label choice14_study:
+
+r "Hello?"
+Shigeru "Hey Ryo, we are having a study session tonight, and we were wondering if you can come."
+r "I should make it up to them. I bailed on them before."
+r "Yeah, I can make it."
+Shigeru "Great we are meeting in the park, in 2 hours."
+r "Okay, I'll be there."
+pause 3.0
+scene bg park4
+with Dissolve(3.0)
+pause 3.0
+play music "Music/Approaching Shadows.ogg"
+r "I'm the first one here?"
+"Ryo glanced down at his watch, making sure he had the correct time."
+r "Did I misunderstand something?"
+r "They are really running late."
+"A sharp pain ran through Ryo's head as the sound of metal rang out."
+scene black
+with fade
+"Ryo's vision instantly faded to black as he was struck again."
+r "What."
+r "What is going on..."
+Chika "Hurry up, or someone might see us."
+r "Chika?"
+Jiro "He is still awake!"
+Shigeru "That doesn't matter idiot."
+r "What... I don't-"
+Chika "We hate you. Simple as that."
+Shigeru "Always getting good grades and looking down at us like you are on some pedestal. It sickens us."
+Jiro "But we figured we could get stuff out of you."
+Chika "But then you had to betray us. So you really think that highly of yourself. Like you are so big shot who doesn't need to look down at the little people. You disgust me!"
+r "....All this time. You guys were the same. Looking at me with contempt. Those envious eyes of yours only see what you want to see."
+Shigeru "Shut up. You think you are so smart, so much better then us. Well if you are so smart, figure out a way to live through this."
+scene bg bridge6
+with Dissolve(.5)
+"Ryo felt his body get picked up and dragged over to the side of the hill."
+Chika "Enjoy your swim Ryo."
+"And they tossed him down the hill toward the rushing river below."
+scene bg water1n
+with Dissolve(1.0)
+r "I was a fool. To think that anyone would look at me differently..."
+r "Everyone is the same, they only look at things with malice and envy."
+r "Life is cruel, it is without beauty."
+jump bad_end
+
+#(Friendship)
+label choice14_end:
+play music "Music/Dreamland.ogg"
+Chika "Ryo."
+r "Hmm?"
+Shigeru "We want to apologize."
+Chika "We shouldn't have forced you into helping us. We should have been understanding, and just dropped it when you said you were busy."
+Jiro "Yeah, we're sorry."
+r "Don't worry about it."
+Shigeru "To make it up you, we want to give you this."
+Chika "It is a ticket to join us on a cruise. It is sailing on October 4th, so make sure you show up."
+Jiro "Yeah, we all pooled our money in for this."
+Shigeru "If you really want, we can also get a ticket for Eve."
+Chika "Yeah, you should bring Eve too. I'll play for Eve's ticket."
+r "Thanks guys, this is really nice. I'm looking forward to it already."
+Chika "Geez it is months away don't get too excited."
+Shigeru "No go on, go hang out with Eve, like you always do."
+r "What about studying?"
+Jiro "We'll manage."
+Chika "Yeah, go on. We've already got everything worked out. You don't have to worry about helping us anymore."
+r "Okay, but if you guys need extra help, just ask."
+
+
+#(Missing)
+scene bg bridge1
+with Dissolve(2.0)
+pause 4.0
+play music "Music/Approaching Shadows.ogg"
+scene bg bridge1e
+with Dissolve(3.0)
+pause 4.0
+scene bg bridge1n
+with Dissolve(4.0)
+"Ryo waited for hours and hours but Eve didn't show up again."
+
+if house_flag:
+        jump ver2
+else:
+        jump choice15_nothing
+
+label ver2:
+"Ryo clenched his fists. He couldn't sit back and do nothing while this was happening to Eve."
+r "I don't care what happens. I'm going to save her."
+jump choice15_save
+
+#(Do nothing)
+label choice15_nothing:
+"Ryo clenched his fists, before letting out a sigh. There was nothing he could do."
+jump choice15_end
+
+label choice15_save:
+scene black
+with Dissolve(.5)
+pause 1.0
+scene bg street1
+with Dissolve(1.0)
+pause 2.0
+scene bg house2
+with Dissolve(2.0)
+"Ryo huffed as he stood in front of Eve's house. He had just ran all the way there, but despite being out of breath he didn't feel tired. Instead he felt like he could do anything he was finding energy he didn't know he even had."
+r "Eve hang on. I'll save you."
+scene black
+with Dissolve(.5)
+"After a few slams the door burst open allowing Ryo to enter inside."
+r "Eve! Eve! Answer me Eve! Are you here!?"
+"He took a gulp, before his eyes narrowed with conviction. No matter what he found inside he would be ready and do whatever it takes to save Eve."
+"Taking a step into the house, Ryo began to scan the room he found himself in."
+"Right away his eye was snatched up by the end table. Garbage and mail cluttered it, overshadowing the furniture in a sea of trash."
+"A tall glass cabinet caught Ryo's attention. There was only one thing inside the see-through amoure. An old photograph coated in a layer of dust."
+"It was a photo of a woman wearing the same outfit Eve always wore playing with a little girl."
+e "No, father please stop."
+"Eve's outcry snagged Ryo's attention, causing his legs to move to her location without a second thought."
+scene bg house_in2
+with Dissolve(.5)
+"Bursting through the door, he spotted Eve laying on the floor, her father standing over her."
+"Ryo's vision flooded with red as he stared at Eve lying motionless on the floor."
+r "Eve..."
+r "How... how could you?"
+"Ryo's fist shook from rage and he rushed at Eve's dad without a second thought."
+"Ryo quickly realized that he was outmatched. He wasn't all that athletic and tough, but compared to this tall muscular man he felt akin to an ant."
+"A punch to the gut caused Ryo to gasp for breath as he fell to his knees."  
+r "I need to think of something. At this rate, I'm not going to be able to save Eve. I can't do this by myself, I need some kind of help."
+"He noticed the father picking up an empty glass beer bottle. Ryo scanned the room in an instant trying to locate something he could use for a weapon, but to his regret nothing seemed to be of use."
+r "Something of use could be in the living room. I could try making a break for there and hope I can find something there."
+menu:
+        "Make a break for the living room.":
+            jump choice18_livingroom
+
+        "Stay in the room and continuing fighting.":
+            jump choice18_bathroom
+ 
+label choice18_livingroom:
+  "Ryo let out a huff before making a sprint to the door."
+  "However right as his body pass through the door he felt a horrid pain swell up on his arm and the echoing sound of shattering glass."
+  "Ryo's arm dropped limply to his side as all feeling left it. That one strike had shattered the nerves in his arm and caused it to go numb."
+  scene black
+  with Dissolve(.5)
+  "Holding his arm Ryo rushed into the living room."
+  "Before he even had any time to react to he felt his body be thrown into the end table. His head clipped the corner of the table."
+  "Ryo was grabbed by the collar of his shirt and held up by it. A stream of blood ran down his forehead from the cut, creating a red line on his face."
+  dad2 "You brat, just where do you think you are going? Huh?!"
+  "His breath reeked of alcohol. His speech slurred from the thickness of his induced state."
+  r "Sir you need to calm down you are hurting Eve. What you are doing is wrong, and you don't deserve to have a daughter if you do things like this."
+  "Ryo tried to punch the man in the gut."
+  "The man staggered slightly, but his grip on Ryo only tightened."
+  "With the force of a rhino Ryo felt his body get thrown backward." 
+  "A shock wave of pain wracked his body as he crashed into the glass cabinet. With the sound level of a train the cabinet fell forward and smashed into Ryo's back."
+  "Glass shattered everywhere like a rain of blades. They sliced into Ryo like with the ease of a scissor cutting into paper."
+  "Ryo laid motionless around the sea of glass as blood poured of the many cuts on his body."
+  r "Eve..."
+  r "I'm sorry."
+  r "I couldn't save you."
+  "Tears formed in his eyes as his vision became hazy, just before he blacked out."
+  jump bad_end
+  
+label choice18_bathroom:
+  r "No, I can't run away and leave Eve. I have to stay here and protect her."
+  "Ryo rushed at the man and delivered a punch to his stomach."
+  "The man barely flinched at Ryo's punch. He lifted the bottle up into the air and prepared to hammer it into Ryo's skull."
+  
+menu:
+    "Block with left arm.":
+        jump choice19_left
+
+    "Block with right arm.":  
+        jump choice19_right
+
+label choice19_left:
+$ righthand_flag = False
+"A loud 'thunk' rang out as the glass connected with Ryo's arm."
+"Ryo could feel the bones in his wrist shatter, and his skin begin to swell up."
+"This is my chance, I have to go on the attack now."
+jump battle
+
+label choice19_right:
+$ righthand_flag = True
+"A loud 'thunk' rang out as the glass connected with Ryo's arm."
+"Ryo could feel the bones in his wrist shatter, and his skin begin to swell up."
+"This is my chance, I have to go on the attack now."
+jump battle
+label battle:
+"Ryo launched himself with all the strength he could muster into the chest of Eve's dad. Ramming into him with the strength of a bull." 
+"The man lost his balanced and was pushed backward. His head slammed into the side of the bathtub which caused the bottle to fall from his hand and rolled along the tile."
+dad2 "You're dead."
+"The man grabbed Ryo and delivered a strong punch to his face, sending him backward into the wall."
+"A trickle of blood ran down the side of Ryo's face as he tried to regain his focus. That last punch had knocked the wind out of him, causing the world around him to spin."
+dad2 "You're dead brat."
+"Ryo stared up at the man towering over him like an executioner."
+if righthand_flag:
+        jump die
+else:
+        jump win
+  
+label win:       
+  "Ryo spotted the bottle out of the corner of his eye and in a split second descion he snatched it up."
+  r "I won't let you hurt Eve."
+  "Ryo rushed at the man and drove the bottle into the side of the man's skull. The bottle shattered to pieces as the man fell to the floor."
+  "Ryo let out deep breath and fell to his knees."
+  "He just remained their like a statue. The only sound in the room was Ryo's huffing."
+  show eve 9b
+  with Dissolve(.5)
+  e "AWHHHH!"
+  "Eve's scream caused Ryo's eyes to fly open. She sat in the corner hugging her knees. Her body shook and rattled like she was experiencing an earthquake. Tears streamed down her face as she stared at her father."
+  r "Eve? Are you okay?"
+  "Eve did not respond to Ryo's voice instead she continued streaming and crying."
+  show eve 10b
+  with Dissolve(.5)
+  e "No... No... This can't be happening."
+  r "Eve, calm down."
+  show eve 15b
+  with Dissolve(.5)
+  e "No."
+  e "No."
+  e "Noooooooo!"
+  show eve 24b
+  with Dissolve(.5)
+  e "No! No! No! No!"
+  "Eve seemed to be emotionally unstable. She snatched up one of the shards of glass and cut herself with it."
+  r "Eve stop!"
+  "Ryo rushed over to her and yanked the glass from her hand."
+  show eve 9b
+  with Dissolve(.5)
+  e "No! Stop! Let me go! Don't stop me. I want to do this!"
+  r "Eve, don't do this."
+  show eve 9
+  with Dissolve(.5)
+  e "Let me go Ryo! I want to do this! I don't want to stay here anymore. I-I don't want this!"
+  e "I don't want a life like this! No!"
+  show eve 15b
+  with Dissolve(.5)
+  e "Please, Ryo... let me do this."
+  r "I need to say something to calm her down."
+menu:    
+    "Don't worry. I'm here for you. I'll help you.":
+        jump choice21_unstable
+
+
+    "Fine, kill yourself. Take the cowards way out.":
+        jump choice21_caretaker
+
+label choice21_unstable:
+  "Ryo held Eve close and whispered in her ear."
+  show eve 24b
+  with Dissolve(.5)
+  e "But... but I don't want this."
+  e "I want my father..."
+  e "I want my mother..."
+  e "I want to be with them..."
+  e "I don't want this."
+  r "It will be okay. I won't leave you."
+  "Ryo's eyes flew open as he felt something wet on his hand. Blood was gushing out of new cut."
+  show eve 15b
+  with Dissolve(.5)
+  e "I'm sorry, Ryo. I want to go."
+  e "I want to be with them."
+  "Ryo stared down at Eve. He refused to allow himself to cry and tried to remain as strong as he could."
+  show eve 5b
+  with Dissolve(3.5)
+  r "I understand."
+  r "Good-"
+  r "Goodbye."
+  r "Eve."
+  hide eve 5b
+  with Dissolve(3.5)
+  pause 3.0
+  scene black
+  with Dissolve(3.0)
+  pause 3.0
+  scene bg bridge3
+  with Dissolve(5.0)
+  "The cold breeze roared causing Ryo's hair to become horrid looking."
+  "He gazed over the side of the bridge at the water below."
+  "He was dressed in a fancy suit, but rather than going to something happy, he had just come from a funeral."
+  "Eve and her father had no relatives and no friends showed up, so in the end only he and his family attended."
+  "It was overall just very sad event. Almost as if no one cared about these people. They only had each other."
+  r "Eve was such a nice girl. Why does no one care? No one noticed her. She was just a shadow, being passed by and ignored."
+  r "And she was always alone. She felt completely alone. Like no one saw her. Her whole world revolved around her family, the people she felt could see her."
+  r "But I saw her. The lone shadow standing there on the bridge."
+  "Ryo threw the flowers he was holding over the side of the bridge."
+  r "And I'll miss her."   
+  jump bad_end
+  
+label choice21_caretaker:
+  show eve 20b
+  with Dissolve(.5)
+  e "Fine I will!"
+  "Eve stabbed the glass in her stomach."
+  r "You're just a coward! Go on quit! See if I care!"
+  show eve 15b
+  with Dissolve(.5)
+  e "What? What?"
+  "Shock shown on her face as she stared mouth agape at Ryo."
+  r "You are taking the easy way out. And instead hurting everyone around you."
+  show eve 10b
+  with Dissolve(.5)
+  e "What do you mean..."
+  "Eve seemed to calm down as confusion took over her hysterics."
+  r "You wonder how you are hurting people? Well you are hurting me. Because I have to go on without you. You know who will be in the most pain then?"
+  r "Me. You'll hurt me."
+  r "I don't want to go on without you."
+  "Ryo scooped up another piece of glass and held it at his throat."
+  r "If you go. I'm going with you."
+  "Ryo stabbed the glass into his neck, allowing a trickle of blood to run down."
+  show eve 24b
+  with Dissolve(.5)
+  e "No, stop!"
+  "Eve cried out and dove at Ryo knocking the glass out of his hand."
+  e "Don't do it Ryo."
+  e "You have your whole life ahead of you."
+  r "Then stay with me."
+  show eve 6b
+  with Dissolve(.5)
+  r "Stay with me."
+  show eve 15b
+  with Dissolve(.5)
+  show eve 24b
+  with Dissolve(.5)
+  e "I'll stay with you. So don't throw your life away."
+  r "Then don't throw your life away either."
+  r "Stay with me."
+  show eve 23b
+  with Dissolve(.5)
+  e "I'll stay."
+  e "Ryo."
+  jump good_end
+  
+label die:
+  "Ryo spotted the bottle out of the corner of his eye. He reached for it, but when he tried to grab it, he found he could not hold it. The bones in his right hand's wrist had been shattered, so he couldn't hold the bottle."
+  "Ryo was frozen as his body was picked up and held in the air."
+  "Everyone faded to black as he was thrown backwards and he felt his skull crash into the sink. A pool of blood poured out of his skull as stared at Eve."
+  r "Eve...."
+  r "I'm sorry."
+  jump bad_end
+  
+label choice15_end:
+play music "Music/Toy's Dance.ogg"
+"All night long, and all the next day Ryo thought about Eve. Concerns for her safety ran through his mind constantly."
+scene bg bridge1
+with Dissolve(2.0)
+pause 4.0
+scene bg bridge1e
+with Dissolve(3.0)
+pause 4.0
+scene bg bridge1n
+with Dissolve(4.0)
+r "Please show up today."
+"Ryo waited and waited until soon he could barely see anything."
+"He let out a sigh and was about to head home when he heard Eve's voice."
+show eve d1
+with Dissolve(.5)
+e "Ryo?"
+r "Eve, good you came. I was worried something happened to you."
+show eve d3
+with Dissolve(.5)
+e "..."
+r "Eve are you okay?"
+show eve d3b
+with Dissolve(.5)
+e "..."
+r "Eve?"
+show eve d5b
+with Dissolve(.5)
+e "I don't know."
+e "I'm really not sure Ryo."
+show eve d10b
+with Dissolve(.5)
+e "I don't know if I can handle this anymore."
+r "Eve, is there anything I can do?"
+show eve 5b
+with Dissolve(.5)
+e "..."
+show eve d3b
+with Dissolve(.5)
+e "Ryo..."
+show eve d5b
+with Dissolve(.5)
+e "Will you come with me?"
+menu:
+      "Yes, I'll come with you.":
+          jump choice20_come
+
+      "I'm sorry, but I can't come with you.":
+          jump choice20_sorry
+
+label choice20_come:
+show eve d7b
+with Dissolve(.5)
+e "Thank you, Ryo."
+scene bg bridge5n
+with Dissolve(.5)
+"Eve climbed over the railing and stood on the edge."
+r "Wait... what are you doing?"
+show eve d8b
+with Dissolve(.5)
+e "You said you would come with me."
+r "Eve, don't do this. It isn't worth it. Remember what you said, that bad times only last so long."
+e "...."
+show eve d3b
+with Dissolve(.5)
+e "So I'm guessing this means you aren't coming with me after all."
+r "Eve don't throw your life away."
+show eve d6b
+with Dissolve(.5)
+e "I'm not surprised. In the end, I'm always abandoned and left alone."
+hide eve d6b
+with Dissolve(.5)
+r "Eve stop!"
+"Ryo tried to grab a hold of her. But he was too late, the fabric slipped just through his fingers."
+scene bg bridge3n
+with Dissolve(.5)
+r "No!"
+r "Eve!"
+"He angrily pounded the railing, until his fists started to bleed."
+r "I couldn’t.... I couldn't do anything to help you."
+r "I'm sorry Eve. I hope the pain is gone now."
+r "...."
+r "I won't forget you."
+r "You've taught me the value of life."
+r "Thank you, Eve."
+jump bad_end
+
+label choice20_sorry:
+show eve d3b
+with Dissolve(.5)
+e "..."
+show eve d5
+with Dissolve(.5)
+e "I figured you'd say that. I always end up alone. I'm the one who gets tossed away and abandoned."
+r "You're not alone. I'm not tossing you aside. This just isn't the answer. Running away from the problem won't help you all that much. Just like ignoring it."
+show eve d6
+with Dissolve(.5)
+e "So what should I do?"
+r "Get help."
+show eve d3
+with Dissolve(.5)
+e "Help?"
+r "Yeah, try to get you and your dad consoling, so you can work through this. You love your dad, and if your dad loves you he will agree to it as well."
+show eve d5
+with Dissolve(.5)
+e "I don't know Ryo... I'm scared."
+r "Have faith Eve. Believe that he cares for you."
+show eve d1
+with Dissolve(.5)
+e "I think I have a lot to think about, so I'm going to go home now."
+r "Alright. Remember you aren't all alone."
+e "I will."
+hide eve d1
+with Dissolve(.5)
+scene black
+with Dissolve(2.0)
+pause 3.0
+
+#(Help)
+play music "Music/Firefly.ogg"
+label choice20_end:
+scene bg bridge1
+with Dissolve(2.0)
+pause 2.0
+show eve 4
+with Dissolve(.5)
+e "Ryo."
+r "That's rare. You greeting me, and you didn't even let me get all that close."
+show eve 3
+with Dissolve(.5)
+e "Stop. This is important. I have something I need to tell you."
+r "Hmm?"
+show eve 1b
+with Dissolve(.5)
+e "We won't be seeing each other for a while."
+r "Why? What is going on?"
+show eve 17b
+with Dissolve(.5)
+e "I took your advice, my father and I are going to be getting consoling. Though it means I don't have time to greet you here anymore."
+show eve 7b
+with Dissolve(.5)
+e "I don't know when I will be able to greet you here anymore."
+show eve 2b
+with Dissolve(.5)
+e "However, can you wait for me?"
+show eve 10b
+with Dissolve(.5)
+e "I know it is a selfish request. To ask you to wait for me here after school every day, for an unknown amount of time. So I don't want you to wait long, just 10 minutes will suffice."
+show eve 8b
+with Dissolve(.5)
+e "So can you wait for me Ryo?"
+e "I don't want to lose our friendship."
+r "Don't be silly Eve."
+r "Oh course I will wait for you. We're friends. That is just a silly thing to ask, for I would do it anyway."
+show eve 16
+with Dissolve(.5)
+e "Thank you Ryo!"
+show eve 18
+with Dissolve(.5)
+e "Till we meet again."
+hide eve 18
+with Dissolve(.5)
+"Ryo smiled until Eve disappeared from sight. He was happy for Eve, but he still couldn't manage anymore than a fake smile."
+r "Yeah... till we meet again."
+pause 2.0
+scene black
+with Dissolve(.5)
+pause 2.0
+
+#(Not there)
+queue music "Music/Firefly.ogg"
+scene bg bridge1
+with Dissolve(1.0)
+"Even though he knew Eve wouldn't be showing up, he still found himself standing on the bridge."
+scene bg bridge2
+with Dissolve(1.0)
+r "It is really quiet without Eve."
+scene bg bridge3
+with Dissolve(1.0)
+r "This isn't like the other times. I didn't know what to think at those times. But now I know she is fine right now."
+scene bg bridge3e
+with Dissolve(2.0)
+r "It is really peaceful."
+scene bg bridge5
+with Dissolve(3.0)
+pause 2.0
+r "I think I understand why Eve looks at the water so much now."
+r "It is calming."
+r "Till we meet again Eve."
+pause 3.0
+scene black 
+with Dissolve(.5)
+pause 5.0
+
+#(Family)
+Shigeru "Ryo, headed home?"
+r "Yeah, but first I'm going to stop by the bridge."
+Chika "Aww, Ryo is so dedicated. It is cute."
+Jiro "But it has been 6 months now. It is almost October."
+"Ryo shrugged."
+r "Habits are hard to break."
+Chika "I hope she shows up one of these days."
+scene bg bridge1
+with Dissolve(2.0)
+pause 3.0
+scene bg bridge1e
+with Dissolve(3.0)
+pause 3.0    
+play music "Music/Harmony.ogg"
+show eve 19
+with Dissolve(.5)
+e "Ryo!"
+"Ryo felt weight crash into his back. Small arms wrapped around him as he was forced into a hug."
+e "You waited just like I asked."
+show eve 18b
+with Dissolve(.5)
+e "I'm so happy."
+r "Don’t worry about it."
+r "Something seems different about you."
+show eve 16b
+with Dissolve(.5)
+e "I am different. In fact I’m thinking about losing this look all together now."
+r "No more gypsy look?"
+show eve 18
+with Dissolve(.5)
+e "Yep."
+r "What is it going to be now? A princess? An amazon?"
+e "No."
+show eve 16
+with Dissolve(.5)
+e "I figured I would maybe go for a more normal style."
+r "What about the different style, and costume jewelry for pretend."
+show eve 17b
+with Dissolve(.5)
+e "Does not matter anymore. In fact I do not normally wear this anymore at all."
+e "I just wanted to wear it again while we met again for the memories and such."
+r "Is that so?"
+show eve 18b
+with Dissolve(.5)
+e "Yeah, I do not need them anymore."
+e "I wore the cloak because I wanted to be ignored and forget about like a shadow. I did not want anymore to notice me, or call out to me. I just wanted to stay in my little bubble."
+show eve 16b
+with Dissolve(.5)
+e "But I am glad you invaded it."
+r "That is kind of funny, since it was your cloak that made me call out to you." 
+e "Life is funny like that."
+r "Anyway, continue."
+show eve 17b
+with Dissolve(.5)
+e "Well I do not need the jewelry or outfit anymore. I no longer want the reason I wore them. I would not trade my life for a fantasy or another life anymore."
+r "So I am guessing things went good with the consoling."
+show eve 18b
+with Dissolve(.5)
+e "Yeah, it took a long while, but things finally are good again. And I am even over my mom leaving us."
+r "Wait; what?"
+show eve 16b
+with Dissolve(.5)
+e "It is nothing, do not worry about it. It is not a weight holding me down anymore. I have freed myself from my problems and worries."
+e "And even if I do not have a perfect life. I would not trade my life for anything. I love my life."
+if love_points > 4:
+        jump choice_final
+else:
+        if love_points == 4:
+                jump choice_final
+        else:
+                jump choice21_friend
+
+label choice_final:
+show eve 6b
+with Dissolve(.5)
+e "Hey, Ryo."
+r "Hmm?"
+show eve 16b
+with Dissolve(.5)
+e "How do you feel about me?"
+menu:
+      "You are my friend":
+          show eve 18b
+          with Dissolve(.5)
+          e "That is what I thought. And I would be mad if you said you didn't see me as a friend. After all the time we've spent together."
+          jump choice21_friend
+
+      "I think I like you more than a friend.":
+          jump choice21_love
+
+
+#(Road to happiness)
+label choice21_love:
+show eve 6b
+with Dissolve(.5)
+e "What?"
+e "I must have heard that wrong. Can you repeat that."
+r "I like you more than just a friend."
+show eve 6
+with Dissolve(.5)
+e "Yeah..."
+e "That is what I thought you said."
+r "..."
+r "..."
+r "No reaction."
+show eve 3b
+with Dissolve(.5)
+e "It is called being speechless, and it is a reaction, Genius."
+show eve 2b
+with Dissolve(.5)
+e "I honestly do not know what to say."
+show eve 16
+with Dissolve(.5)
+e "But I can feel my heart beating, so I wonder if I happy about it."
+r "I thought you did not believe in love."
+show eve 4b
+with Dissolve(.5)
+e "I do not know what to believe. My mom ruined both my dad, and mine life when she left us."
+r "I will just have to prove it to you then. Will you give me the chance?"
+show eve 2b
+with Dissolve(.5)
+e "I doubt I have a choice in the matter. You are the one making the choices right now from my perspective."
+r "You have got that right."
+"Ryo leaned down and brought his lips close to Eve’s" 
+r "You can pull away if you want."
+show eve 19b
+with Dissolve(.5)
+e "I know, Genius."
+"Ryo's eyes flew open and Eve closed the space between them and made the first move."
+"The kiss only last for a few short moments, before Eve pulled away."
+show eve 18b
+with Dissolve(.5)
+e "You'll have to work hard to prove to me the existence of love if you want a longer kiss or anything more."
+r "Don't worry, I won't give up. I didn't stop coming each and everyday. I will give this even more effort. I will make you believe in love."
+show eve 19b
+with Dissolve(.5)
+e "Geez, stop being so corny."
+e "I can't stop laughing now."
+r "Eve."
+show eve 4b
+with Dissolve(.5)
+e "Hmm?"
+r "I love you."
+"Ryo planted a soft kiss on Eve's forehead."
+show eve 2b
+with Dissolve(.5)
+e "We'll have to work on that..."
+e "If you keep up all this corny stuff we won't last long."
+r "Sorry."
+show eve 18b
+with Dissolve(.5)
+e "Well... I guess it can't hurt, once in a while."
+show eve 16b
+with Dissolve(.5)
+e "Ryo, I think I might be falling for you as well."
+e "Just maybe, we could reach a happy ending."
+r "Now, who is being corny."
+show eve 21b
+with Dissolve(.5)
+e "Shut up, I was trying to be sweet!"
+r "And I love that about you."
+show eve 2b
+with Dissolve(.5)
+e "Geez, you keep throwing curve balls at me, it is like I'm a baseball player."
+r "A baseball player in the game of love."
+show eve 9b
+with Dissolve(.5)
+e "Grr stop already."
+"Eve stormed away grumbling to herself. Ryo could not help but smile as he followed behind her."
+r "I love you Eve."
+show eve 10
+with Dissolve(.5)
+e "UG! Stop that!"
+jump good_end
+
+#(Smile)
+label choice21_friend:
+show eve 16
+with Dissolve(.5)
+e "Without you Ryo, I wouldn't have lowered my mask. I would still be hiding in the shadows. And even if someone spoke to me, I would just have a plastic smile."
+show eve 5
+with Dissolve(.5)
+e "Most of the time my emotion was plastic. Even during the time we spent together, I never really got it deep down."
+show eve 4b
+with Dissolve(.5)
+e "I was just playing the happy part, hoping my inner-self would change to match it. I was lying to myself trying to force myself to say that I was happy."
+show eve 3b
+with Dissolve(.5)
+e "But not anymore. It has been such a long time since my smile had any light in it."
+r "I don't see anything different about it."
+r "You are still the same Eve to me. The Eve I've been having fun with since day 1."
+show eve 6b
+with Dissolve(.5)
+e "You're right, I still am pretty much the same. Maybe I was wrong actually. Maybe all that time I did show some of my real self. The mask was cracked I guess."
+show eve 21b
+with Dissolve(.5)
+e "Are all my metaphors flying over your head genius."
+r "What? Of course not."
+show eve 19b
+with Dissolve(.5)
+e "Haha, I'm just kidding."
+show eve 16b
+with Dissolve(.5)
+e "But really Ryo. If I wasn't for you. I wouldn't know how to smile."
+show eve 18b
+with Dissolve(.5)
+e "Thank you."
+r "Your-"
+show eve 21b
+with Dissolve(.5)
+e "Alright that is enough of that! Ryo, I challenge you to a race. Whoever reaches the park first wins. The loser has to buy food for the winner, whatever the winner wants."
+r "What? Wait-"
+show eve 19b
+with Dissolve(.5)
+e "And I want lobster, or maybe steak, steak and lobster?"
+r "I can't really-"
+show eve 21b
+with Dissolve(.5)
+e "Go!"
+r "Wait Eve!"
+e "Slowpoke! And you call yourself a guy. A girl is beating you. You better have your savings account ready!"
+scene black
+with Dissolve(.5)
+"Ryo shook his head, but nonetheless joined in anyway."
+r "That's it is on!"
+pause 2.0
+scene bg park4
+with Dissolve(1.0)
+pause 2.0
+show eve 19
+with Dissolve(.5)
+e "I win! I win!"
+r "My wallet is so screwed..."
+show eve 16
+with Dissolve(.5)
+e "Let's go some place cheap."
+r "What happened to steak and lobster?"
+show eve 6
+with Dissolve(.5)
+e "Do you want to buy me that?"
+r "No."
+show eve 18
+with Dissolve(.5)
+e "Then just consider it your reward for waiting all the time for me."
+r "My wallet is-"
+show eve 19b
+with Dissolve(.5)
+e "But that doesn't mean I won't order one of everything~"
+r "...Screwed."
+if book_flag:
+        if friend_flag:
+                jump secret_end
+        else:
+                jump good_end
+else:
+    jump good_end
+    
+#(Regret)
+label secret_end:
+queue music "Music/Life.ogg"
+scene bg bridge3
+with fade
+"Eve stood on the bridge. The wind blew through her hair as she stared down at the water. A bouquet of flowers was in her hand."
+show eve 13
+with Dissolve(.5)
+e "Ryo..."
+"Her eyes started to fill with tears."
+show eve 14b
+with Dissolve(.5)
+e "I never thought, that something like this would happen."
+e "That when you went on a cruise with your friends you would go missing."
+show eve 15b
+with Dissolve(.5)
+e "I-I...I should have gone with too."
+e "You might not have gone missing if I had gone with."
+show eve 14
+with Dissolve(.5)
+e "I refuse to believe you are dead."
+e "Even if everyone says you died, and there is no chance of you living after falling off the boat."
+show eve 22b
+with Dissolve(.5)
+e "I'll believe."
+e "Even if it just a silly thing. I'll believe, and I'll make others believe as well."
+show eve 23b
+with Dissolve(.5)
+e "I'll rewrite it. Even if it has no meaning, I'll make everyone think that you happened to drift to a nearby island."
+show eve 22b
+with Dissolve(.5)
+e "I'll believe that you survived."
+e "And someday we will meet again."
+e "Ryo."
+e "Till we meet again."
+jump true_end
+
+label bad_end:
+play music "Music/Eternal Dream.ogg"
+scene black
+with Dissolve(1.0)
+pause 2.0
+scene bg end1
+with Dissolve(2.0)
+scene bg end3 
+with Dissolve(2.0)
+pause 6.0
+scene black
+with Dissolve(1.0)
+pause 2.0
+return
+    
+label good_end:
+scene black
+with Dissolve(1.0)
+pause 2.0
+scene bg end1
+with Dissolve(2.0)
+scene bg end2 
+with Dissolve(2.0)
+pause 6.0
+scene black
+with Dissolve(1.0)
+pause 2.0
+return
+
+label true_end:
+play music "Music/Cold Mind.ogg"
+scene black
+with Dissolve(1.0)
+pause 2.0
+scene bg end1
+with Dissolve(2.0)
+scene bg end4 
+with Dissolve(2.0)
+pause 6.0
+scene black
+with Dissolve(1.0)
+pause 2.0
+return
