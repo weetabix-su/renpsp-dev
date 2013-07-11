@@ -54,7 +54,8 @@ function ENGINE:CtrlFallingMenu(pad,oldpad)
 			self:Save()
 		elseif munuaction == "conf" then
 			confexit = false
-			confmenu = {q='Select fast forward speed',a={},active=1}
+			
+			confmenu = {q='Select skipping speed',a={},active=1}
 			confmenu.a[1]='as fast as possible'
 			confmenu.a[2]='5 seconds'
 			confmenu.a[3]='more than 9000 milliseconds'

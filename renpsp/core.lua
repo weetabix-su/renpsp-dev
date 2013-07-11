@@ -142,7 +142,7 @@ function ENGINE:DrawMenu(menu)
 			if i == menu.active then
 				l = '>> '..l..' <<'
 			end
-			screen:blit(110, y0+(i-1)*25-2, self.media.answer_frame)
+			screen:blit(240-(GAME_imagewidth(self.media.answer_frame)/2), y0+(i-1)*25-2, self.media.answer_frame)
 			TEXT:WriteLineCenter(y0+(i-1)*25,l)
 		end	
 	end
