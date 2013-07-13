@@ -158,6 +158,7 @@ function ENGINE:DrawMenu(menu)
 			end
 			TEXT:WriteParagraph(10,205,self.state.text,66)
 		end
+		TEXT:WriteParagraph(10,205,self.state.text,66)
 		if self.control.debug then
 		   	ENGINE:DrawDebug()
 		end
