@@ -151,6 +151,7 @@ function explodeLexer(str)
 end
 
 function ENGINE:ExecuteScriptLine(cmd)
+
 	if cmd[1].type == 'string' then
 		self.state.text = {}
 		for i=1,table.maxn(cmd) do
@@ -482,12 +483,19 @@ function ENGINE:SelectGame(path)
 
 	local i=1
 	ENGINE.script.continue = false
-	ENGINE.state.menu = {a={},jmp={},active=1}
+	ENGINE.state.menu = {a={},jmp={},q="No game description",active=1}
 	idx = 1
 	for i,j in pairs(GAME_listdir()) do
 		if string.sub(j.name,1,1)~='.' then
 			ENGINE.state.menu.a[idx] = j.name
 			ENGINE.state.menu.jmp[idx] = j.name
+			--ENGINE.state.menu.q[idx] = "No game description"
+			--local descfile = path.."/"..ENGINE.state.menu.jmp[idx].."/desc.lua"
+			--if descfile ~= nil then
+				--dofile(descfile)
+				--ENGINE.state.menu.a[idx] = gamedesc.title
+				--ENGINE.state.menu.q[idx] = gamedesc.desc
+			--end
 			idx = idx + 1
 		end
 	end
