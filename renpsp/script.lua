@@ -483,7 +483,7 @@ function ENGINE:SelectGame(path)
 
 	local i=1
 	ENGINE.script.continue = false
-	ENGINE.state.menu = {a={},jmp={},q="",qdesc={},active=1}
+	ENGINE.state.menu = {a={},jmp={},q="",qdesc={},qbon={},active=1}
 	idx = 1
 	for i,j in pairs(GAME_listdir()) do
 		if string.sub(j.name,1,1)~='.' then
@@ -496,11 +496,12 @@ function ENGINE:SelectGame(path)
 				dofile(descfile)
 				ENGINE.state.menu.a[idx] = gamedesc.title
 				ENGINE.state.menu.qdesc[idx] = ("Made by: "..gamedesc.auth.."\n"..gamedesc.desc)
+				--ENGINE.state.menu.qbon[idx] = path.."/"..ENGINE.state.menu.jmp[idx].."/"..gamedesc.screen
 			end
 			idx = idx + 1
 		end
 	end
-
+	
 	self:Scene('white')
 
 	while not ENGINE.script.continue do
