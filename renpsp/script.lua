@@ -483,19 +483,20 @@ function ENGINE:SelectGame(path)
 
 	local i=1
 	ENGINE.script.continue = false
-	ENGINE.state.menu = {a={},jmp={},q="No game description",active=1}
+	ENGINE.state.menu = {a={},jmp={},q="",qdesc={},active=1}
 	idx = 1
 	for i,j in pairs(GAME_listdir()) do
 		if string.sub(j.name,1,1)~='.' then
 			ENGINE.state.menu.a[idx] = j.name
 			ENGINE.state.menu.jmp[idx] = j.name
-			--ENGINE.state.menu.q[idx] = "No game description"
-			--local descfile = path.."/"..ENGINE.state.menu.jmp[idx].."/desc.lua"
-			--if descfile ~= nil then
-				--dofile(descfile)
-				--ENGINE.state.menu.a[idx] = gamedesc.title
-				--ENGINE.state.menu.q[idx] = gamedesc.desc
-			--end
+			ENGINE.state.menu.qdesc[idx] = "No game description"
+			descfile = path.."/"..ENGINE.state.menu.jmp[idx].."/desc.lua"
+			desc_check = io.open(descfile)
+			if desc_check ~= nil then
+				dofile(descfile)
+				ENGINE.state.menu.a[idx] = gamedesc.title
+				ENGINE.state.menu.qdesc[idx] = ("Made by: "..gamedesc.auth.."\n"..gamedesc.desc)
+			end
 			idx = idx + 1
 		end
 	end

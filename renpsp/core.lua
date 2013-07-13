@@ -149,7 +149,15 @@ function ENGINE:DrawMenu(menu)
 
 	if table.maxn(self.state.text)~=0 then
 		screen:blit(0, 200, self.media.text_frame)
-		TEXT:WriteParagraph(10,205,self.state.text,66)
+		for i=1,table.maxn(menu.a) do
+			local l = menu.a[i]
+			if i == menu.active then
+				if menu.qdesc[i] ~= nil then
+					self.state.text = {menu.qdesc[i]}
+				end
+			end
+			TEXT:WriteParagraph(10,205,self.state.text,66)
+		end
 		if self.control.debug then
 		   	ENGINE:DrawDebug()
 		end
