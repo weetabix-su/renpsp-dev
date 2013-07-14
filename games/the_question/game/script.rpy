@@ -29,7 +29,7 @@ label start:
 
     $ bl_game = False
     
-    play music "illurock.ogg"
+    play music "illurock.wav"
 
     scene bg lecturehall
     with fade

@@ -496,7 +496,9 @@ function ENGINE:SelectGame(path)
 				dofile(descfile)
 				ENGINE.state.menu.a[idx] = gamedesc.title
 				ENGINE.state.menu.qdesc[idx] = ("Made by: "..gamedesc.auth.."\n"..gamedesc.desc)
-				ENGINE.state.menu.qbon[idx] = path.."/"..ENGINE.state.menu.jmp[idx].."/"..gamedesc.screen
+				if gamedesc.screen ~= nil then
+					ENGINE.state.menu.qbon[idx] = path.."/"..ENGINE.state.menu.jmp[idx].."/"..gamedesc.screen
+				end
 			end
 			idx = idx + 1
 		end
