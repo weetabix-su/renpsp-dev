@@ -155,7 +155,7 @@ function ENGINE:DrawMenu(menu)
 				if menu.qdesc[i] ~= nil then
 					self.state.text = {menu.qdesc[i]}
 				end
-				if GAME_enableAdvDesc()
+				if GAME_enableAdvDesc() then
 					if menu.qbon[i] ~= nil then
 						ENGINE:ClearScene()
 						--if CURRENT_SYSTEM == "LPE" then
