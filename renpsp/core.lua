@@ -155,12 +155,17 @@ function ENGINE:DrawMenu(menu)
 				if menu.qdesc[i] ~= nil then
 					self.state.text = {menu.qdesc[i]}
 				end
-				if menu.qbon[i] ~= nil then
-					ENGINE:ClearScene()
-					self.media.background = Image.load(menu.qbon[i])
-				elseif menu.qbon[i] == nil then
-					ENGINE:ClearScene()
-					self.media.background = 'white'
+				if GAME_enableAdvDesc()
+					if menu.qbon[i] ~= nil then
+						ENGINE:ClearScene()
+						--if CURRENT_SYSTEM == "LPE" then
+							--ENGINE:Timer(100)
+						--end
+						self.media.background = Image.load(menu.qbon[i])
+					elseif menu.qbon[i] == nil then
+						ENGINE:ClearScene()
+						self.media.background = 'white'
+					end
 				end
 			end
 			TEXT:WriteParagraph(10,205,self.state.text,66)
