@@ -110,6 +110,10 @@ function RenpyClass(renpy)
 		ENGINE:TextBoxOut(blah)
 	end
 	
+	function renpy.importLua(file)
+		dofile(file)
+	end
+	
 	function renpy.movie_cutscene(movie, delay, loop)
 		if (delay == nil and delay ~= -1) then
 			delay = 0

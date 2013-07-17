@@ -261,7 +261,7 @@ function ENGINE:Quit()
 	self:Timer(3000)
 	self:Scene('black')
 	self:ClearChars()
-	self.state.text = {'Thanks for using RenPSP!\n\n                                                      lb@iichan'}
+	self.state.text = {'Thanks for using RenPSP!\n\n                                                      lb@iichan\a'}
 	self.script.exit = true
 	self.script.continue = false
 end
@@ -483,7 +483,7 @@ function ENGINE:SelectGame(path)
 
 	local i=1
 	ENGINE.script.continue = false
-	ENGINE.state.menu = {a={},jmp={},q="",qdesc={},qbon={},active=1}
+	ENGINE.state.menu = {a={},jmp={},q="",qdesc={},qbon={},yBoxPos={},yLimiter=0,yAbs=0,active=1}
 	idx = 1
 	for i,j in pairs(GAME_listdir()) do
 		if string.sub(j.name,1,1)~='.' then
@@ -519,7 +519,7 @@ function ENGINE:SelectGame(path)
 	ENGINE.cursavepath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/saves'
 	ENGINE.curskinpath = path..'/'..self.state.menu.jmp[self.state.menu.active]..'/skin'
 	GAME_print('ENGINE.curgamepath = '..ENGINE.curgamepath)
-	ENGINE.state.menu = {a={},jmp={},active=1}
+	ENGINE.state.menu = {a={},jmp={},yBoxPos={},yLimiter=0,yAbs=0,active=1}
 	if GAME_chkDir(ENGINE.cursavepath) == false then
 		GAME_makeDir(ENGINE.cursavepath)
 	end
