@@ -136,7 +136,7 @@ function ENGINE:DrawMenu(menu)
 		menu.yAbs = 13
 		menu.yLimiter = 7
 		if table.maxn(self.state.text)==0 then
-			menu.yAbs = 45
+			menu.yAbs = 5
 			menu.yLimiter = 10
 		end
 		if table.maxn(menu.a) < menu.yLimiter then
@@ -166,12 +166,12 @@ function ENGINE:DrawMenu(menu)
 					end
 				end
 			elseif menu.yLimiter == 10 then
-				if (menu.yBoxPos[menu.active] < 45) and (menu.active < (table.maxn(menu.a)-menu.yLimiter)) then
+				if (menu.yBoxPos[menu.active] < 5) and (menu.active < (table.maxn(menu.a)-menu.yLimiter)) then
 					menu.yAbs = menu.yAbs + ((table.maxn(menu.a)-menu.active-menu.yLimiter)*25)
 					for k=1,table.maxn(menu.a) do
 						menu.yBoxPos[k] = menu.yAbs+(k-1)*25
 					end
-				elseif (menu.yBoxPos[menu.active] > 275) and (menu.active > menu.yLimiter) then
+				elseif (menu.yBoxPos[menu.active] > 255) and (menu.active > menu.yLimiter) then
 					menu.yAbs = menu.yAbs - ((menu.active-menu.yLimiter)*25)
 					for k=1,table.maxn(menu.a) do
 						menu.yBoxPos[k] = menu.yAbs+(k-1)*25

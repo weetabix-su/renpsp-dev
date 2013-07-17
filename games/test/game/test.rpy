@@ -41,6 +41,10 @@ label start:
         "On-Screen Keyboard":
             jump osk
 
+label blank:
+	"Dummy menu data, moving on!"
+	jump start
+			
 label scen:
     "В данный момент подгружаются все *.rpy файлы из каталога /game/ игры. Каждый файл содержит код, совместимый с обычным RenPy (http://renpy.org)."
     jump start
