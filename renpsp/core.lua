@@ -133,22 +133,80 @@ end
 function ENGINE:DrawMenu(menu)
 	if table.maxn(menu.a)~=0 then
 		self.state.text = {menu.q}
-		local y0 = (200 - table.maxn(menu.a)*25)/2
+		menu.yAbs = 13
+		menu.yLimiter = 7
 		if table.maxn(self.state.text)==0 then
-            y0 = y0 + 40
-        end
+			menu.yAbs = 5
+			menu.yLimiter = 10
+		end
+		if table.maxn(menu.a) < menu.yLimiter then
+			menu.yAbs = (200 - table.maxn(menu.a)*25)/2
+			if table.maxn(self.state.text)==0 then
+				menu.yAbs = menu.yAbs + 40
+			end
+		end
+		for i=1,table.maxn(menu.a) do
+			menu.yBoxPos[i] = menu.yAbs+(i-1)*25
+		end
 		for i=1,table.maxn(menu.a) do
 			local l = menu.a[i]
 			if i == menu.active then
 				l = '>> '..l..' <<'
 			end
-			screen:blit(240-(GAME_imagewidth(self.media.answer_frame)/2), y0+(i-1)*25-2, self.media.answer_frame)
-			TEXT:WriteLineCenter(y0+(i-1)*25,l)
+			if menu.yLimiter == 7 then
+				if (menu.yBoxPos[menu.active] < 13) and (menu.active < (table.maxn(menu.a)-menu.yLimiter)) then
+					menu.yAbs = menu.yAbs + ((table.maxn(menu.a)-menu.active-menu.yLimiter)*25)
+					for k=1,table.maxn(menu.a) do
+						menu.yBoxPos[k] = menu.yAbs+(k-1)*25
+					end
+				elseif (menu.yBoxPos[menu.active] > 200) and (menu.active > menu.yLimiter) then
+					menu.yAbs = menu.yAbs - ((menu.active-menu.yLimiter)*25)
+					for k=1,table.maxn(menu.a) do
+						menu.yBoxPos[k] = menu.yAbs+(k-1)*25
+					end
+				end
+			elseif menu.yLimiter == 10 then
+				if (menu.yBoxPos[menu.active] < 5) and (menu.active < (table.maxn(menu.a)-menu.yLimiter)) then
+					menu.yAbs = menu.yAbs + ((table.maxn(menu.a)-menu.active-menu.yLimiter)*25)
+					for k=1,table.maxn(menu.a) do
+						menu.yBoxPos[k] = menu.yAbs+(k-1)*25
+					end
+				elseif (menu.yBoxPos[menu.active] > 255) and (menu.active > menu.yLimiter) then
+					menu.yAbs = menu.yAbs - ((menu.active-menu.yLimiter)*25)
+					for k=1,table.maxn(menu.a) do
+						menu.yBoxPos[k] = menu.yAbs+(k-1)*25
+					end
+				end
+			end
+
+			screen:blit(240-(GAME_imagewidth(self.media.answer_frame)/2), menu.yBoxPos[i]-2, self.media.answer_frame)
+			TEXT:WriteLineCenter(menu.yBoxPos[i],l)
 		end	
 	end
 
 	if table.maxn(self.state.text)~=0 then
 		screen:blit(0, 200, self.media.text_frame)
+		for i=1,table.maxn(menu.a) do
+			local l = menu.a[i]
+			if i == menu.active then
+				if menu.qdesc[i] ~= nil then
+					self.state.text = {menu.qdesc[i]}
+				end
+				if GAME_enableAdvDesc() then
+					if menu.qbon[i] ~= nil then
+						ENGINE:ClearScene()
+						--if CURRENT_SYSTEM == "LPE" then
+							--ENGINE:Timer(100)
+						--end
+						self.media.background = Image.load(menu.qbon[i])
+					elseif menu.qbon[i] == nil then
+						ENGINE:ClearScene()
+						self.media.background = 'white'
+					end
+				end
+			end
+			TEXT:WriteParagraph(10,205,self.state.text,66)
+		end
 		TEXT:WriteParagraph(10,205,self.state.text,66)
 		if self.control.debug then
 		   	ENGINE:DrawDebug()

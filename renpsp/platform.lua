@@ -2,6 +2,10 @@ function GAME_hasMP3()
 	return (CURRENT_SYSTEM ~= "WIN" and soundon == true)
 end
 
+function GAME_enableAdvDesc()
+	return CURRENT_SYSTEM == "WIN"
+end
+
 function GAME_CPU(x)
 	if CURRENT_SYSTEM ~= "WIN" then
 		System.setCpuSpeed(x)
