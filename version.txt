@@ -1,8 +1,34 @@
+п»ї=== Version 0.5 ===
+New features:
+* Added ICON0 and PIC1 design
+* Support for game description files (see desc.lua on any game folder)
+* Game preview backgrounds on main menu (only on Windows version for now)
+* Screenshots are now saved in ms0:/PICTURE/RenPSP
+* Sounds can now be disabled upon game boot
+* Support for $renpy.save() and $renpy.load() functions
+* Menu selection scrolling
+
+Bug fixes:
+* Background loading from save game
+
+Released with several mini-VNs:
+* a test game to demonstrate some features
+* "The Question" by LSF Team (Revised)
+* "9 РјР°СЏ" by IIchan Eroge Team (Revised)
+* "Ripples" by Ayu Sakata (Revised)
+
 === Version 0.4a ==
 Corrections to new features:
 * OSK input function disabled
 * Custom game skin variables corrected
 * Background clearing fix
+
+Game-specific Improvements:
+* 9 РјР°СЏ:
+	- Sample use of customized game skin and helpfile
+	- Background music compatibility fix
+* Ripples:
+	- Background music compatibility fix
 
 === Version 0.4 ===
 Some improvements were made:
@@ -16,12 +42,12 @@ Some improvements were made:
 Released with several mini-VNs:
 * a test game to demonstrate some features
 * "The Question" by LSF Team
-* "9 мая" by IIchan Eroge Team (Revised)
+* "9 РјР°СЏ" by IIchan Eroge Team (Revised)
 * "Ripples" by Ayu Sakata (Revised)
 * "Marijuana: The Truth" by Studio Mugenjohncel (NaNoRenO 2012 Release)
 
 Game-specific Improvements:
-* 9 мая:
+* 9 Г¬Г Гї:
 	- Sample use of customized game skin and helpfile
 	- Background music compatibility fix
 * Ripples:
@@ -46,7 +72,7 @@ Thanks to weetabix for contribution:
 Released with several mini-VNs:
 * a test game to demonstrate some features
 * "The Question" by LSF Team
-* "9 мая" by IIchan Eroge Team
+* "9 РјР°СЏ" by IIchan Eroge Team
 * "Ripples" by Ayu Sakata
 * "One Lazy Saturday" by Dei Akarinazo
 * "The Most Offensive Game Ever" by Dei Akarinazo
@@ -70,7 +96,7 @@ Thanks to weetabix for contribution:
 
 Released with several mini-VNs:
 * "The Question"
-* "9 мая" by IIchan Eroge Team
+* "9 Г¬Г Гї" by IIchan Eroge Team
 * a test game to demonstrate some features
 * Katawa Shoujo alpha (script only contains up to Act 1 Monday)
 
@@ -113,5 +139,5 @@ Features:
 
 Released with several mini-VNs:
 * "The Question"
-* "9 мая" by IIchan Eroge Team
+* "9 РјР°СЏ" by IIchan Eroge Team
 * a test game to demonstrate some features

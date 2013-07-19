@@ -3,24 +3,24 @@
 RenPSP is a Lua Player clone of the Ren'Py Visual Novel Engine for the PlayStation Portable platform.
 This repository will serve as a developmental testbed for edited as well as new features of the RenPSP 0.3 release onwards. It will also contain select developmental visual novels, if possible.
 
-RenPSP is free, but there are some rules of it's rebistribution:
-* inform lolbot_iichan@mail.ru or kraftwerk.renpsp@gmail.com about your actions
-* provide link to http://iichan.hk or http://iichan-eroge.blogspot.com with your release
-* do not try to earn money using RenPSP or it's parts
+RenPSP is free, but there are some rules of its rebistribution:
+1. inform lolbot_iichan@mail.ru or vovo27_miranemiko@yahoo.co.jp about your actions
+2. provide link to http://iichan.hk or http://iichan-eroge.blogspot.com with your release
+3. do not try to earn money using RenPSP or its parts
 
-Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License; Lua Player Euphoria is licensed under OSI BSD 3-Clause License (a.k.a. New BSD License)
+Note that LuaPlayer is licensed under GPL.
 
-### Start on Microsoft Windows:
+###Start on Microsoft Windows:
     just run: win32_start.bat
-    tested at Windows XP, Windows 7, and Windows 8 
-    MS Windows release is based on LuaPlayer 0.20
-    LuaPlayer 0.20 exists on PSP 1.50 too
+    tested at Windows XP and Windows 7 
+	MS Windows release is based on LuaPlayer 0.20
+	LuaPlayer 0.20 exists on PSP 1.50 too
     
-### Start on cracked PSP as homebrew:
-    put everything in ms0:/PSP/GAME/
+###Start on cracked PSP as homebrew:
+    put everything in ms0:/PSP/GAME5xx/
     Lua Player Euphoria v8 is the default Lua Player EBOOT.PBP
     rename EBOOT_LPP.PBP to EBOOT.PBP to use Lua Player Plus rev163
-    tested at PSP FAT with 5.00 M33-3 and 6.60 ME
+    tested at PSP Fat with 5.00 M33-3/6.60 ME and PSP Slim with 5.50 Prome-4
 
 ## FEATURES:
 + Support for .rpy scripts, image formats (JPEG, PNG, BMP), audio formats (WAV, MP3, OGG Vorbis, Atrac3)
@@ -28,6 +28,16 @@ Note: LuaPlayer and Lua Player Plus is licensed under GNU General Public License
 + Cyrillic 1251 character map compatibility
 
 ## CHANGELOG:
+
+### 0.5
++ Added ICON0 and PIC1 design
++ Support for game description files (see desc.lua on any game folder)
++ Game preview backgrounds on main menu (only on Windows version for now)
++ Screenshots are now saved in ms0:/PICTURE/RenPSP
++ Sounds can now be disabled upon game boot
++ Support for $renpy.save() and $renpy.load() functions
++ Menu selection scrolling
++ Background loading from save game bugfix
 
 ### 0.4
 + New default skin
