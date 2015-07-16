@@ -265,8 +265,9 @@ function ENGINE:PlayMusic(name,ch,loop)
 	end
 
 	local type = getExt(name)
-
-	name = 'game/'..name
+	if string.sub(name, 1, 5) ~= "game/" then
+		name = 'game/'..name
+	end
 	GAME_print('starting '..name..' ('..type..') at '..ch)
 
 	self.state.music[ch] = {}
