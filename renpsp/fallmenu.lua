@@ -75,6 +75,8 @@ function ENGINE:CtrlFallingMenu(pad,oldpad)
 				self:TimerStop()
 			end
 		elseif munuaction == "exit" then
+			self:StopMusic()
+			self:StopSound()
 			self.script.exit = true
 		end
 	end
@@ -99,6 +101,8 @@ end
 function ENGINE:FallingMenu()
 	self:TakeScreenshot()
 	for i=-20,1 do self:FMenu(i*4) end
+	
+	self:StopSound()
 
 	menuexit = false
 	while not menuexit do
