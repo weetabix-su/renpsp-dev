@@ -15,3 +15,5 @@ Note that LuaPlayer is licensed under GPL.
 RenPSP is an independent release of lolbot from the iichan Eroge Team. RenPSP is NOT affiliated with iichan Eroge unless further specified.
 This development repository is managed by weetabix. Contact weetabix at Jabber [weetabix@jabber.org], e-mail [vovo27_miranemiko@yahoo.co.jp], Twitter [@weetabix_su], or Discord [@weetabix_su#7846].
 Content used in RenPSP games may be protected by any form of licensing and may be publishing a derivative of the protected game. It is your responsibility to use the content at your own risk.
+
+Hiya! crim here. You can contact me on Discord [@crimsonwolf8439#3182] or email [crimsonwolf8439@gmail.com].
