@@ -22,4 +22,5 @@ Hiya! crim here. You can contact me on Discord [@crimsonwolf8439#3182] or email 
 ## Credits
 
 Thanks to the original people who opened up the PSP.
+
 Thanks to libcg/geecko for making glib2d.
