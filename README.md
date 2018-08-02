@@ -9,8 +9,6 @@ RenPSP is free, but there are some rules of its rebistribution:
 * provide link to http://iichan.hk or http://iichan-eroge.blogspot.com with your release
 * do not try to earn money using RenPSP or its parts
 
-Note that LuaPlayer is licensed under GPL.
-
 ## DISCLAIMER:
 RenPSP is an independent release of lolbot from the iichan Eroge Team. RenPSP is NOT affiliated with iichan Eroge unless further specified.
 This development repository is managed by weetabix. Contact weetabix at Jabber [weetabix@jabber.org], e-mail [vovo27_miranemiko@yahoo.co.jp], Twitter [@weetabix_su], or Discord [@weetabix_su#7846].
